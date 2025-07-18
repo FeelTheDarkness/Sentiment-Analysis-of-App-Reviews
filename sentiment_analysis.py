@@ -1,139 +1,156 @@
-import os
 import re
-import nltk
-import numpy as np
 import pandas as pd
-from glob import glob
 import seaborn as sns
-import plotly.express as px
 import matplotlib.pyplot as plt
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
-from nltk.sentiment import SentimentIntensityAnalyzer
-from google_play_scraper import app, Sort, reviews_all
+import transformers as tf
+from transformers.pipelines import pipeline
+from google_play_scraper import Sort, reviews_all
 
-# Initialize NLTK
-nltk.download(["punkt", "stopwords", "wordnet", "vader_lexicon"])
-lemmatizer = WordNetLemmatizer()
-stop_words = set(stopwords.words("english"))
-sia = SentimentIntensityAnalyzer()
-
-
-def get_available_apps():
-    """Find all app CSV files in the directory"""
-    csv_files = glob("*.csv")
-    available_apps = {}
-
-    # Skip analysis results files
-    skip_files = ["all_combined.csv", "analyzed_reviews.csv"]
-
-    for i, filename in enumerate([f for f in csv_files if f not in skip_files], 1):
-        app_name = filename.replace(".csv", "")
-        available_apps[str(i)] = {"name": app_name, "filename": filename}
-
-    return available_apps
+# --- Initialization ---
+# Load a transformer-based sentiment analysis pipeline
+# (This will download the model on first run)
+sentiment_pipeline = pipeline(
+    "sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english"
+)
 
 
 def preprocess_text(text):
-    """Clean and preprocess text data"""
+    # Basic cleaning; deep cleaning not as necessary for Transformers
     if pd.isna(text):
         return ""
-
     text = str(text)
-    text = re.sub(r"[^\w\s]", "", text)
-    text = text.lower()
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
 
-    tokens = nltk.word_tokenize(text)
-    tokens = [lemmatizer.lemmatize(word) for word in tokens if word not in stop_words]
-    tokens = [word for word in tokens if len(word) > 2]
 
-    return " ".join(tokens)
+def fetch_reviews(package_name, count=None):
+    try:
+        print(f"Fetching reviews for '{package_name}'...")
+        result = reviews_all(
+            package_name, lang="en", country="us", sort=Sort.NEWEST, count=count
+        )
+        print(f"Successfully fetched {len(result)} reviews.")
+        return result
+    except Exception as e:
+        print(f"An error occurred while fetching reviews for '{package_name}': {e}")
+        return []
+
+
+def assign_sentiment(text):
+    # The pipeline returns a list of dicts: [{'label': 'POSITIVE', 'score': 0.999...}]
+    result = sentiment_pipeline(text)
+    if isinstance(result, list):
+        label = result[0]["label"].lower()  # 'positive' or 'negative'
+        score = result[0]["score"]
+    else:
+        label = result["label"].lower()
+        score = result["score"]
+    if label not in ("positive", "negative"):
+        label = "neutral"
+    # Score is probability for the predicted class
+    return pd.Series(
+        [
+            score if label == "positive" else -score if label == "negative" else 0.0,
+            label,
+        ]
+    )
 
 
 def main():
-    print("\nApp Review Sentiment Analysis Tool")
-    print("----------------------------------")
+    print("\n--- App Review Sentiment Analysis Tool [Transformers] ---")
+    print(
+        "This tool fetches reviews from the Google Play Store and performs sentiment analysis with a transformer model."
+    )
+    print("---------------------------------------------------------")
 
-    available_apps = get_available_apps()
-
-    if not available_apps:
-        print("No app CSV files found in directory.")
-        print("Please ensure your CSV files are in the same folder as this script.")
+    # --- Step 1: Get User Input ---
+    package_name = input(
+        "Enter the Google Play app package name (e.g., com.google.android.apps.maps): "
+    ).strip()
+    if not package_name:
+        print("No package name provided. Exiting.")
         return
 
-    print("\nAvailable apps for analysis:")
-    for num, app in available_apps.items():
-        print(f"{num}. {app['name']}")
+    count_input = input(
+        "Enter the maximum number of reviews to fetch (or press Enter for all): "
+    ).strip()
+    count = int(count_input) if count_input.isdigit() else None
 
-    while True:
-        choice = input("\nEnter the number of the app to analyze (or 'q' to quit): ")
-        if choice.lower() == "q":
-            return
-        if choice in available_apps:
-            selected_app = available_apps[choice]
-            break
-        print("Invalid selection. Please try again.")
+    # --- Step 2: Fetch reviews ---
+    reviews_data = fetch_reviews(package_name, count)
+    if not reviews_data:
+        print(f"No reviews were found for '{package_name}'. Exiting.")
+        return
 
-    print(f"\nAnalyzing: {selected_app['name']}")
+    df = pd.DataFrame(reviews_data)
 
-    try:
-        df = pd.read_csv(selected_app["filename"])
-
-        # Check for required columns (case insensitive)
-        required = {"content", "score"}
-        actual = {col.lower() for col in df.columns}
-
-        if not required.issubset(actual):
-            missing = required - actual
-            print(f"Error: Missing required columns: {missing}")
-            return
-
-        # Standardize column names
-        df = df.rename(
-            columns={
-                next(col for col in df.columns if col.lower() == "content"): "review",
-                next(col for col in df.columns if col.lower() == "score"): "rating",
-            }
+    if "content" not in df.columns or "score" not in df.columns:
+        print(
+            "The fetched review data is missing the expected 'content' or 'score' columns."
         )
-
-    except Exception as e:
-        print(f"Error loading file: {e}")
         return
 
-    # Analysis pipeline
+    df = df.rename(columns={"content": "review", "score": "rating"})
+    df = df.dropna(subset=["review"])
+    df = df.loc[df["review"].str.strip() != ""]
+
     print("\nPreprocessing reviews...")
     df["cleaned_review"] = df["review"].apply(preprocess_text)
 
-    print("Analyzing sentiment...")
-    df["sentiment_score"] = df["cleaned_review"].apply(
-        lambda x: sia.polarity_scores(x)["compound"]
+    # --- Step 3: Sentiment Analysis ---
+    print(
+        "Analyzing sentiment with transformer model (this may take a while for large datasets)..."
     )
+    # Batch the inference for better performance (default pipeline batch size is 32)
+    sentiments = df["cleaned_review"].apply(assign_sentiment)
+    df["sentiment_score"] = sentiments.iloc[:, 0]
+    df["sentiment"] = sentiments.iloc[:, 1]
 
-    df["sentiment"] = df["sentiment_score"].apply(
-        lambda x: "positive" if x > 0.1 else ("negative" if x < -0.1 else "neutral")
+    # Normalize label for display (optionally, treat uncertain as 'neutral')
+    # If you want a 'neutral' threshold, you could set: if abs(score) < 0.2: neutral
+    # For simplicity, transformers mostly return just positive/negative
+
+    # --- Step 4: Display Results ---
+    total_reviews = len(df)
+    positive_reviews = len(df[df["sentiment"] == "positive"])
+    negative_reviews = len(df[df["sentiment"] == "negative"])
+    neutral_reviews = total_reviews - positive_reviews - negative_reviews
+
+    print("\n========== Analysis Results ==========")
+    print(f"App Package: {package_name}")
+    print(f"Total Reviews Analyzed: {total_reviews}")
+    print(
+        f"Positive Reviews: {positive_reviews} ({positive_reviews/total_reviews:.1%})"
     )
+    print(
+        f"Negative Reviews: {negative_reviews} ({negative_reviews/total_reviews:.1%})"
+    )
+    print(
+        f"Neutral (low confidence): {neutral_reviews} ({neutral_reviews/total_reviews:.1%})"
+    )
+    print("======================================")
 
-    # Results
-    total = len(df)
-    pos = len(df[df["sentiment"] == "positive"])
-    neg = len(df[df["sentiment"] == "negative"])
-
-    print("\n=== Results ===")
-    print(f"Total reviews: {total}")
-    print(f"Positive: {pos} ({pos/total:.1%})")
-    print(f"Negative: {neg} ({neg/total:.1%})")
-    print(f"Neutral: {total-pos-neg} ({(total-pos-neg)/total:.1%})")
-
-    # Visualization
-    plt.figure(figsize=(10, 5))
-    sns.countplot(data=df, x="sentiment", order=["positive", "neutral", "negative"])
-    plt.title(f"Sentiment Analysis for {selected_app['name']}")
+    # --- Step 5: Visualization ---
+    plt.figure(figsize=(10, 6))
+    sns.countplot(
+        data=df,
+        x="sentiment",
+        order=["positive", "neutral", "negative"],
+        palette="viridis",
+    )
+    plt.title(f"Sentiment Analysis for '{package_name}' (Transformers)", fontsize=16)
+    plt.xlabel("Sentiment", fontsize=12)
+    plt.ylabel("Number of Reviews", fontsize=12)
     plt.show()
 
-    # Save results
-    output_name = f"{selected_app['name'].replace(' ', '_')}_analysis.csv"
-    df.to_csv(output_name, index=False)
-    print(f"\nResults saved to: {output_name}")
+    # --- Step 6: Save Results ---
+    safe_app_name = re.sub(r"[\W_]+", "_", package_name)
+    output_filename = f"{safe_app_name}_transformers_sentiment_analysis.csv"
+    try:
+        df.to_csv(output_filename, index=False)
+        print(f"\nAnalysis complete. Results saved to: {output_filename}")
+    except Exception as e:
+        print(f"\nCould not save the results to a file. Error: {e}")
 
 
 if __name__ == "__main__":
