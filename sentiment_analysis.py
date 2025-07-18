@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 import re
@@ -11,23 +12,54 @@ import time
 from googlesearch import search
 from datetime import datetime
 import warnings
+import os
+
+# Set matplotlib to use non-interactive backend to prevent display issues
+matplotlib.use("Agg")  # Use 'Agg' backend which doesn't require a display
 
 # Suppress warnings
 warnings.filterwarnings("ignore")
 
 # Load spaCy model for preprocessing
 print("Loading spaCy model for preprocessing...")
-nlp = spacy.load("en_core_web_sm", disable=["parser", "ner"])
-print("spaCy model loaded successfully!")
+try:
+    nlp = spacy.load("en_core_web_sm", disable=["parser", "ner"])
+    print("spaCy model loaded successfully!")
+except Exception as e:
+    print(f"Error loading spaCy model: {e}")
+    print("Trying to download the model...")
+    try:
+        import subprocess
+
+        subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+        nlp = spacy.load("en_core_web_sm", disable=["parser", "ner"])
+        print("spaCy model downloaded and loaded successfully!")
+    except:
+        print("Failed to load spaCy model. Exiting.")
+        exit(1)
 
 # Initialize sentiment analysis pipeline
 print("Loading sentiment analysis model...")
-sentiment_analyzer = pipeline(
-    "sentiment-analysis",
-    model="distilbert-base-uncased-finetuned-sst-2-english",
-    device=0 if torch.cuda.is_available() else -1,
-)
-print("Model loaded successfully!")
+try:
+    sentiment_analyzer = pipeline(
+        "sentiment-analysis",
+        model="distilbert-base-uncased-finetuned-sst-2-english",
+        device=0 if torch.cuda.is_available() else -1,
+    )
+    print("Model loaded successfully!")
+except Exception as e:
+    print(f"Error loading sentiment analysis model: {e}")
+    print("Trying to use a smaller model...")
+    try:
+        sentiment_analyzer = pipeline(
+            "sentiment-analysis",
+            model="siebert/sentiment-roberta-large-english",
+            device=0 if torch.cuda.is_available() else -1,
+        )
+        print("Alternative model loaded successfully!")
+    except:
+        print("Failed to load sentiment analysis model. Exiting.")
+        exit(1)
 
 
 def search_apps(query, max_results=5):
@@ -190,14 +222,18 @@ def main():
     print(f"Installs: {app_details['installs']}")
 
     # Fetch reviews
-    review_count = input(
+    review_count_input = input(
         "\nHow many reviews to analyze? (default 200, max 1000): "
     ).strip()
     try:
-        review_count = min(1000, max(50, int(review_count)) if review_count else 200)
+        if review_count_input:
+            review_count = int(review_count_input)
+            review_count = max(50, min(review_count, 1000))
+        else:
+            review_count = 200
     except ValueError:
         review_count = 200
-        print("Using default value of 200 reviews")
+        print("Invalid input. Using default value of 200 reviews")
 
     reviews_data = fetch_reviews(selected_app["id"], review_count)
 
@@ -224,8 +260,6 @@ def main():
 
     # Analyze sentiment
     print("Analyzing sentiment with transformer model...")
-
-    # Analyze in batches to avoid memory issues
     sentiment_results = analyze_sentiment_batch(df["cleaned_review"].tolist())
 
     # Extract sentiment labels and scores
@@ -278,46 +312,68 @@ def main():
             print(f"{i+1}. {review[:150]}{'...' if len(review) > 150 else ''}")
 
     # Visualization
-    plt.figure(figsize=(14, 10))
+    try:
+        plt.figure(figsize=(14, 10))
 
-    # Sentiment distribution
-    plt.subplot(2, 2, 1)
-    sns.countplot(data=df, x="sentiment", order=["positive", "neutral", "negative"])
-    plt.title("Sentiment Distribution")
-    plt.xlabel("")
+        # Sentiment distribution
+        plt.subplot(2, 2, 1)
+        sns.countplot(data=df, x="sentiment", order=["positive", "neutral", "negative"])
+        plt.title("Sentiment Distribution")
+        plt.xlabel("")
 
-    # Rating distribution
-    plt.subplot(2, 2, 2)
-    sns.countplot(data=df, x="rating")
-    plt.title("Star Rating Distribution")
-    plt.xlabel("Stars")
+        # Rating distribution
+        plt.subplot(2, 2, 2)
+        sns.countplot(data=df, x="rating")
+        plt.title("Star Rating Distribution")
+        plt.xlabel("Stars")
 
-    # Sentiment vs rating
-    plt.subplot(2, 2, 3)
-    sns.boxplot(data=df, x="rating", y="sentiment_score")
-    plt.title("Sentiment Score by Rating")
-    plt.xlabel("Star Rating")
-    plt.ylabel("Sentiment Score")
+        # Sentiment vs rating
+        plt.subplot(2, 2, 3)
+        sns.boxplot(data=df, x="rating", y="sentiment_score")
+        plt.title("Sentiment Score by Rating")
+        plt.xlabel("Star Rating")
+        plt.ylabel("Sentiment Score")
 
-    # Time series of sentiment
-    if "date" in df and len(df["date"].unique()) > 1:
-        plt.subplot(2, 2, 4)
+        # Time series of sentiment
+        if "date" in df and len(df["date"].unique()) > 1:
+            plt.subplot(2, 2, 4)
+            try:
+                df["date"] = pd.to_datetime(df["date"])
+                df.set_index("date", inplace=True)
+                weekly = df.resample("W")["sentiment_score"].mean()
+                if len(weekly) > 1:
+                    weekly.plot()
+                    plt.title("Weekly Average Sentiment")
+                    plt.ylabel("Sentiment Score")
+                    plt.xlabel("Date")
+                df.reset_index(inplace=True)
+            except Exception as e:
+                print(f"Error creating time series plot: {e}")
+
+        plt.tight_layout()
+        plt.suptitle(
+            f"Sentiment Analysis for {app_details['title']}", fontsize=16, y=1.02
+        )
+
+        # Save the plot as an image
+        timestamp = pd.Timestamp.now().strftime("%Y%m%d_%H%M%S")
+        plot_filename = (
+            f"{app_details['title'].replace(' ', '_')}_sentiment_plot_{timestamp}.png"
+        )
+        plt.savefig(plot_filename)
+        print(f"\nVisualization saved to: {plot_filename}")
+
+        # Try to show the plot if possible
         try:
-            df["date"] = pd.to_datetime(df["date"])
-            df.set_index("date", inplace=True)
-            weekly = df.resample("W")["sentiment_score"].mean()
-            if len(weekly) > 1:
-                weekly.plot()
-                plt.title("Weekly Average Sentiment")
-                plt.ylabel("Sentiment Score")
-                plt.xlabel("Date")
-            df.reset_index(inplace=True)
+            plt.show()
         except:
-            pass
+            print(
+                "Plot display not supported in this environment. Image file saved instead."
+            )
 
-    plt.tight_layout()
-    plt.suptitle(f"Sentiment Analysis for {app_details['title']}", fontsize=16, y=1.02)
-    plt.show()
+    except Exception as e:
+        print(f"\nError creating visualizations: {e}")
+        print("Skipping visualization step.")
 
     # Save results
     timestamp = pd.Timestamp.now().strftime("%Y%m%d_%H%M%S")
