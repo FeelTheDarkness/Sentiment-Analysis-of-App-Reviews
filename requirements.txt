@@ -1,0 +1,6 @@
+pandas
+seaborn
+matplotlib
+transformers
+google-play-scraper
+torch

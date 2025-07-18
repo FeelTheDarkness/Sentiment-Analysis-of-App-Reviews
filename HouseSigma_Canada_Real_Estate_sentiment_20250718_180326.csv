@@ -1,0 +1,201 @@
+date,review,rating,thumbs_up,cleaned_review,sentiment_label,sentiment_score,sentiment
+2025-07-15 03:34:14,love the updates,5,0,love update,POSITIVE,0.9995667338371277,positive
+2025-07-09 04:38:40,"easy to use, accurate information",5,0,easy use accurate information,POSITIVE,0.9912081956863403,positive
+2025-07-02 07:22:57,"unable to adjust and put a number in sqft and built year filter option, slider cannot be adjusted to specific number. for ex. built year can only be either 3 or 1. sqft can only be in 100s. realtor.ca has both edit: please do not ask your users to work for you. you guys can easily take screenshot yourself or just pass on the feedback",1,0,unable adjust number sqft build year filter option slider adjust specific number build year sqft 100s realtor.ca edit ask user work guy easily screenshot pass feedback,NEGATIVE,-0.9948712587356567,negative
+2025-06-28 18:10:10,"You used to be able to zoom into a neighborhood or street, and there would be little blue dots signifying that the house had been sold, or is for sale. you could hit the dot, and the listing would pop up. Now it's gone. It would be nice to see just the listings that are NEW today, rather than yesterday's and today's listings shown at once.",1,17,able zoom neighborhood street little blue dot signify house sell sale hit dot listing pop go nice listing new today yesterday today listing show,NEGATIVE,-0.7762724161148071,negative
+2025-06-26 18:33:38,keeps enlarging itself on a tablet,1,0,keep enlarge tablet,POSITIVE,0.9991586208343506,positive
+2025-06-25 05:24:29,best real estate app. shows you everything,5,0,good real estate app show,POSITIVE,0.999834418296814,positive
+2025-06-21 20:45:44,love house sigma! the ability to see historical selling prices is so helpful.,4,0,love house sigma ability historical selling price helpful,POSITIVE,0.9994431138038635,positive
+2025-06-16 05:15:30,Very disappointed that they've removed a lot of the market stats now that the market has slowed down. Very shady!,2,0,disappointed remove lot market stat market slow shady,NEGATIVE,-0.9994572997093201,negative
+2025-06-13 17:05:12,"Great app, but missing streetview option and tablet version is buggy (no horizontal view, icons becomes huge all sudden so it has to be restarted)",3,0,great app miss streetview option tablet version buggy horizontal view icon huge sudden restart,NEGATIVE,-0.9935791492462158,negative
+2025-06-08 06:02:14,"This app has so much info, it's great. My #1 tool for looking up real estate. I wish it didn't ask me to login multiple times a day.. It's 2025, it's about time you've added dark mode! It's a great app but these annoyances like no dark mode and constantly asking me to login are annoying. This is almost the perfect real estate app.",4,49,app info great tool look real estate wish ask login multiple time day 2025 time add dark mode great app annoyance like dark mode constantly ask login annoying perfect real estate app,NEGATIVE,-0.9833822846412659,negative
+2025-06-03 20:27:06,"great site, lots to offer",5,0,great site lot offer,POSITIVE,0.9997988343238831,positive
+2025-05-26 23:18:50,great information very timely.,5,0,great information timely,POSITIVE,0.9998773336410522,positive
+2025-05-22 07:37:26,Excellent app! Highly recommend for home/neighborhood information,5,0,excellent app highly recommend home neighborhood information,POSITIVE,0.9998250603675842,positive
+2025-05-22 06:01:08,Amazing tool. It is really useful.,5,0,amazing tool useful,POSITIVE,0.9997982382774353,positive
+2025-05-19 02:04:22,I like looking at properties to get ideas for the future.,5,0,like look property idea future,POSITIVE,0.9950064420700073,positive
+2025-05-18 20:58:20,"Absolutely required to be an informed buyer in real estate. Has finer filters like condo fee maximums, shows price history and sold listings.",5,4,absolutely require informed buyer real estate fine filter like condo fee maximum show price history sell listing,NEGATIVE,-0.7054368257522583,negative
+2025-05-13 19:29:20,seeing property I'll never be able to afford,4,0,see property able afford,POSITIVE,0.9997393488883972,positive
+2025-05-13 00:43:34,Nothing available east of Ontario. Would use if extended to ALL of Canada.,1,0,available east ontario use extend canada,NEGATIVE,-0.7542622089385986,negative
+2025-05-09 04:12:12,Great app.,5,0,great app,POSITIVE,0.999821126461029,positive
+2025-05-03 05:32:09,this app is dog water. has no listing's. none. go on the browser and it works normally.,1,0,app dog water listing browser work normally,NEGATIVE,-0.9919133186340332,negative
+2025-05-02 09:24:22,great app,5,0,great app,POSITIVE,0.999821126461029,positive
+2025-04-28 10:01:24,better then Realtor and NO ADS. KEEP IT AD FREE. Awesome app.,5,0,well realtor ads free awesome app,POSITIVE,0.9989905953407288,positive
+2025-04-25 20:25:18,App crashes whenever I try to bring up maps App crashes whenever I try to bring up maps App,1,0,app crash try bring map app crash try bring map app,NEGATIVE,-0.9982500672340393,negative
+2025-04-14 19:41:41,"great app, but keeps signing me out daily, since maybe a few months now!? super annoying. Android and web.",4,2,great app keep sign daily maybe month super annoying android web,NEGATIVE,-0.9715913534164429,negative
+2025-04-10 19:34:25,"Has actual information on previous listing prices, changes to price, final sale price.",5,0,actual information previous listing price change price final sale price,NEGATIVE,-0.911373496055603,negative
+2025-04-09 03:18:51,a good place track the market,4,0,good place track market,POSITIVE,0.9998327493667603,positive
+2025-04-07 21:52:19,"I loved this app, but you need to update your school data. Currently seeing 2022 scores for schools. I almost moved to a different area due to these inaccurate scores! Once I noticed the date on the scores, I did my own research and found out the scores of the schools in my area are better now than the ones in the area I almost moved to. These inaccurate scores could negatively impact the value of my house on the market! People use these scores to decide where to live. The accuracy is crucial!",3,2,love app need update school datum currently see 2022 score school move different area inaccurate score notice date score research find score school area well one area move inaccurate score negatively impact value house market people use score decide live accuracy crucial,NEGATIVE,-0.9987339377403259,negative
+2025-04-07 20:45:48,Excellent platform,5,0,excellent platform,POSITIVE,0.9998717308044434,positive
+2025-04-05 06:26:08,Way way easier to set up searches than on realtor.ca!,4,0,way way easy set search realtor.ca,POSITIVE,0.833734929561615,positive
+2025-04-03 07:54:33,amazing app!,5,0,amazing app,POSITIVE,0.9998670816421509,positive
+2025-04-01 23:10:39,I got no response to multiple requests for scheduling a viewing for rentals.,1,0,get response multiple request schedule viewing rental,NEGATIVE,-0.9670448303222656,negative
+2025-03-25 02:15:58,excellent thank you,5,0,excellent thank,POSITIVE,0.9998633861541748,positive
+2025-03-22 06:18:05,Excellent experience,5,0,excellent experience,POSITIVE,0.9998596906661987,positive
+2025-03-20 22:06:56,Better than realtor,5,0,well realtor,POSITIVE,0.9996976852416992,positive
+2025-03-19 16:31:15,Great app for house information,5,0,great app house information,POSITIVE,0.9997056126594543,positive
+2025-03-13 17:40:45,It's great overall but doesn't support landscape mode (portrait only).,4,3,great overall support landscape mode portrait,POSITIVE,0.9998637437820435,positive
+2025-03-12 17:26:50,great for laptop but doesn't work on phones,4,0,great laptop work phone,POSITIVE,0.9994555115699768,positive
+2025-03-12 09:47:46,"great app. thanks for having this available, and for free. literally loads of info, and always working properly.",5,0,great app thank have available free literally load info work properly,POSITIVE,0.9746154546737671,positive
+2025-02-21 04:54:11,such a great source with specific comparisons user-friendly and accurate,5,0,great source specific comparison user friendly accurate,POSITIVE,0.9990102052688599,positive
+2025-02-19 07:53:38,Hands down the best real estate app out there with great data.,5,0,hand good real estate app great datum,POSITIVE,0.9789047837257385,positive
+2025-02-12 20:15:02,"we loved using HouseSigma! It was so helpful to""see"" the houses without having to physically look at them! We found our forever home through HouseSigma!",5,0,"love housesigma helpful to""see house have physically look find forever home housesigma",POSITIVE,0.99870765209198,positive
+2025-02-12 11:18:39,"What a treat it is to actually have access to relevant information that helps you search better, follow listings and not waste your Realtor's time on basic information that CREA would love to keep behind closed doors. This app gives buyers and sellers greater confidence in their transactions and makes for a better and more fair market.",5,3,treat actually access relevant information help search well follow listing waste realtor time basic information crea love closed door app give buyer seller great confidence transaction make well fair market,POSITIVE,0.9680498838424683,positive
+2025-02-08 10:16:40,Amazing service,5,0,amazing service,POSITIVE,0.9998700618743896,positive
+2025-02-05 02:42:04,Please add Manitoba.,3,0,add manitoba,POSITIVE,0.9918689727783203,positive
+2025-02-04 22:08:32,Difficult to use,1,0,difficult use,NEGATIVE,-0.9949681162834167,negative
+2025-02-01 06:36:44,Was kicked out of the app for not being an interested buyer. Was looking for my friends.,1,0,kick app interested buyer look friend,POSITIVE,0.9902153015136719,positive
+2025-01-31 02:58:04,"I love this app and using it from years without problem. 5 stars are for previous versions. After The latest update it always take me to the play store when I click on email links from housesigma emails even I have the latest version. Email links never open in app anymore, please fix it.",5,5,love app year problem star previous version late update play store click email link housesigma email late version email link open app anymore fix,NEGATIVE,-0.9947912693023682,negative
+2025-01-30 06:41:08,"This app is phenomenal! I can't believe I just found out about it, so much extra house listing information compared to the other apps",5,0,app phenomenal believe find extra house list information compare app,POSITIVE,0.92845618724823,positive
+2025-01-29 03:27:35,great app and informative,5,0,great app informative,POSITIVE,0.9998425245285034,positive
+2025-01-25 11:19:14,Pretty slick app.,5,0,pretty slick app,POSITIVE,0.9997143149375916,positive
+2025-01-18 21:00:26,Used to be 5 stars but makes me confirm my identity several times a day now to see listings which is very annoying.,2,1,star make confirm identity time day listing annoying,NEGATIVE,-0.9996514320373535,negative
+2025-01-17 21:10:42,Great tool,4,0,great tool,POSITIVE,0.9998475313186646,positive
+2025-01-06 06:36:12,"Great app, helpful",5,0,great app helpful,POSITIVE,0.9997349381446838,positive
+2025-01-06 06:31:51,get app easy to use,5,0,app easy use,POSITIVE,0.961776077747345,positive
+2025-01-03 01:50:47,Terrible,1,0,terrible,NEGATIVE,-0.999752938747406,negative
+2025-01-02 04:17:41,"I can highly recommend the app, it can help to get valuable information about the real estate market and to buy.",5,0,highly recommend app help valuable information real estate market buy,POSITIVE,0.9989277720451355,positive
+2024-12-19 23:23:10,The apps works great and provides upto date information. Support i On the app is excellent,5,0,app work great provide upto date information support app excellent,POSITIVE,0.9996069073677063,positive
+2024-12-13 22:30:55,nice app,5,0,nice app,POSITIVE,0.9998061060905457,positive
+2024-12-07 21:43:17,the best,5,0,good,POSITIVE,0.9998161196708679,positive
+2024-12-03 05:21:51,great app,4,0,great app,POSITIVE,0.999821126461029,positive
+2024-12-02 06:11:47,great app,5,0,great app,POSITIVE,0.999821126461029,positive
+2024-11-30 19:12:13,"I have been using the app for years, l like it very much, but since update it keep asking me to put the password every time I open the app that makes me very disappointed. I refer not to use the app anymore. I start searching for the new app, finally I found one, It calls REALMASTER. It has all information about the house, when you click on maps it shows all the price of the area, you can move to every city you want. I highly recommend REALMASTER. Thank you anyway HouseSigma..",2,9,app year like update ask password time open app make disappointed refer use app anymore start search new app finally find call realmaster information house click map show price area city want highly recommend realmaster thank housesigma,POSITIVE,0.9525512456893921,positive
+2024-11-22 05:55:54,This app is cloned. Please remove all devices from this app.,1,0,app clone remove device app,NEGATIVE,-0.9996100068092346,negative
+2024-11-21 21:18:04,I love that this app shows you the history of the purchases and what the final price was at time of sale,5,2,love app show history purchase final price time sale,POSITIVE,0.6623665690422058,positive
+2024-11-19 23:28:16,Comprehensive and up to date market information ; clear organization and explanations for accessing relevant data to visual content pertaining to individual listings as well as detailed broader market information for analysis in various contexts.,4,0,comprehensive date market information clear organization explanation access relevant datum visual content pertain individual listing detailed broad market information analysis contexts,POSITIVE,0.9937295913696289,positive
+2024-11-18 05:05:07,good,5,0,good,POSITIVE,0.9998161196708679,positive
+2024-11-14 22:13:24,excellent resource,5,0,excellent resource,POSITIVE,0.9998738765716553,positive
+2024-11-13 22:01:55,Okay thanks,5,0,okay thank,POSITIVE,0.9998421669006348,positive
+2024-11-02 22:31:41,"I still love the app but find it fustrating that some houses, mostly rural, show in the wrong location. I use another house search app to find the actual location. Shall I report it in the chat every time one is wrong?",4,1,love app find fustrate house rural wrong location use house search app find actual location shall report chat time wrong,NEGATIVE,-0.9992761015892029,negative
+2024-10-30 18:41:28,Very informative on all available listings. you can easily filter and find listings as per your requirements and also easily get all details on the shortlisted properties.,5,4,informative available listing easily filter find listing requirement easily detail shortlist property,POSITIVE,0.9622381329536438,positive
+2024-10-29 14:30:06,"Being a real estate agent, i think this App has a definite elaboration to current properties to sneak peek at.",5,0,real estate agent think app definite elaboration current property sneak peek,POSITIVE,0.8136415481567383,positive
+2024-10-28 18:56:07,awesome insight and info for buying a house,5,0,awesome insight info buy house,POSITIVE,0.9998365640640259,positive
+2024-10-28 03:24:19,Amazing app. Much more data than the other ones,5,0,amazing app datum one,POSITIVE,0.9998118281364441,positive
+2024-10-24 04:50:29,UI could use some cleaning up but otherwise. great.,4,0,use cleaning great,POSITIVE,0.9976614713668823,positive
+2024-10-16 19:53:11,Use to be a very informative and useful app. Now it gives you no information on sold properties. Everything is blanked out.,1,1,use informative useful app give information sell property blank,NEGATIVE,-0.9914773106575012,negative
+2024-10-15 00:28:58,Very informative,5,0,informative,POSITIVE,0.99977046251297,positive
+2024-10-13 23:20:06,It is so fun to look at old pictures of my family house before it got renovated,5,0,fun look old picture family house get renovate,POSITIVE,0.9996730089187622,positive
+2024-10-10 08:39:20,very helpful and the best.,5,0,helpful good,POSITIVE,0.9998306035995483,positive
+2024-09-29 13:38:16,great design and easy to use with lots of features for comparison.,5,0,great design easy use lot feature comparison,POSITIVE,0.9900820851325989,positive
+2024-09-26 20:03:33,best listing aggregator with price history around 👌,5,0,good list aggregator price history,POSITIVE,0.9994120597839355,positive
+2024-09-24 08:24:42,Quick to get rid of properties.,4,0,quick rid property,NEGATIVE,-0.9989074468612671,negative
+2024-09-18 10:04:17,"I wish it showed a few more listings, but having all this information at your fingertips is great 👍.",4,0,wish show listing have information fingertip great,POSITIVE,0.9963418841362,positive
+2024-09-14 19:30:18,"Please add the ability to better define land sqft/acreage, right now that is the single biggest weakness of housesigma. You cannot look for example for only 1+, 2+, 3+ acreage lots for example",2,1,add ability well define land sqft acreage right single big weakness housesigma look example acreage lot example,POSITIVE,0.9948375821113586,positive
+2024-09-12 21:32:25,I used to be able to scroll freely and see every listing in my area.... now pics are blurred and access is limited. Curious why?,3,1,able scroll freely listing area pic blur access limited curious,NEGATIVE,-0.9697545766830444,negative
+2024-09-07 05:35:59,very good app to watch the house,5,0,good app watch house,POSITIVE,0.9998393058776855,positive
+2024-09-06 19:48:07,this app really good and useful,5,0,app good useful,POSITIVE,0.9995334148406982,positive
+2024-09-06 19:41:46,I love this app because I bought a home and I can go to the pictures to see what I want to do with it considering it's quite far and closing isn't until end of September. it allows me to show my clients what I purchased.,5,8,love app buy home picture want consider far closing end september allow client purchase,NEGATIVE,-0.9533058404922485,negative
+2024-08-31 08:42:02,Great app!,5,0,great app,POSITIVE,0.999821126461029,positive
+2024-08-31 00:00:51,This is a good option to check the previous history of sold houses.,5,0,good option check previous history sell house,POSITIVE,0.9987450838088989,positive
+2024-08-29 11:31:32,Okay,5,0,okay,POSITIVE,0.9997709393501282,positive
+2024-08-26 05:28:42,Great app,5,0,great app,POSITIVE,0.999821126461029,positive
+2024-08-23 19:57:51,Great website,5,0,great website,POSITIVE,0.9998726844787598,positive
+2024-08-18 20:25:19,the ability to set a defined search radius is a real game changer when looking for a place.,4,0,ability set define search radius real game changer look place,POSITIVE,0.9971699118614197,positive
+2024-08-12 18:40:07,"fabulous tool. It's fun, too, to see how other people designed their interiors in the same layout as your own (for sale, mind you, but still)",5,4,fabulous tool fun people design interior layout sale mind,POSITIVE,0.9997827410697937,positive
+2024-08-09 05:16:30,great app gives u info that other apps dont highly recommend,5,0,great app give info app highly recommend,POSITIVE,0.9998217225074768,positive
+2024-08-08 03:39:02,Very difficult to log in. Not worth the trouble when you want to quickly look up a listing.,1,0,difficult log worth trouble want quickly look listing,NEGATIVE,-0.9977466464042664,negative
+2024-08-03 21:34:14,"Great at first, then constantly had to sign in. Had to delete. Don't know why they need all this security when I am just looking at properties. Not like I am buying anything through this or entering personal details.",2,0,great constantly sign delete know need security look property like buy enter personal detail,NEGATIVE,-0.9917389154434204,negative
+2024-08-03 18:21:02,Great site to review current real estate listings. Allows you to search only areas you're interested in. Very informative.,5,3,great site review current real estate listing allow search area interested informative,POSITIVE,0.9970079064369202,positive
+2024-08-02 19:56:44,"Needs a dark mode, blindingly white background is painful to navigate.",1,0,need dark mode blindingly white background painful navigate,NEGATIVE,-0.9948167204856873,negative
+2024-07-28 05:54:30,Very useful!,5,0,useful,POSITIVE,0.9997634291648865,positive
+2024-07-24 21:22:13,Good app but keeps making me sign in. Just keep me signed in,2,0,good app keep make sign sign,POSITIVE,0.9994627833366394,positive
+2024-07-22 23:16:27,Great app,5,0,great app,POSITIVE,0.999821126461029,positive
+2024-07-20 07:16:20,Love this site!,5,0,love site,POSITIVE,0.9998214840888977,positive
+2024-07-17 08:13:58,"New update is terrible. I have to continuously re enter my password every time I use the app. EDIT after reply from dev . After the last update, we are asked to re enter password every time we use the app. It is back to being terribly inconvenient and impractical.",1,6,new update terrible continuously enter password time use app edit reply dev update ask enter password time use app terribly inconvenient impractical,NEGATIVE,-0.9995846152305603,negative
+2024-07-15 20:33:33,Thank you for biometric sign in !,5,0,thank biometric sign,POSITIVE,0.999728262424469,positive
+2024-07-14 09:02:45,Great website!,5,0,great website,POSITIVE,0.9998726844787598,positive
+2024-07-11 21:40:23,"App is awesome but every 2-3 days asking to login. Serious, what is it? Why do we have to keep logging in.",1,0,app awesome day ask login log,POSITIVE,0.9988523721694946,positive
+2024-07-09 00:26:39,love all the extra info you get with this app.,5,0,love extra info app,POSITIVE,0.9997337460517883,positive
+2024-07-07 05:42:25,I had been using another housing app that rhymes Moocasa but so far this one is much superior in every way compared to the other one,5,2,housing app rhyme moocasa far superior way compare,POSITIVE,0.989768385887146,positive
+2024-07-06 07:10:33,"Just like that, the app shows me a survey asking what my interest in real estate is, I answer it truthfully, and nowI am denied access to any listing details. What gives?",1,2,like app show survey ask interest real estate answer truthfully nowi deny access list detail give,NEGATIVE,-0.9788507223129272,negative
+2024-07-05 20:57:40,Great app,4,0,great app,POSITIVE,0.999821126461029,positive
+2024-07-05 00:38:07,Allows for a lot of research for future investments or rerentals.,5,0,allow lot research future investment rerental,POSITIVE,0.9257515668869019,positive
+2024-07-04 08:54:18,Asking for password after every hour. Not sure what is wrong with the application!,1,0,ask password hour sure wrong application,NEGATIVE,-0.9975389242172241,negative
+2024-07-04 03:55:13,Ŵorked fine until last update. Now app keeps kicking me out and I have to sign in every time I open it. Even asked if I was an agent ?? Shouldn't have to answer any question to look at listings. Disappointing.,3,4,ŵorke fine update app keep kick sign time open ask agent answer question look listing disappointing,NEGATIVE,-0.9990711212158203,negative
+2024-07-03 00:40:37,"I used to love app, but since the last update it logs me out every few hours. Too annoying to use now, constantly having to sign in if more than a few hours passes.",1,5,love app update log hour annoying use constantly have sign hour pass,NEGATIVE,-0.993939995765686,negative
+2024-07-02 23:36:18,whether you are leasing or buying this app is one window solution to all of your questions,5,0,lease buy app window solution question,NEGATIVE,-0.9952795505523682,negative
+2024-07-02 20:57:17,Doesn't show properties for 70% of the country...,1,0,property country,POSITIVE,0.9870815873146057,positive
+2024-06-30 00:24:45,Good app but keeps asking to re-enter my password everytime I open the app recently. Please fix.,3,2,good app keep ask enter password everytime open app recently fix,POSITIVE,0.9897142052650452,positive
+2024-06-27 23:39:57,good,4,0,good,POSITIVE,0.9998161196708679,positive
+2024-06-23 07:25:11,"it's great to watch price changes, house sale activity, including historical data with photos.",5,0,great watch price change house sale activity include historical datum photo,NEGATIVE,-0.9216667413711548,negative
+2024-06-22 23:06:38,I'm reasonably happy with the app. There are times that it is difficult to find what you are looking for. Maybe I need more practice.,4,0,reasonably happy app time difficult find look maybe need practice,POSITIVE,0.973494291305542,positive
+2024-06-15 23:32:03,This app. has provided me with so much info. when it comes to buying and/or selling my house. It is very intuitive and satisfying to use this app. Hugely appreciate!!!,5,7,app provide info come buy and/or sell house intuitive satisfying use app hugely appreciate,POSITIVE,0.9997240900993347,positive
+2024-06-15 00:15:04,love the details available to you for comparisons. Great app,4,0,love detail available comparison great app,POSITIVE,0.9988988637924194,positive
+2024-06-13 02:14:34,"amazing app, I love how you can see price history on houses.",5,0,amazing app love price history house,POSITIVE,0.9997805953025818,positive
+2024-06-11 23:37:32,solid app,5,0,solid app,POSITIVE,0.9998602867126465,positive
+2024-06-11 23:12:33,Your app looks AMAZING! Why don't you include Manitoba or Saskatchewan?? I'm in Manitoba and would appreciate it you included our province!!,1,0,app look amazing include manitoba saskatchewan manitoba appreciate include province,POSITIVE,0.9997090697288513,positive
+2024-06-09 05:07:13,Well made app. Solid UI/UX. A Split view of map and listings would be great.,5,2,app solid split view map listing great,POSITIVE,0.9996947050094604,positive
+2024-06-06 03:45:54,Spectacular app!!,5,0,spectacular app,POSITIVE,0.9995806813240051,positive
+2024-06-05 01:19:57,"It was an unpleasant experience, a proprty was posted terminated while Agent said is available another property was planned for this upcoming open house , I planned to visit I recived notification was sold yesterday. It is not accurate. As much as I experienced difficulty but I like its mapping. You can easily search on the map and see the listing . Another inaccurate information on a property.",4,7,unpleasant experience proprty post terminate agent say available property plan upcoming open house plan visit recive notification sell yesterday accurate experience difficulty like mapping easily search map listing inaccurate information property,NEGATIVE,-0.9980619549751282,negative
+2024-05-23 03:41:13,The photos never load or only half load. App is constantly glitchy,1,0,photo load half load app constantly glitchy,NEGATIVE,-0.9994557499885559,negative
+2024-05-21 20:46:06,very user friendly,5,0,user friendly,POSITIVE,0.9775891304016113,positive
+2024-05-16 17:39:23,excellent source of information on a variety of homes on the market,5,0,excellent source information variety home market,POSITIVE,0.9996976852416992,positive
+2024-05-14 16:41:47,awesome app. You don't need an agent with this app.,5,0,awesome app need agent app,POSITIVE,0.999586284160614,positive
+2024-05-11 20:43:20,Great app but lacks the ability to filter on acreage.,4,0,great app lack ability filter acreage,NEGATIVE,-0.8870480060577393,negative
+2024-05-06 01:05:26,gives a lot of information,5,0,give lot information,POSITIVE,0.998950719833374,positive
+2024-04-29 05:06:58,I like the filters for viewing on the map and also the growth estimate could really come in handy.,4,0,like filter view map growth estimate come handy,POSITIVE,0.9496138691902161,positive
+2024-04-28 23:31:32,very useful,5,0,useful,POSITIVE,0.9997634291648865,positive
+2024-04-23 19:47:47,"easy to use, lots of info",5,0,easy use lot info,POSITIVE,0.8641505241394043,positive
+2024-04-22 00:19:25,Very useful and informative. Recently hit a snag on some milton and Oakville areas. Password expired . What does that mean,4,0,useful informative recently hit snag milton oakville area password expire mean,POSITIVE,0.7261966466903687,positive
+2024-04-20 08:31:33,"Great info of any property history at your fingertips. Fantastic job House sigma, well done",4,0,great info property history fingertip fantastic job house sigma,POSITIVE,0.9996359348297119,positive
+2024-04-17 07:01:57,Excellent,5,0,excellent,POSITIVE,0.9998434782028198,positive
+2024-04-17 02:42:09,Good app. I like almost everything. Would be nice to be able to specify lot width to the foot (instead of 10' increments). Would also be nice to specify sold date history to the day.,4,0,good app like nice able specify lot width foot instead increment nice specify sell date history day,POSITIVE,0.968586802482605,positive
+2024-04-16 05:40:24,Hope VR could be added so that we can have a more thorough understanding.,4,0,hope add thorough understanding,POSITIVE,0.9998190999031067,positive
+2024-04-14 22:43:57,very informative.,5,0,informative,POSITIVE,0.99977046251297,positive
+2024-04-12 00:54:21,love being able to view past prices and compare,5,0,love able view past price compare,POSITIVE,0.999121367931366,positive
+2024-04-02 23:43:26,"Housesigma excels as a premier real estate portal, offering both a user-friendly website and a seamlessly functional mobile app. Its performance is marked by speed, reliability, and a wealth of information. The Estimate Price feature stands out as particularly valuable, providing precise estimations of property values to aid buyers in securing the best deals. With a responsive and friendly sales team, Housesigma ensures swift assistance and a positive user experience. Love this app",5,0,housesigma excel premier real estate portal offer user friendly website seamlessly functional mobile app performance mark speed reliability wealth information estimate price feature stand particularly valuable provide precise estimation property value aid buyer secure good deal responsive friendly sale team housesigma ensure swift assistance positive user experience love app,POSITIVE,0.9985324144363403,positive
+2024-03-30 11:41:36,Well organized and fairly good information,5,0,organized fairly good information,POSITIVE,0.9998383522033691,positive
+2024-03-30 02:41:04,"I like the app idea, but it doesn't have Quebec/Montreal in it unfortunately so it's useless for me.",3,1,like app idea quebec montreal unfortunately useless,NEGATIVE,-0.9994964599609375,negative
+2024-03-29 21:45:37,nice app. u don't need to call a realtor to give you price of any property to compare.,5,2,nice app need realtor price property compare,POSITIVE,0.9807220697402954,positive
+2024-03-26 18:19:00,Good details,5,0,good detail,POSITIVE,0.9998384714126587,positive
+2024-03-26 01:33:37,"Very beautiful app, quick and responsive!",5,0,beautiful app quick responsive,POSITIVE,0.9998106360435486,positive
+2024-03-25 07:22:37,preferred app after comparison with others. Bravo!!!,5,0,preferred app comparison bravo,NEGATIVE,-0.7825912237167358,negative
+2024-03-24 20:21:03,fantastic app for recon when you are looking to buy/sell,4,0,fantastic app recon look buy sell,POSITIVE,0.9997573494911194,positive
+2024-03-20 07:06:11,Please add a dark mode. A lot of listing pictures are not loading.,3,1,add dark mode lot list picture load,NEGATIVE,-0.9990838766098022,negative
+2024-03-19 16:38:14,Excellent 👌,5,0,excellent,POSITIVE,0.9998434782028198,positive
+2024-03-19 15:40:57,Please allow a filter for age of property. Thanks,5,0,allow filter age property thank,POSITIVE,0.994461178779602,positive
+2024-03-19 03:15:45,Search filter doesnt work. When you put in max price it still shows all of the houses outside of that price range.,2,1,search filter work max price show house outside price range,NEGATIVE,-0.9954469799995422,negative
+2024-03-16 02:41:44,"Useful, efficient site. highly recommended",5,0,useful efficient site highly recommend,POSITIVE,0.9997789263725281,positive
+2024-03-12 04:45:39,best real estate app I've come across!,5,0,good real estate app come,POSITIVE,0.9997649788856506,positive
+2024-03-11 20:05:40,good,5,0,good,POSITIVE,0.9998161196708679,positive
+2024-03-06 02:05:07,Provides great information for people looking to buy their first home,5,0,provide great information people look buy home,POSITIVE,0.9998301267623901,positive
+2024-03-05 20:48:30,very informative. love it !!,5,0,informative love,POSITIVE,0.9998733997344971,positive
+2024-03-05 11:52:00,Better than any other real estate application. Very impressed so far with the service.,5,0,well real estate application impressed far service,POSITIVE,0.9994550347328186,positive
+2024-03-02 14:01:57,Nice,5,0,nice,POSITIVE,0.9998552799224854,positive
+2024-03-02 06:03:25,This app is similar to having the same info a realtor has. I love it!!!,5,0,app similar have info realtor love,POSITIVE,0.8350914716720581,positive
+2024-03-01 04:00:56,"like the app, it's great",4,0,like app great,POSITIVE,0.9997639060020447,positive
+2024-02-26 22:52:05,Best app I have ever used for real estate information,5,0,good app real estate information,POSITIVE,0.9998371601104736,positive
+2024-02-25 09:11:29,good one,5,0,good,POSITIVE,0.9998161196708679,positive
+2024-02-23 04:52:11,great app!,5,0,great app,POSITIVE,0.999821126461029,positive
+2024-02-20 19:31:27,I like the customization of searches.,5,0,like customization search,NEGATIVE,-0.8450289964675903,negative
+2024-02-18 04:12:03,The app was good until it kept asking me to log in and wouldn't accept my login. I've uninstalled now.,1,1,app good keep ask log accept login uninstalle,POSITIVE,0.9024767279624939,positive
+2024-02-14 20:08:59,excellent for toronto area.,5,0,excellent toronto area,POSITIVE,0.9998618364334106,positive
+2024-02-13 18:37:18,overall great. sometimes you have to enter the right variation of an address to find it and that can be frustrating. very finicky at times,4,1,overall great enter right variation address find frustrating finicky time,NEGATIVE,-0.989852249622345,negative
+2024-02-12 11:04:32,"There are still bugs (for Android users anyway), the watch map didn't update when new listings are posted even after refreshing. They will show up however if you click on the map. But it's a great app overall.",4,3,bug android user watch map update new listing post refresh click map great app overall,NEGATIVE,-0.9983838796615601,negative
+2024-02-10 06:28:31,My trusted Real estate partner !!!! 5 star,5,0,trust real estate partner star,POSITIVE,0.9980042576789856,positive
+2024-02-09 22:09:51,"My go to app for all my real estate thirst. It's amazing some realtors wonder if I am an agent, with all the information I have on any given property.😊",5,0,app real estate thirst amazing realtor wonder agent information give property,POSITIVE,0.9994719624519348,positive
+2024-02-09 19:25:30,the best real estate app,5,0,good real estate app,POSITIVE,0.9998465776443481,positive
+2024-02-07 00:23:38,its really good,5,0,good,POSITIVE,0.9998161196708679,positive
+2024-02-05 06:07:54,more details than realtor.ca,5,0,detail realtor.ca,POSITIVE,0.9753760695457458,positive
+2024-01-28 23:01:04,the sold and lease values are helpful,4,0,sell lease value helpful,POSITIVE,0.9971747398376465,positive
+2024-01-28 22:03:59,Well written app. Everything organized clearly with useful stats and notifications. Especially like being able to explore property history.,5,2,write app organize clearly useful stat notification especially like able explore property history,POSITIVE,0.9970741271972656,positive
+2024-01-24 23:39:07,Great 👍,3,0,great,POSITIVE,0.9998630285263062,positive
+2024-01-22 21:14:30,Just an awesome app. This app works flawlessly. Good work.,5,0,awesome app app work flawlessly good work,POSITIVE,0.9998677968978882,positive
+2024-01-20 07:36:38,Very well documented and updated daily.,5,0,document update daily,POSITIVE,0.9398576021194458,positive
+2024-01-19 18:37:01,easy to use and a great resource,4,0,easy use great resource,POSITIVE,0.9993840456008911,positive
+2024-01-16 02:49:46,"Why does this app ask me to create an account (with a password) when I already chose the ""sign in with Google"" option???",2,1,app ask create account password choose sign google option,NEGATIVE,-0.980708658695221,negative
+2024-01-06 18:33:56,"Map out areas of interest, estimated values of houses, selling history, photos of expired listing. Beautiful app, please don't change.",5,2,map area interest estimate value house sell history photo expired list beautiful app change,NEGATIVE,-0.7956550121307373,negative
+2024-01-05 05:15:58,The best app for rent buy and sell property,5,0,good app rent buy sell property,POSITIVE,0.9973412156105042,positive
+2024-01-04 01:29:49,Best realty app I've used by a large margin.,5,0,best realty app large margin,POSITIVE,0.9996956586837769,positive
+2024-01-03 03:28:57,Website has more listings than the app. App limits to 4 listings for a condo but the site shows all.,1,0,website listing app app limit listing condo site show,NEGATIVE,-0.9816061854362488,negative
+2024-01-02 07:45:03,Love this app. A must for any serious home buyer investor. Easy to use. Intuitive. Very good and timely listing info.,5,2,love app home buyer investor easy use intuitive good timely list info,POSITIVE,0.9964762330055237,positive
+2023-12-21 06:01:52,all the bells and whistles!,5,0,bell whistle,NEGATIVE,-0.9314956068992615,negative
+2023-12-16 00:25:03,"great application, seriously saves me hours.",5,0,great application seriously save hour,POSITIVE,0.9968980550765991,positive
+2023-12-13 21:30:56,good,4,0,good,POSITIVE,0.9998161196708679,positive
+2023-11-19 08:01:53,It's helpful to see previous listing and sale prices. As well as seeing what other houses in the area sold for.,5,0,helpful previous listing sale price see house area sell,NEGATIVE,-0.98052978515625,negative
+2023-11-16 06:34:22,great app,5,0,great app,POSITIVE,0.999821126461029,positive
+2023-11-05 10:38:21,Dont need a realtor to look up history of sold prices when you have this app! So many useful info.,5,0,need realtor look history sell price app useful info,NEGATIVE,-0.9842063188552856,negative
+2023-10-26 05:07:50,"works well for my purposes, has lots of features I don't necessarily need or use bubi could see being helpful to others",5,0,work purpose lot feature necessarily need use bubi helpful,NEGATIVE,-0.99439936876297,negative
+2023-10-24 23:46:59,good to see the history of a location,5,0,good history location,POSITIVE,0.9998562335968018,positive
+2023-10-19 21:18:40,Presenting Inaccurate market status.,1,0,present inaccurate market status,NEGATIVE,-0.9995977282524109,negative
