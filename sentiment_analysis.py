@@ -6,10 +6,8 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import re
 import spacy
-from google_play_scraper import app as gp_app, reviews_all as gp_reviews_all
+from google_play_scraper import app as gp_app, reviews, Sort
 from app_store_scraper import AppStore
-
-# Corrected the import location for the pipeline function
 from transformers.pipelines import pipeline
 import torch
 from collections import Counter
@@ -25,15 +23,13 @@ warnings.filterwarnings("ignore")
 def initialize_models():
     """Loads and initializes the spaCy and Transformers models."""
     print("🚀 Initializing models...")
-    # Load spaCy model for text processing
     try:
-        nlp = spacy.load("en_core_web_sm", disable=["parser", "ner"])
+        nlp = spacy.load("en_core_web_sm", disable=["ner"])
     except OSError:
         print("Spacy 'en_core_web_sm' model not found. Downloading...")
         os.system("python -m spacy download en_core_web_sm")
-        nlp = spacy.load("en_core_web_sm", disable=["parser", "ner"])
+        nlp = spacy.load("en_core_web_sm", disable=["ner"])
 
-    # Initialize sentiment analysis pipeline from Hugging Face
     sentiment_analyzer = pipeline(  # type: ignore
         "sentiment-analysis",
         model="distilbert-base-uncased-finetuned-sst-2-english",
@@ -50,8 +46,10 @@ def scrape_google_play_reviews(app_id, review_count):
     """Scrapes reviews for a given app ID from the Google Play Store."""
     print(f"Fetching {review_count} reviews from Google Play for '{app_id}'...")
     try:
-        reviews = gp_reviews_all(app_id, lang="en", country="us", count=review_count)
-        df = pd.DataFrame(reviews)
+        reviews_list, _ = reviews(
+            app_id, lang="en", country="us", count=review_count, sort=Sort.NEWEST
+        )
+        df = pd.DataFrame(reviews_list)
         df = df[["content", "score", "at"]].rename(columns={"content": "review", "score": "rating", "at": "date"})  # type: ignore
         df["source"] = "Google Play"
         print(f"✅ Found {len(df)} reviews.")
@@ -61,19 +59,34 @@ def scrape_google_play_reviews(app_id, review_count):
         return pd.DataFrame()
 
 
-def scrape_apple_app_store_reviews(app_name, country_code, review_count):
-    """Scrapes reviews for a given app name from the Apple App Store."""
+def scrape_apple_app_store_reviews(app_name, app_id, country_code, review_count):
+    """Scrapes reviews for a given app name/ID from the Apple App Store."""
     print(f"Fetching {review_count} reviews from Apple App Store for '{app_name}'...")
     try:
-        store = AppStore(country=country_code, app_name=app_name)
+        # Prioritize searching by app_id if provided, as it's more reliable
+        if app_id:
+            store = AppStore(country=country_code, app_name=app_name, app_id=app_id)
+        else:
+            store = AppStore(country=country_code, app_name=app_name)
+
         store.review(how_many=review_count)
         df = pd.DataFrame(store.reviews)
+
+        if df.empty:
+            print(
+                f"⚠️ No reviews found for '{app_name}' in the '{country_code}' App Store."
+            )
+            return pd.DataFrame()
+
         df = df[["review", "rating", "date"]].copy()
         df["source"] = "App Store"
         print(f"✅ Found {len(df)} reviews.")
         return df
     except Exception as e:
         print(f"❌ Error scraping App Store: {e}")
+        print(
+            "💡 Tip: The app might have a different name in this country's App Store. Finding the numeric App ID from the app's URL is more reliable."
+        )
         return pd.DataFrame()
 
 
@@ -103,11 +116,27 @@ def analyze_sentiment(df, sentiment_analyzer):
 
 
 def extract_topics(text, nlp_model):
-    """Extracts key noun phrases (topics) from a single piece of text."""
+    """Extracts key noun phrases (topics), filtering for stop words, pronouns, and short words."""
     if not isinstance(text, str) or not text.strip():
         return []
+
     doc = nlp_model(text.lower())
-    topics = [chunk.text for chunk in doc.noun_chunks if len(chunk.text.split()) < 4]
+    topics = []
+    stop_words = nlp_model.Defaults.stop_words
+
+    for chunk in doc.noun_chunks:
+        clean_chunk = chunk.text.strip()
+
+        # Check if the root of the chunk is a pronoun or if the chunk is a stop word or too short
+        is_pronoun = chunk.root.pos_ == "PRON"
+        is_stop_word = clean_chunk in stop_words
+        is_short = (
+            len(clean_chunk) <= 2
+        )  # Increased from 1 to 2 to filter out more noise
+
+        if not is_pronoun and not is_stop_word and not is_short:
+            topics.append(clean_chunk)
+
     return topics
 
 
@@ -130,9 +159,7 @@ def create_interactive_dashboard(app_data, comparison_data=None):
     print("📊 Generating interactive dashboard...")
     is_comparison = comparison_data is not None
 
-    # Define the figure layout
     rows, cols = 5, (2 if is_comparison else 1)
-
     subplot_titles = (
         "Sentiment Score & User Rating Distribution",
         "Sentiment Breakdown",
@@ -235,11 +262,8 @@ def create_interactive_dashboard(app_data, comparison_data=None):
                 for _, row in df[df["sentiment_label"] == "NEGATIVE"].iterrows()
                 for topic in row["topics"]
             )
-
-            # Added type:ignore to suppress linter false positives on pd.DataFrame constructor
             pos_topics_df = pd.DataFrame(positive_topics.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")  # type: ignore
             neg_topics_df = pd.DataFrame(negative_topics.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")  # type: ignore
-
             fig.add_trace(
                 go.Bar(
                     y=pos_topics_df["Topic"],
@@ -298,7 +322,6 @@ def main():
         app_names.append(input("Enter the name of the app to analyze: "))
 
     app_data_dict = {}
-
     for app_name in app_names:
         print(f"\n--- Configuring for '{app_name}' ---")
 
@@ -306,41 +329,60 @@ def main():
             f"Choose review source for '{app_name}' (1: Google Play, 2: Apple App Store, 3: Both): "
         )
         review_count = int(input("How many reviews to fetch per source? (e.g., 500): "))
-
         all_reviews = []
         if source_choice in ["1", "3"]:
             google_app_id = input(
                 f"Enter Google Play App ID for '{app_name}' (e.g., 'com.google.android.gm'): "
             )
             all_reviews.append(scrape_google_play_reviews(google_app_id, review_count))
-
         if source_choice in ["2", "3"]:
             apple_country = input(
                 f"Enter Apple App Store country code for '{app_name}' (e.g., 'us', 'ca', 'in'): "
             )
+            # --- FIX: Asking for optional but recommended App ID ---
+            apple_app_id = input(
+                f"Enter Apple App ID for '{app_name}' (optional, but recommended - e.g., '284882215' for Facebook): "
+            )
             all_reviews.append(
-                scrape_apple_app_store_reviews(app_name, apple_country, review_count)
+                scrape_apple_app_store_reviews(
+                    app_name, apple_app_id, apple_country, review_count
+                )
             )
 
+        if not all_reviews:
+            print(f"No sources selected for '{app_name}'. Skipping.")
+            continue
+
         df = pd.concat(all_reviews, ignore_index=True)
-        df["date"] = pd.to_datetime(df["date"])
+        df["date"] = pd.to_datetime(df["date"], errors="coerce")
+        df.dropna(subset=["date"], inplace=True)
 
         if df.empty:
             print(f"No reviews found for '{app_name}'. Skipping.")
             continue
 
-        filter_choice = input("Apply advanced filters? (y/n): ").lower()
+        filter_choice = input("Apply advanced date range filter? (y/n): ").lower()
         if filter_choice == "y":
-            min_rating = int(input("Enter minimum star rating to include (1-5): "))
-            max_rating = int(input("Enter maximum star rating to include (1-5): "))
-            df = df[(df["rating"] >= min_rating) & (df["rating"] <= max_rating)]
-            print(f"Filtered to {len(df)} reviews.")
+            try:
+                start_date_str = input("Enter start date (YYYY-MM-DD): ")
+                end_date_str = input("Enter end date (YYYY-MM-DD): ")
+
+                start_date = pd.to_datetime(start_date_str)
+                end_date = pd.to_datetime(end_date_str)
+
+                df["date"] = df["date"].dt.tz_localize(None)
+                df = df[(df["date"] >= start_date) & (df["date"] <= end_date)]
+                print(
+                    f"✅ Filtered to {len(df)} reviews from {start_date_str} to {end_date_str}."
+                )
+            except ValueError:
+                print(
+                    "❌ Invalid date format. Please use YYYY-MM-DD. Skipping date filter."
+                )
 
         df = analyze_sentiment(df, sentiment_analyzer)
         df = analyze_topics(df, nlp)
-
         app_data_dict[app_name] = {"name": app_name, "df": df}
-
         csv_filename = f"{app_name.replace(' ', '_')}_sentiment_analysis.csv"
         df.to_csv(csv_filename, index=False)
         print(f"✅ Detailed data for '{app_name}' saved to {csv_filename}")
