@@ -1,385 +1,357 @@
+# enhanced_app_analysis.py
+
 import pandas as pd
 import numpy as np
-import matplotlib
-import matplotlib.pyplot as plt
-import seaborn as sns
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 import re
 import spacy
-from google_play_scraper import app, Sort, reviews
-from transformers import pipeline
+from google_play_scraper import app as gp_app, reviews_all as gp_reviews_all
+from app_store_scraper import AppStore
+
+# Corrected the import location for the pipeline function
+from transformers.pipelines import pipeline
 import torch
-import time
-from googlesearch import search
-from datetime import datetime
+from collections import Counter
 import warnings
 import os
 
-# Set matplotlib to use non-interactive backend to prevent display issues
-matplotlib.use("Agg")  # Use 'Agg' backend which doesn't require a display
+# --- INITIAL SETUP ---
 
-# Suppress warnings
+# Suppress warnings for cleaner output
 warnings.filterwarnings("ignore")
 
-# Load spaCy model for preprocessing
-print("Loading spaCy model for preprocessing...")
-try:
-    nlp = spacy.load("en_core_web_sm", disable=["parser", "ner"])
-    print("spaCy model loaded successfully!")
-except Exception as e:
-    print(f"Error loading spaCy model: {e}")
-    print("Trying to download the model...")
+
+def initialize_models():
+    """Loads and initializes the spaCy and Transformers models."""
+    print("🚀 Initializing models...")
+    # Load spaCy model for text processing
     try:
-        import subprocess
-
-        subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
         nlp = spacy.load("en_core_web_sm", disable=["parser", "ner"])
-        print("spaCy model downloaded and loaded successfully!")
-    except:
-        print("Failed to load spaCy model. Exiting.")
-        exit(1)
+    except OSError:
+        print("Spacy 'en_core_web_sm' model not found. Downloading...")
+        os.system("python -m spacy download en_core_web_sm")
+        nlp = spacy.load("en_core_web_sm", disable=["parser", "ner"])
 
-# Initialize sentiment analysis pipeline
-print("Loading sentiment analysis model...")
-try:
-    sentiment_analyzer = pipeline(
+    # Initialize sentiment analysis pipeline from Hugging Face
+    sentiment_analyzer = pipeline(  # type: ignore
         "sentiment-analysis",
         model="distilbert-base-uncased-finetuned-sst-2-english",
         device=0 if torch.cuda.is_available() else -1,
     )
-    print("Model loaded successfully!")
-except Exception as e:
-    print(f"Error loading sentiment analysis model: {e}")
-    print("Trying to use a smaller model...")
+    print("✅ Models loaded successfully!")
+    return nlp, sentiment_analyzer
+
+
+# --- DATA SCRAPING ---
+
+
+def scrape_google_play_reviews(app_id, review_count):
+    """Scrapes reviews for a given app ID from the Google Play Store."""
+    print(f"Fetching {review_count} reviews from Google Play for '{app_id}'...")
     try:
-        sentiment_analyzer = pipeline(
-            "sentiment-analysis",
-            model="siebert/sentiment-roberta-large-english",
-            device=0 if torch.cuda.is_available() else -1,
-        )
-        print("Alternative model loaded successfully!")
-    except:
-        print("Failed to load sentiment analysis model. Exiting.")
-        exit(1)
+        reviews = gp_reviews_all(app_id, lang="en", country="us", count=review_count)
+        df = pd.DataFrame(reviews)
+        df = df[["content", "score", "at"]].rename(columns={"content": "review", "score": "rating", "at": "date"})  # type: ignore
+        df["source"] = "Google Play"
+        print(f"✅ Found {len(df)} reviews.")
+        return df
+    except Exception as e:
+        print(f"❌ Error scraping Google Play: {e}")
+        return pd.DataFrame()
 
 
-def search_apps(query, max_results=5):
-    """Search for apps on Google Play"""
+def scrape_apple_app_store_reviews(app_name, country_code, review_count):
+    """Scrapes reviews for a given app name from the Apple App Store."""
+    print(f"Fetching {review_count} reviews from Apple App Store for '{app_name}'...")
+    try:
+        store = AppStore(country=country_code, app_name=app_name)
+        store.review(how_many=review_count)
+        df = pd.DataFrame(store.reviews)
+        df = df[["review", "rating", "date"]].copy()
+        df["source"] = "App Store"
+        print(f"✅ Found {len(df)} reviews.")
+        return df
+    except Exception as e:
+        print(f"❌ Error scraping App Store: {e}")
+        return pd.DataFrame()
+
+
+# --- DATA PROCESSING & ANALYSIS ---
+
+
+def analyze_sentiment(df, sentiment_analyzer):
+    """Performs sentiment analysis on the review text."""
+    print("🧠 Performing sentiment analysis...")
+    if "review" not in df.columns or df.empty:
+        return df
+
+    df["review"] = df["review"].astype(str).fillna("")
+    reviews_list = df["review"].tolist()
+
     results = []
+    batch_size = 64
+    for i in range(0, len(reviews_list), batch_size):
+        batch = reviews_list[i : i + batch_size]
+        results.extend(sentiment_analyzer(batch))
 
-    print(f"\nSearching for '{query}' on Google Play...")
-    try:
-        for url in search(f"{query} site:play.google.com", num_results=max_results):
-            if "id=" in url:
-                app_id = url.split("id=")[-1].split("&")[0]
-            else:
-                # Handle different URL formats
-                app_id = (
-                    url.split("/")[-1]
-                    if url.endswith("/")
-                    else url.split("/")[-1].split("?")[0]
-                )
-
-            app_name = app_id.replace("_", " ").replace(".", " ").title()
-            results.append({"name": app_name, "id": app_id})
-    except Exception as e:
-        print(f"Search error: {e}")
-
-    return results
-
-
-def get_app_details(app_id):
-    """Get app details from Google Play"""
-    try:
-        result = app(app_id)
-        return {
-            "title": result["title"],
-            "description": result["description"],
-            "score": result["score"],
-            "installs": result["installs"],
-            "icon": result["icon"],
-            "id": app_id,
-        }
-    except Exception as e:
-        print(f"Error fetching app details: {e}")
-        return None
-
-
-def fetch_reviews(app_id, count=200):
-    """Fetch reviews from Google Play"""
-    print(f"\nFetching {count} reviews for {app_id}...")
-    all_reviews = []
-    continuation_token = None
-
-    while len(all_reviews) < count:
-        try:
-            result, continuation_token = reviews(
-                app_id,
-                lang="en",
-                country="us",
-                sort=Sort.NEWEST,
-                count=min(100, count - len(all_reviews)),
-                continuation_token=continuation_token,
-            )
-            all_reviews.extend(result)
-
-            if not continuation_token:
-                break
-
-            time.sleep(1)  # Be polite with requests
-        except Exception as e:
-            print(f"Error fetching reviews: {e}")
-            break
-
-    print(f"Retrieved {len(all_reviews)} reviews")
-    return all_reviews[:count]
-
-
-def preprocess_text(text):
-    """Clean and preprocess text data using spaCy"""
-    if pd.isna(text) or not text:
-        return ""
-
-    text = str(text)
-
-    # Remove URLs
-    text = re.sub(r"http\S+|www\S+|https\S+", "", text, flags=re.MULTILINE)
-
-    # Create spaCy doc
-    doc = nlp(text)
-
-    # Extract tokens: lemmas, lowercase, no punctuation, no stop words, length > 2
-    tokens = [
-        token.lemma_.lower()
-        for token in doc
-        if not token.is_punct and not token.is_stop and len(token.text) > 2
+    df["sentiment_label"] = [r["label"] for r in results]
+    df["sentiment_score"] = [
+        r["score"] if r["label"] == "POSITIVE" else -r["score"] for r in results
     ]
-
-    return " ".join(tokens)
-
-
-def analyze_sentiment_batch(texts, batch_size=32):
-    """Analyze sentiment in batches"""
-    results = []
-    for i in range(0, len(texts), batch_size):
-        batch = texts[i : i + batch_size]
-        try:
-            results.extend(sentiment_analyzer(batch))
-        except Exception as e:
-            print(f"Error in batch {i//batch_size}: {e}")
-            # Fill with neutral sentiment for failed batches
-            results.extend([{"label": "NEUTRAL", "score": 0.5}] * len(batch))
-    return results
+    return df
 
 
-def main():
-    print("\n=== Google Play Review Sentiment Analyzer ===")
-    print("Powered by Transformers and Google Play Scraper")
+def extract_topics(text, nlp_model):
+    """Extracts key noun phrases (topics) from a single piece of text."""
+    if not isinstance(text, str) or not text.strip():
+        return []
+    doc = nlp_model(text.lower())
+    topics = [chunk.text for chunk in doc.noun_chunks if len(chunk.text.split()) < 4]
+    return topics
 
-    # App search
-    while True:
-        query = input("\nEnter app name to search (or 'q' to quit): ").strip()
-        if query.lower() == "q":
-            return
 
-        if not query:
-            print("Please enter a valid search term")
-            continue
+def analyze_topics(df, nlp_model):
+    """Analyzes topics for all reviews and adds them to the DataFrame."""
+    print("🔍 Extracting topics from reviews...")
+    if "review" not in df.columns or df.empty:
+        df["topics"] = pd.Series([[] for _ in range(len(df))])
+        return df
 
-        search_results = search_apps(query)
+    df["topics"] = df["review"].apply(lambda x: extract_topics(x, nlp_model))
+    return df
 
-        if not search_results:
-            print("No apps found. Try a different search term.")
-            continue
 
-        print("\nSearch Results:")
-        for i, result in enumerate(search_results, 1):
-            print(f"{i}. {result['name']} (ID: {result['id']})")
+# --- VISUALIZATION ---
 
-        choice = input(
-            "\nEnter the number of the app to analyze (or 'b' to search again): "
+
+def create_interactive_dashboard(app_data, comparison_data=None):
+    """Creates an interactive Plotly dashboard and saves it as an HTML file."""
+    print("📊 Generating interactive dashboard...")
+    is_comparison = comparison_data is not None
+
+    # Define the figure layout
+    rows, cols = 5, (2 if is_comparison else 1)
+
+    subplot_titles = (
+        "Sentiment Score & User Rating Distribution",
+        "Sentiment Breakdown",
+        "Weekly Average Sentiment",
+        "Top Positive Topics",
+        "Top Negative Topics",
+    )
+    if is_comparison:
+        app1_name, app2_name = app_data["name"], comparison_data["name"]
+        subplot_titles = (
+            f"Sentiment Score - {app1_name}",
+            f"Sentiment Score - {app2_name}",
+            f"Sentiment Breakdown - {app1_name}",
+            f"Sentiment Breakdown - {app2_name}",
+            "Weekly Average Sentiment",
+            None,
+            f"Top Positive Topics - {app1_name}",
+            f"Top Positive Topics - {app2_name}",
+            f"Top Negative Topics - {app1_name}",
+            f"Top Negative Topics - {app2_name}",
         )
-        if choice.lower() == "b":
-            continue
 
-        try:
-            selected_index = int(choice) - 1
-            if 0 <= selected_index < len(search_results):
-                selected_app = search_results[selected_index]
-                break
-            else:
-                print("Invalid selection. Please try again.")
-        except ValueError:
-            print("Please enter a valid number.")
-
-    # Get app details
-    app_details = get_app_details(selected_app["id"])
-    if not app_details:
-        print("Failed to get app details. Please try another app.")
-        return
-
-    print(f"\nSelected App: {app_details['title']}")
-    print(f"Average Rating: {app_details['score']} ⭐")
-    print(f"Installs: {app_details['installs']}")
-
-    # Fetch reviews
-    review_count_input = input(
-        "\nHow many reviews to analyze? (default 200, max 1000): "
-    ).strip()
-    try:
-        if review_count_input:
-            review_count = int(review_count_input)
-            review_count = max(50, min(review_count, 1000))
-        else:
-            review_count = 200
-    except ValueError:
-        review_count = 200
-        print("Invalid input. Using default value of 200 reviews")
-
-    reviews_data = fetch_reviews(selected_app["id"], review_count)
-
-    if not reviews_data:
-        print("No reviews found. Exiting.")
-        return
-
-    # Create DataFrame
-    df = pd.DataFrame(
+    specs = (
         [
-            {
-                "review": r.get("content", ""),
-                "rating": r.get("score", 0),
-                "thumbs_up": r.get("thumbsUpCount", 0),
-                "date": r.get("at", datetime.now()),
-            }
-            for r in reviews_data
+            [{"type": "histogram"}, {"type": "histogram"}],
+            [{"type": "domain"}, {"type": "domain"}],
+            [{"colspan": 2}, None],
+            [{"type": "bar"}, {"type": "bar"}],
+            [{"type": "bar"}, {"type": "bar"}],
+        ]
+        if is_comparison
+        else [
+            [{"type": "histogram"}],
+            [{"type": "pie"}],
+            [{"type": "xy"}],
+            [{"type": "bar"}],
+            [{"type": "bar"}],
         ]
     )
-
-    # Preprocess reviews
-    print("\nPreprocessing reviews with spaCy...")
-    df["cleaned_review"] = df["review"].apply(preprocess_text)
-
-    # Analyze sentiment
-    print("Analyzing sentiment with transformer model...")
-    sentiment_results = analyze_sentiment_batch(df["cleaned_review"].tolist())
-
-    # Extract sentiment labels and scores
-    df["sentiment_label"] = [result["label"] for result in sentiment_results]
-    df["sentiment_score"] = [
-        result["score"] if result["label"] == "POSITIVE" else -result["score"]
-        for result in sentiment_results
-    ]
-
-    # Convert to standard labels
-    df["sentiment"] = df["sentiment_label"].apply(
-        lambda x: (
-            "positive"
-            if x == "POSITIVE"
-            else "negative" if x == "NEGATIVE" else "neutral"
-        )
+    fig = make_subplots(
+        rows=rows,
+        cols=cols,
+        subplot_titles=subplot_titles,
+        specs=specs,
+        vertical_spacing=0.08,
     )
 
-    # Calculate metrics
-    total_reviews = len(df)
-    positive = len(df[df["sentiment"] == "positive"])
-    negative = len(df[df["sentiment"] == "negative"])
-    neutral = len(df[df["sentiment"] == "neutral"])
+    def plot_app_data(data, fig, col_num):
+        df = data["df"]
+        if df.empty:
+            return
 
-    # Display results
-    print("\n=== Analysis Results ===")
-    print(f"App: {app_details['title']}")
-    print(f"Total Reviews Analyzed: {total_reviews}")
-    print(f"Positive Reviews: {positive} ({positive/total_reviews:.1%})")
-    print(f"Negative Reviews: {negative} ({negative/total_reviews:.1%})")
-    print(f"Neutral Reviews: {neutral} ({neutral/total_reviews:.1%})")
-
-    # Show sample reviews
-    if positive > 0:
-        print("\n=== Top Positive Reviews ===")
-        for i, review in enumerate(
-            df.loc[df["sentiment"] == "positive"]
-            .sort_values(by="sentiment_score", ascending=False)
-            .head(3)["review"]
-        ):
-            print(f"{i+1}. {review[:150]}{'...' if len(review) > 150 else ''}")
-
-    if negative > 0:
-        print("\n=== Top Negative Reviews ===")
-        for i, review in enumerate(
-            df.loc[df["sentiment"] == "negative"]
-            .sort_values(by="sentiment_score")
-            .head(3)["review"]
-        ):
-            print(f"{i+1}. {review[:150]}{'...' if len(review) > 150 else ''}")
-
-    # Visualization
-    try:
-        plt.figure(figsize=(14, 10))
-
-        # Sentiment distribution
-        plt.subplot(2, 2, 1)
-        sns.countplot(data=df, x="sentiment", order=["positive", "neutral", "negative"])
-        plt.title("Sentiment Distribution")
-        plt.xlabel("")
-
-        # Rating distribution
-        plt.subplot(2, 2, 2)
-        sns.countplot(data=df, x="rating")
-        plt.title("Star Rating Distribution")
-        plt.xlabel("Stars")
-
-        # Sentiment vs rating
-        plt.subplot(2, 2, 3)
-        sns.boxplot(data=df, x="rating", y="sentiment_score")
-        plt.title("Sentiment Score by Rating")
-        plt.xlabel("Star Rating")
-        plt.ylabel("Sentiment Score")
-
-        # Time series of sentiment
-        if "date" in df and len(df["date"].unique()) > 1:
-            plt.subplot(2, 2, 4)
-            try:
-                df["date"] = pd.to_datetime(df["date"])
-                df.set_index("date", inplace=True)
-                weekly = df.resample("W")["sentiment_score"].mean()
-                if len(weekly) > 1:
-                    weekly.plot()
-                    plt.title("Weekly Average Sentiment")
-                    plt.ylabel("Sentiment Score")
-                    plt.xlabel("Date")
-                df.reset_index(inplace=True)
-            except Exception as e:
-                print(f"Error creating time series plot: {e}")
-
-        plt.tight_layout()
-        plt.suptitle(
-            f"Sentiment Analysis for {app_details['title']}", fontsize=16, y=1.02
+        fig.add_trace(
+            go.Histogram(
+                x=df["sentiment_score"], name="Sentiment Score", marker_color="#1f77b4"
+            ),
+            row=1,
+            col=col_num,
         )
-
-        # Save the plot as an image
-        timestamp = pd.Timestamp.now().strftime("%Y%m%d_%H%M%S")
-        plot_filename = (
-            f"{app_details['title'].replace(' ', '_')}_sentiment_plot_{timestamp}.png"
-        )
-        plt.savefig(plot_filename)
-        print(f"\nVisualization saved to: {plot_filename}")
-
-        # Try to show the plot if possible
-        try:
-            plt.show()
-        except:
-            print(
-                "Plot display not supported in this environment. Image file saved instead."
+        if not is_comparison:
+            fig.add_trace(
+                go.Histogram(
+                    x=df["rating"], name="User Rating", marker_color="#ff7f0e"
+                ),
+                row=1,
+                col=1,
             )
 
-    except Exception as e:
-        print(f"\nError creating visualizations: {e}")
-        print("Skipping visualization step.")
+        sentiment_counts = df["sentiment_label"].value_counts()
+        fig.add_trace(
+            go.Pie(
+                labels=sentiment_counts.index,
+                values=sentiment_counts.values,
+                name="Sentiment",
+            ),
+            row=2,
+            col=col_num,
+        )
 
-    # Save results
-    timestamp = pd.Timestamp.now().strftime("%Y%m%d_%H%M%S")
-    filename = f"{app_details['title'].replace(' ', '_')}_sentiment_{timestamp}.csv"
-    df.to_csv(filename, index=False)
-    print(f"\nResults saved to: {filename}")
+        df_ts = df.set_index("date").resample("W")["sentiment_score"].mean().dropna()
+        fig.add_trace(
+            go.Scatter(
+                x=df_ts.index,
+                y=df_ts.values,
+                mode="lines+markers",
+                name=f"{data['name']} Sentiment Trend",
+            ),
+            row=3,
+            col=1,
+        )
+
+        if "topics" in df.columns:
+            positive_topics = Counter(
+                topic
+                for _, row in df[df["sentiment_label"] == "POSITIVE"].iterrows()
+                for topic in row["topics"]
+            )
+            negative_topics = Counter(
+                topic
+                for _, row in df[df["sentiment_label"] == "NEGATIVE"].iterrows()
+                for topic in row["topics"]
+            )
+
+            # Added type:ignore to suppress linter false positives on pd.DataFrame constructor
+            pos_topics_df = pd.DataFrame(positive_topics.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")  # type: ignore
+            neg_topics_df = pd.DataFrame(negative_topics.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")  # type: ignore
+
+            fig.add_trace(
+                go.Bar(
+                    y=pos_topics_df["Topic"],
+                    x=pos_topics_df["Count"],
+                    orientation="h",
+                    name="Positive",
+                    marker_color="green",
+                ),
+                row=4,
+                col=col_num,
+            )
+            fig.add_trace(
+                go.Bar(
+                    y=neg_topics_df["Topic"],
+                    x=neg_topics_df["Count"],
+                    orientation="h",
+                    name="Negative",
+                    marker_color="red",
+                ),
+                row=5,
+                col=col_num,
+            )
+
+    plot_app_data(app_data, fig, 1)
+    if is_comparison:
+        plot_app_data(comparison_data, fig, 2)
+        fig.update_layout(
+            title_text=f"📊 App Analysis: {app_data['name']} vs. {comparison_data['name']}",
+            height=1200,
+            showlegend=True,
+        )
+    else:
+        fig.update_layout(
+            title_text=f"📊 App Analysis: {app_data['name']}",
+            height=1600,
+            showlegend=True,
+        )
+
+    filename = f"analysis_dashboard_{app_data['name'].replace(' ', '_')}.html"
+    fig.write_html(filename)
+    print(f"✅ Dashboard saved to: {filename}")
+
+
+# --- MAIN EXECUTION ---
+def main():
+    """Main function to run the interactive analysis workflow."""
+    nlp, sentiment_analyzer = initialize_models()
+
+    print("\n--- App Analysis Configuration ---")
+    analysis_mode = input("Select analysis mode (1: Single App, 2: Comparison): ")
+    app_names = []
+    if analysis_mode == "2":
+        app_names.append(input("Enter name of App 1: "))
+        app_names.append(input("Enter name of App 2: "))
+    else:
+        app_names.append(input("Enter the name of the app to analyze: "))
+
+    app_data_dict = {}
+
+    for app_name in app_names:
+        print(f"\n--- Configuring for '{app_name}' ---")
+
+        source_choice = input(
+            f"Choose review source for '{app_name}' (1: Google Play, 2: Apple App Store, 3: Both): "
+        )
+        review_count = int(input("How many reviews to fetch per source? (e.g., 500): "))
+
+        all_reviews = []
+        if source_choice in ["1", "3"]:
+            google_app_id = input(
+                f"Enter Google Play App ID for '{app_name}' (e.g., 'com.google.android.gm'): "
+            )
+            all_reviews.append(scrape_google_play_reviews(google_app_id, review_count))
+
+        if source_choice in ["2", "3"]:
+            apple_country = input(
+                f"Enter Apple App Store country code for '{app_name}' (e.g., 'us', 'ca', 'in'): "
+            )
+            all_reviews.append(
+                scrape_apple_app_store_reviews(app_name, apple_country, review_count)
+            )
+
+        df = pd.concat(all_reviews, ignore_index=True)
+        df["date"] = pd.to_datetime(df["date"])
+
+        if df.empty:
+            print(f"No reviews found for '{app_name}'. Skipping.")
+            continue
+
+        filter_choice = input("Apply advanced filters? (y/n): ").lower()
+        if filter_choice == "y":
+            min_rating = int(input("Enter minimum star rating to include (1-5): "))
+            max_rating = int(input("Enter maximum star rating to include (1-5): "))
+            df = df[(df["rating"] >= min_rating) & (df["rating"] <= max_rating)]
+            print(f"Filtered to {len(df)} reviews.")
+
+        df = analyze_sentiment(df, sentiment_analyzer)
+        df = analyze_topics(df, nlp)
+
+        app_data_dict[app_name] = {"name": app_name, "df": df}
+
+        csv_filename = f"{app_name.replace(' ', '_')}_sentiment_analysis.csv"
+        df.to_csv(csv_filename, index=False)
+        print(f"✅ Detailed data for '{app_name}' saved to {csv_filename}")
+
+    if len(app_data_dict) == 1:
+        create_interactive_dashboard(list(app_data_dict.values())[0])
+    elif len(app_data_dict) == 2:
+        apps = list(app_data_dict.values())
+        create_interactive_dashboard(apps[0], apps[1])
+
+    print("\n🎉 Analysis complete!")
 
 
 if __name__ == "__main__":
