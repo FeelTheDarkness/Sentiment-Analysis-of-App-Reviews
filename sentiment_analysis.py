@@ -5,6 +5,14 @@ import numpy as np
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import re
+import sys
+import os
+
+# Add the virtual environment site-packages to the path to ensure spaCy uses the correct installation
+venv_site_packages = "/home/parantapsinha/Parantap/Sentiment-Analysis-of-App-Reviews/.analysis/lib/python3.11/site-packages"
+if venv_site_packages not in sys.path:
+    sys.path.insert(0, venv_site_packages)
+
 import spacy
 from google_play_scraper import app as gp_app, reviews, Sort
 from app_store_scraper import AppStore
@@ -12,7 +20,6 @@ from transformers.pipelines import pipeline
 import torch
 from collections import Counter
 import warnings
-import os
 
 # --- INITIAL SETUP ---
 
@@ -23,19 +30,23 @@ warnings.filterwarnings("ignore")
 def initialize_models():
     """Loads and initializes the spaCy and Transformers models."""
     print("🚀 Initializing models...")
+
     try:
         nlp = spacy.load("en_core_web_sm", disable=["ner"])
-    except OSError:
-        print("Spacy 'en_core_web_sm' model not found. Downloading...")
-        os.system("python -m spacy download en_core_web_sm")
-        nlp = spacy.load("en_core_web_sm", disable=["ner"])
+        print("✅ spaCy model loaded successfully!")
+    except OSError as e:
+        print(f"❌ Failed to load spaCy model: {e}")
+        print("Please install the model manually:")
+        print("   python -m spacy download en_core_web_sm")
+        return None, None
 
     sentiment_analyzer = pipeline(  # type: ignore
         "sentiment-analysis",
         model="distilbert-base-uncased-finetuned-sst-2-english",
         device=0 if torch.cuda.is_available() else -1,
     )
-    print("✅ Models loaded successfully!")
+    print("✅ Transformers model loaded successfully!")
+    print("✅ All models loaded successfully!")
     return nlp, sentiment_analyzer
 
 
@@ -312,6 +323,11 @@ def main():
     """Main function to run the interactive analysis workflow."""
     nlp, sentiment_analyzer = initialize_models()
 
+    # Check if models were loaded successfully
+    if nlp is None or sentiment_analyzer is None:
+        print("❌ Failed to initialize models. Exiting.")
+        return
+
     print("\n--- App Analysis Configuration ---")
     analysis_mode = input("Select analysis mode (1: Single App, 2: Comparison): ")
     app_names = []
@@ -354,11 +370,19 @@ def main():
             continue
 
         df = pd.concat(all_reviews, ignore_index=True)
+
+        # Check if DataFrame is empty before processing
+        if df.empty:
+            print(f"No reviews found for '{app_name}'. Skipping.")
+            continue
+
         df["date"] = pd.to_datetime(df["date"], errors="coerce")
         df.dropna(subset=["date"], inplace=True)
 
         if df.empty:
-            print(f"No reviews found for '{app_name}'. Skipping.")
+            print(
+                f"No valid reviews found for '{app_name}' after date processing. Skipping."
+            )
             continue
 
         filter_choice = input("Apply advanced date range filter? (y/n): ").lower()
