@@ -7,6 +7,9 @@ from plotly.subplots import make_subplots
 import re
 import sys
 import os
+import requests
+import json
+from datetime import datetime
 
 # Add the virtual environment site-packages to the path to ensure spaCy uses the correct installation
 venv_site_packages = "/home/parantapsinha/Parantap/Sentiment-Analysis-of-App-Reviews/.analysis/lib/python3.11/site-packages"
@@ -15,7 +18,6 @@ if venv_site_packages not in sys.path:
 
 import spacy
 from google_play_scraper import app as gp_app, reviews, Sort
-from app_store_scraper import AppStore
 from transformers.pipelines import pipeline
 import torch
 from collections import Counter
@@ -71,34 +73,134 @@ def scrape_google_play_reviews(app_id, review_count):
 
 
 def scrape_apple_app_store_reviews(app_name, app_id, country_code, review_count):
-    """Scrapes reviews for a given app name/ID from the Apple App Store."""
+    """Scrapes reviews for a given app ID from the Apple App Store."""
     print(f"Fetching {review_count} reviews from Apple App Store for '{app_name}'...")
+
+    # Method 1: Try using the iTunes RSS feed approach
     try:
-        # Prioritize searching by app_id if provided, as it's more reliable
-        if app_id:
-            store = AppStore(country=country_code, app_name=app_name, app_id=app_id)
+        import requests
+        import json
+        from datetime import datetime
+
+        # Construct the RSS feed URL for app reviews
+        rss_url = f"https://itunes.apple.com/{country_code}/rss/customerreviews/id={app_id}/sortBy=mostRecent/json"
+
+        print(f"Trying iTunes RSS feed approach...")
+        response = requests.get(rss_url, timeout=10)
+
+        if response.status_code == 200:
+            data = response.json()
+
+            # Check if there are entries in the feed
+            if "feed" in data and "entry" in data["feed"]:
+                entries = data["feed"]["entry"]
+
+                # The first entry is usually app info, skip it
+                if isinstance(entries, list) and len(entries) > 1:
+                    entries = entries[1:]  # Skip first entry
+                elif not isinstance(entries, list):
+                    entries = []
+
+                reviews_list = []
+                for entry in entries[:review_count]:  # Limit to requested count
+                    try:
+                        review_data = {
+                            "review": entry.get("content", {}).get("label", ""),
+                            "rating": int(entry.get("im:rating", {}).get("label", 0)),
+                            "date": entry.get("updated", {}).get("label", pd.NaT),
+                        }
+                        if review_data["review"]:  # Only add if review has content
+                            reviews_list.append(review_data)
+                    except (KeyError, ValueError):
+                        continue
+
+                if reviews_list:
+                    df = pd.DataFrame(reviews_list)
+                    df["source"] = "App Store"
+                    print(f"✅ Found {len(df)} reviews using RSS feed.")
+                    return df
+                else:
+                    print("⚠️ No valid reviews found in RSS feed.")
+            else:
+                print("⚠️ No review entries found in RSS feed.")
         else:
-            store = AppStore(country=country_code, app_name=app_name)
+            print(f"⚠️ RSS feed returned status code: {response.status_code}")
 
-        store.review(how_many=review_count)
-        df = pd.DataFrame(store.reviews)
-
-        if df.empty:
-            print(
-                f"⚠️ No reviews found for '{app_name}' in the '{country_code}' App Store."
-            )
-            return pd.DataFrame()
-
-        df = df[["review", "rating", "date"]].copy()
-        df["source"] = "App Store"
-        print(f"✅ Found {len(df)} reviews.")
-        return df
     except Exception as e:
-        print(f"❌ Error scraping App Store: {e}")
-        print(
-            "💡 Tip: The app might have a different name in this country's App Store. Finding the numeric App ID from the app's URL is more reliable."
+        print(f"❌ RSS feed approach failed: {e}")
+
+    # Method 2: Try the original app-store-scraper library
+    try:
+        from app_store_scraper import AppStore
+
+        print("Trying app-store-scraper library...")
+
+        # Try with different parameters
+        store = AppStore(country=country_code, app_name=app_name, app_id=int(app_id))
+        store.review(how_many=review_count)
+
+        if store.reviews:
+            reviews_list = []
+            for r in store.reviews:
+                review_data = {
+                    "review": r.get("review", ""),
+                    "rating": r.get("rating", 0),
+                    "date": r.get("date", pd.NaT),
+                }
+                if review_data["review"]:  # Only add if review has content
+                    reviews_list.append(review_data)
+
+            if reviews_list:
+                df = pd.DataFrame(reviews_list)
+                df["source"] = "App Store"
+                print(f"✅ Found {len(df)} reviews using app-store-scraper.")
+                return df
+
+    except Exception as e:
+        print(f"❌ app-store-scraper failed: {e}")
+
+    # Method 3: Try using requests with a different endpoint
+    try:
+        import requests
+
+        print("Trying direct API approach...")
+
+        # Try the lookup API first to verify the app exists
+        lookup_url = (
+            f"https://itunes.apple.com/lookup?id={app_id}&country={country_code}"
         )
-        return pd.DataFrame()
+        lookup_response = requests.get(lookup_url, timeout=10)
+
+        if lookup_response.status_code == 200:
+            lookup_data = lookup_response.json()
+            if lookup_data.get("resultCount", 0) > 0:
+                print(
+                    f"✅ App found: {lookup_data['results'][0].get('trackName', 'Unknown')}"
+                )
+
+                # Unfortunately, the lookup API doesn't return reviews
+                # But we can confirm the app exists
+                print(
+                    "⚠️ Direct review API is not available. Consider using web scraping tools."
+                )
+            else:
+                print(f"⚠️ App with ID {app_id} not found in {country_code} store.")
+
+    except Exception as e:
+        print(f"❌ Direct API approach failed: {e}")
+
+    # If all methods fail, return empty DataFrame with a helpful message
+    print("\n❌ Unable to fetch App Store reviews. Possible reasons:")
+    print("1. The app ID might be incorrect")
+    print("2. The app might not be available in the specified country")
+    print("3. Apple's API might have changed or be temporarily unavailable")
+    print("\nSuggestions:")
+    print("1. Verify the app ID is correct (you can find it in the App Store URL)")
+    print("2. Try a different country code (e.g., 'us', 'gb', 'ca')")
+    print("3. Consider using Google Play reviews if the app is available there")
+    print("4. Try installing: pip install itunes-app-scraper")
+
+    return pd.DataFrame()
 
 
 # --- DATA PROCESSING & ANALYSIS ---
@@ -117,7 +219,23 @@ def analyze_sentiment(df, sentiment_analyzer):
     batch_size = 64
     for i in range(0, len(reviews_list), batch_size):
         batch = reviews_list[i : i + batch_size]
-        results.extend(sentiment_analyzer(batch))
+        # Filter out empty reviews
+        batch = [r for r in batch if r.strip()]
+        if batch:
+            results.extend(sentiment_analyzer(batch))
+
+    # Handle cases where some reviews might have been filtered out
+    if len(results) < len(reviews_list):
+        # Fill in missing results with neutral sentiment
+        full_results = []
+        result_idx = 0
+        for review in reviews_list:
+            if review.strip():
+                full_results.append(results[result_idx])
+                result_idx += 1
+            else:
+                full_results.append({"label": "NEUTRAL", "score": 0.5})
+        results = full_results
 
     df["sentiment_label"] = [r["label"] for r in results]
     df["sentiment_score"] = [
@@ -329,13 +447,15 @@ def main():
         return
 
     print("\n--- App Analysis Configuration ---")
-    analysis_mode = input("Select analysis mode (1: Single App, 2: Comparison): ")
+    analysis_mode = input(
+        "Select analysis mode (1: Single App, 2: Comparison): "
+    ).strip()
     app_names = []
     if analysis_mode == "2":
-        app_names.append(input("Enter name of App 1: "))
-        app_names.append(input("Enter name of App 2: "))
+        app_names.append(input("Enter name of App 1: ").strip())
+        app_names.append(input("Enter name of App 2: ").strip())
     else:
-        app_names.append(input("Enter the name of the app to analyze: "))
+        app_names.append(input("Enter the name of the app to analyze: ").strip())
 
     app_data_dict = {}
     for app_name in app_names:
@@ -343,66 +463,85 @@ def main():
 
         source_choice = input(
             f"Choose review source for '{app_name}' (1: Google Play, 2: Apple App Store, 3: Both): "
-        )
+        ).strip()
         review_count = int(input("How many reviews to fetch per source? (e.g., 500): "))
         all_reviews = []
         if source_choice in ["1", "3"]:
             google_app_id = input(
                 f"Enter Google Play App ID for '{app_name}' (e.g., 'com.google.android.gm'): "
-            )
+            ).strip()
             all_reviews.append(scrape_google_play_reviews(google_app_id, review_count))
         if source_choice in ["2", "3"]:
-            apple_country = input(
-                f"Enter Apple App Store country code for '{app_name}' (e.g., 'us', 'ca', 'in'): "
+            # Clean the country code input to remove extra spaces or quotes
+            apple_country = (
+                input(
+                    f"Enter Apple App Store country code for '{app_name}' (e.g., 'us', 'ca', 'in'): "
+                )
+                .strip()
+                .strip("'\"")
             )
-            # --- FIX: Asking for optional but recommended App ID ---
             apple_app_id = input(
                 f"Enter Apple App ID for '{app_name}' (optional, but recommended - e.g., '284882215' for Facebook): "
-            )
+            ).strip()
             all_reviews.append(
                 scrape_apple_app_store_reviews(
                     app_name, apple_app_id, apple_country, review_count
                 )
             )
 
-        if not all_reviews:
-            print(f"No sources selected for '{app_name}'. Skipping.")
+        # Check if all_reviews is empty or contains only empty DataFrames
+        if not any(not df.empty for df in all_reviews):
+            print(
+                f"❌ No reviews were fetched for '{app_name}'. Skipping to the next app if available."
+            )
             continue
 
-        df = pd.concat(all_reviews, ignore_index=True)
+        df = pd.concat([r for r in all_reviews if not r.empty], ignore_index=True)
 
-        # Check if DataFrame is empty before processing
+        # Check if the concatenated DataFrame is empty
         if df.empty:
-            print(f"No reviews found for '{app_name}'. Skipping.")
+            print(
+                f"❌ No reviews found for '{app_name}' after attempting to fetch. Cannot proceed with analysis for this app."
+            )
             continue
 
         df["date"] = pd.to_datetime(df["date"], errors="coerce")
         df.dropna(subset=["date"], inplace=True)
 
+        # Add another check after date conversion, as some rows might be dropped
         if df.empty:
-            print(
-                f"No valid reviews found for '{app_name}' after date processing. Skipping."
-            )
+            print(f"No valid reviews with dates found for '{app_name}'. Skipping.")
             continue
 
-        filter_choice = input("Apply advanced date range filter? (y/n): ").lower()
+        filter_choice = (
+            input("Apply advanced date range filter? (y/n): ").lower().strip()
+        )
         if filter_choice == "y":
             try:
                 start_date_str = input("Enter start date (YYYY-MM-DD): ")
                 end_date_str = input("Enter end date (YYYY-MM-DD): ")
-
                 start_date = pd.to_datetime(start_date_str)
                 end_date = pd.to_datetime(end_date_str)
 
-                df["date"] = df["date"].dt.tz_localize(None)
+                # Ensure the 'date' column is timezone-naive for comparison
+                if df["date"].dt.tz is not None:
+                    df["date"] = df["date"].dt.tz_localize(None)
+
                 df = df[(df["date"] >= start_date) & (df["date"] <= end_date)]
                 print(
                     f"✅ Filtered to {len(df)} reviews from {start_date_str} to {end_date_str}."
                 )
-            except ValueError:
+            except (ValueError, KeyError):
                 print(
-                    "❌ Invalid date format. Please use YYYY-MM-DD. Skipping date filter."
+                    "❌ Invalid date format or filtering error. Please use YYYY-MM-DD. Skipping date filter."
                 )
+
+        # Final check before analysis
+        if df.empty:
+            print(
+                f"No reviews remain for '{app_name}' after filtering. Skipping analysis."
+            )
+            continue
 
         df = analyze_sentiment(df, sentiment_analyzer)
         df = analyze_topics(df, nlp)
