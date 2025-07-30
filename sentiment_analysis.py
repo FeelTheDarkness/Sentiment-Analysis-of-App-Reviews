@@ -1,29 +1,25 @@
-# enhanced_app_analysis.py
-
-import pandas as pd
+import re
+import os
+import sys
+import json
+import spacy
+import torch
+import warnings
+import requests
 import numpy as np
+import pandas as pd
+from datetime import datetime
+from collections import Counter
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-import re
-import sys
-import os
-import requests
-import json
-from datetime import datetime
+from transformers.pipelines import pipeline
+from google_play_scraper import app as gp_app, reviews, Sort
 
 # Add the virtual environment site-packages to the path to ensure spaCy uses the correct installation
 venv_site_packages = "/home/parantapsinha/Parantap/Sentiment-Analysis-of-App-Reviews/.analysis/lib/python3.11/site-packages"
 if venv_site_packages not in sys.path:
     sys.path.insert(0, venv_site_packages)
 
-import spacy
-from google_play_scraper import app as gp_app, reviews, Sort
-from transformers.pipelines import pipeline
-import torch
-from collections import Counter
-import warnings
-
-# --- INITIAL SETUP ---
 
 # Suppress warnings for cleaner output
 warnings.filterwarnings("ignore")
@@ -78,9 +74,6 @@ def scrape_apple_app_store_reviews(app_name, app_id, country_code, review_count)
 
     # Method 1: Try using the iTunes RSS feed approach
     try:
-        import requests
-        import json
-        from datetime import datetime
 
         # Construct the RSS feed URL for app reviews
         rss_url = f"https://itunes.apple.com/{country_code}/rss/customerreviews/id={app_id}/sortBy=mostRecent/json"
@@ -161,7 +154,6 @@ def scrape_apple_app_store_reviews(app_name, app_id, country_code, review_count)
 
     # Method 3: Try using requests with a different endpoint
     try:
-        import requests
 
         print("Trying direct API approach...")
 
@@ -288,21 +280,18 @@ def create_interactive_dashboard(app_data, comparison_data=None):
     print("📊 Generating interactive dashboard...")
     is_comparison = comparison_data is not None
 
-    # <<< FIX: Adjust layout for single-app view to separate histograms >>>
     if is_comparison:
+        # --- COMPARISON MODE: Explicitly build the dashboard for clarity ---
         rows, cols = 5, 2
-        app1_name, app2_name = app_data["name"], comparison_data["name"]
+        app1_name, df1 = app_data['name'], app_data['df']
+        app2_name, df2 = comparison_data['name'], comparison_data['df']
+
         subplot_titles = (
-            f"Sentiment Score - {app1_name}",
-            f"Sentiment Score - {app2_name}",
-            f"Sentiment Breakdown - {app1_name}",
-            f"Sentiment Breakdown - {app2_name}",
-            "Weekly Average Sentiment",
-            None,
-            f"Top Positive Topics - {app1_name}",
-            f"Top Positive Topics - {app2_name}",
-            f"Top Negative Topics - {app1_name}",
-            f"Top Negative Topics - {app2_name}",
+            f"Sentiment Score - {app1_name}", f"Sentiment Score - {app2_name}",
+            f"Sentiment Breakdown - {app1_name}", f"Sentiment Breakdown - {app2_name}",
+            "Weekly Average Sentiment", None,
+            f"Top Positive Topics - {app1_name}", f"Top Positive Topics - {app2_name}",
+            f"Top Negative Topics - {app1_name}", f"Top Negative Topics - {app2_name}",
         )
         specs = [
             [{"type": "histogram"}, {"type": "histogram"}],
@@ -311,156 +300,69 @@ def create_interactive_dashboard(app_data, comparison_data=None):
             [{"type": "bar"}, {"type": "bar"}],
             [{"type": "bar"}, {"type": "bar"}],
         ]
-        fig_height = 1200
-    else:
-        rows, cols = 6, 1
-        subplot_titles = (
-            "Sentiment Score Distribution", # New Title
-            "User Rating Distribution",     # New Title
-            "Sentiment Breakdown",
-            "Weekly Average Sentiment",
-            "Top Positive Topics",
-            "Top Negative Topics",
-        )
-        specs = [
-            [{"type": "histogram"}],
-            [{"type": "histogram"}],
-            [{"type": "pie"}],
-            [{"type": "xy"}],
-            [{"type": "bar"}],
-            [{"type": "bar"}],
-        ]
-        fig_height = 1800 # Increased height for the extra plot
 
-    fig = make_subplots(
-        rows=rows,
-        cols=cols,
-        subplot_titles=subplot_titles,
-        specs=specs,
-        vertical_spacing=0.06, # Adjusted spacing
-    )
+        fig = make_subplots(rows=rows, cols=cols, subplot_titles=subplot_titles, specs=specs, vertical_spacing=0.08)
 
-    def plot_app_data(data, fig, col_num):
-        df = data["df"]
-        if df.empty:
-            return
+        # -- App 1 (Left Column) --
+        fig.add_trace(go.Histogram(x=df1["sentiment_score"], name=f"Sentiment Score ({app1_name})", marker_color="#1f77b4", xbins=dict(start=-1.0, end=1.0, size=0.1)), row=1, col=1)
+        fig.add_trace(go.Pie(labels=df1["sentiment_label"].value_counts().index, values=df1["sentiment_label"].value_counts().values, name=f"Sentiment ({app1_name})"), row=2, col=1)
 
-        # --- Plotting Logic for Single App View ---
-        if not is_comparison:
-            # <<< FIX: Add Sentiment Score histogram to its own row (row 1) >>>
-            # Manually define bins to correctly represent the -1 to 1 score range.
-            fig.add_trace(
-                go.Histogram(
-                    x=df["sentiment_score"],
-                    name="Sentiment Score",
-                    marker_color="#1f77b4",
-                    xbins=dict(start=-1.0, end=1.0, size=0.1) # Corrects binning issue
-                ),
-                row=1,
-                col=1,
-            )
-            # <<< FIX: Add User Rating histogram to its own row (row 2) >>>
-            fig.add_trace(
-                go.Histogram(
-                    x=df["rating"],
-                    name="User Rating",
-                    marker_color="#ff7f0e"
-                ),
-                row=2,
-                col=1,
-            )
-            # Adjust row indices for subsequent plots
-            pie_row, scatter_row, pos_topic_row, neg_topic_row = 3, 4, 5, 6
+        if "topics" in df1.columns:
+            pos_topics1 = Counter(topic for _, row in df1[df1["sentiment_label"] == "POSITIVE"].iterrows() for topic in row["topics"])
+            neg_topics1 = Counter(topic for _, row in df1[df1["sentiment_label"] == "NEGATIVE"].iterrows() for topic in row["topics"])
+            pos_df1 = pd.DataFrame(pos_topics1.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")
+            neg_df1 = pd.DataFrame(neg_topics1.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")
+
+            fig.add_trace(go.Bar(y=pos_df1["Topic"], x=pos_df1["Count"], orientation="h", name=f"Positive ({app1_name})", marker_color="green", showlegend=False), row=4, col=1)
+            fig.add_trace(go.Bar(y=neg_df1["Topic"], x=neg_df1["Count"], orientation="h", name=f"Negative ({app1_name})", marker_color="red", showlegend=False), row=5, col=1)
+
+        # -- App 2 (Right Column) --
+        fig.add_trace(go.Histogram(x=df2["sentiment_score"], name=f"Sentiment Score ({app2_name})", marker_color="#ff7f0e", xbins=dict(start=-1.0, end=1.0, size=0.1)), row=1, col=2)
+        fig.add_trace(go.Pie(labels=df2["sentiment_label"].value_counts().index, values=df2["sentiment_label"].value_counts().values, name=f"Sentiment ({app2_name})"), row=2, col=2)
+
+        if "topics" in df2.columns:
+            pos_topics2 = Counter(topic for _, row in df2[df2["sentiment_label"] == "POSITIVE"].iterrows() for topic in row["topics"])
+            neg_topics2 = Counter(topic for _, row in df2[df2["sentiment_label"] == "NEGATIVE"].iterrows() for topic in row["topics"])
+            pos_df2 = pd.DataFrame(pos_topics2.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")
+            neg_df2 = pd.DataFrame(neg_topics2.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")
+
+            fig.add_trace(go.Bar(y=pos_df2["Topic"], x=pos_df2["Count"], orientation="h", name=f"Positive ({app2_name})", marker_color="mediumseagreen", showlegend=False), row=4, col=2)
+            fig.add_trace(go.Bar(y=neg_df2["Topic"], x=neg_df2["Count"], orientation="h", name=f"Negative ({app2_name})", marker_color="tomato", showlegend=False), row=5, col=2)
+
+        # -- Shared Chart (Weekly Sentiment) --
+        df1_ts = df1.set_index("date").resample("W")["sentiment_score"].mean().dropna()
+        df2_ts = df2.set_index("date").resample("W")["sentiment_score"].mean().dropna()
+        fig.add_trace(go.Scatter(x=df1_ts.index, y=df1_ts.values, mode="lines+markers", name=f"{app1_name} Trend"), row=3, col=1)
+        fig.add_trace(go.Scatter(x=df2_ts.index, y=df2_ts.values, mode="lines+markers", name=f"{app2_name} Trend"), row=3, col=1)
         
-        # --- Plotting Logic for Comparison View ---
-        else:
-            # Original logic for comparison view remains the same
-            fig.add_trace(
-                go.Histogram(
-                    x=df["sentiment_score"],
-                    name="Sentiment Score",
-                    marker_color="#1f77b4",
-                    xbins=dict(start=-1.0, end=1.0, size=0.1)
-                ),
-                row=1,
-                col=col_num,
-            )
-            pie_row, scatter_row, pos_topic_row, neg_topic_row = 2, 3, 4, 5
+        fig.update_layout(title_text=f"📊 App Analysis: {app1_name} vs. {app2_name}", height=1200, showlegend=True)
 
-        # --- Common plotting logic ---
-        sentiment_counts = df["sentiment_label"].value_counts()
-        fig.add_trace(
-            go.Pie(
-                labels=sentiment_counts.index,
-                values=sentiment_counts.values,
-                name="Sentiment",
-            ),
-            row=pie_row,
-            col=col_num if is_comparison else 1,
-        )
+    else:
+        # --- SINGLE APP MODE: This logic is preserved as it was correct ---
+        rows, cols = 6, 1
+        app_name, df = app_data['name'], app_data['df']
+        subplot_titles = ("Sentiment Score Distribution", "User Rating Distribution", "Sentiment Breakdown", "Weekly Average Sentiment", "Top Positive Topics", "Top Negative Topics")
+        specs = [[{"type": "histogram"}], [{"type": "histogram"}], [{"type": "pie"}], [{"type": "xy"}], [{"type": "bar"}], [{"type": "bar"}]]
+        
+        fig = make_subplots(rows=rows, cols=cols, subplot_titles=subplot_titles, specs=specs, vertical_spacing=0.06)
 
+        fig.add_trace(go.Histogram(x=df["sentiment_score"], name="Sentiment Score", marker_color="#1f77b4", xbins=dict(start=-1.0, end=1.0, size=0.1)), row=1, col=1)
+        fig.add_trace(go.Histogram(x=df["rating"], name="User Rating", marker_color="#ff7f0e"), row=2, col=1)
+        fig.add_trace(go.Pie(labels=df["sentiment_label"].value_counts().index, values=df["sentiment_label"].value_counts().values, name="Sentiment"), row=3, col=1)
+        
         df_ts = df.set_index("date").resample("W")["sentiment_score"].mean().dropna()
-        fig.add_trace(
-            go.Scatter(
-                x=df_ts.index,
-                y=df_ts.values,
-                mode="lines+markers",
-                name=f"{data['name']} Sentiment Trend",
-            ),
-            row=scatter_row,
-            col=1, # This spans both columns in comparison mode
-        )
+        fig.add_trace(go.Scatter(x=df_ts.index, y=df_ts.values, mode="lines+markers", name=f"{app_name} Sentiment Trend"), row=4, col=1)
 
         if "topics" in df.columns:
-            positive_topics = Counter(
-                topic
-                for _, row in df[df["sentiment_label"] == "POSITIVE"].iterrows()
-                for topic in row["topics"]
-            )
-            negative_topics = Counter(
-                topic
-                for _, row in df[df["sentiment_label"] == "NEGATIVE"].iterrows()
-                for topic in row["topics"]
-            )
-            pos_topics_df = pd.DataFrame(positive_topics.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")
-            neg_topics_df = pd.DataFrame(negative_topics.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")
-            fig.add_trace(
-                go.Bar(
-                    y=pos_topics_df["Topic"],
-                    x=pos_topics_df["Count"],
-                    orientation="h",
-                    name="Positive",
-                    marker_color="green",
-                ),
-                row=pos_topic_row,
-                col=col_num if is_comparison else 1,
-            )
-            fig.add_trace(
-                go.Bar(
-                    y=neg_topics_df["Topic"],
-                    x=neg_topics_df["Count"],
-                    orientation="h",
-                    name="Negative",
-                    marker_color="red",
-                ),
-                row=neg_topic_row,
-                col=col_num if is_comparison else 1,
-            )
+            pos_topics = Counter(topic for _, row in df[df["sentiment_label"] == "POSITIVE"].iterrows() for topic in row["topics"])
+            neg_topics = Counter(topic for _, row in df[df["sentiment_label"] == "NEGATIVE"].iterrows() for topic in row["topics"])
+            pos_df = pd.DataFrame(pos_topics.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")
+            neg_df = pd.DataFrame(neg_topics.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")
 
-    plot_app_data(app_data, fig, 1)
-    if is_comparison:
-        plot_app_data(comparison_data, fig, 2)
-        fig.update_layout(
-            title_text=f"📊 App Analysis: {app_data['name']} vs. {comparison_data['name']}",
-            height=fig_height,
-            showlegend=True,
-        )
-    else:
-        fig.update_layout(
-            title_text=f"📊 App Analysis: {app_data['name']}",
-            height=fig_height,
-            showlegend=True,
-        )
+            fig.add_trace(go.Bar(y=pos_df["Topic"], x=pos_df["Count"], orientation="h", name="Positive", marker_color="green"), row=5, col=1)
+            fig.add_trace(go.Bar(y=neg_df["Topic"], x=neg_df["Count"], orientation="h", name="Negative", marker_color="red"), row=6, col=1)
+        
+        fig.update_layout(title_text=f"📊 App Analysis: {app_name}", height=1800, showlegend=True)
 
     filename = f"analysis_dashboard_{app_data['name'].replace(' ', '_')}.html"
     fig.write_html(filename)
