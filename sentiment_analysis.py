@@ -288,15 +288,9 @@ def create_interactive_dashboard(app_data, comparison_data=None):
     print("📊 Generating interactive dashboard...")
     is_comparison = comparison_data is not None
 
-    rows, cols = 5, (2 if is_comparison else 1)
-    subplot_titles = (
-        "Sentiment Score & User Rating Distribution",
-        "Sentiment Breakdown",
-        "Weekly Average Sentiment",
-        "Top Positive Topics",
-        "Top Negative Topics",
-    )
+    # <<< FIX: Adjust layout for single-app view to separate histograms >>>
     if is_comparison:
+        rows, cols = 5, 2
         app1_name, app2_name = app_data["name"], comparison_data["name"]
         subplot_titles = (
             f"Sentiment Score - {app1_name}",
@@ -310,30 +304,40 @@ def create_interactive_dashboard(app_data, comparison_data=None):
             f"Top Negative Topics - {app1_name}",
             f"Top Negative Topics - {app2_name}",
         )
-
-    specs = (
-        [
+        specs = [
             [{"type": "histogram"}, {"type": "histogram"}],
             [{"type": "domain"}, {"type": "domain"}],
             [{"colspan": 2}, None],
             [{"type": "bar"}, {"type": "bar"}],
             [{"type": "bar"}, {"type": "bar"}],
         ]
-        if is_comparison
-        else [
+        fig_height = 1200
+    else:
+        rows, cols = 6, 1
+        subplot_titles = (
+            "Sentiment Score Distribution", # New Title
+            "User Rating Distribution",     # New Title
+            "Sentiment Breakdown",
+            "Weekly Average Sentiment",
+            "Top Positive Topics",
+            "Top Negative Topics",
+        )
+        specs = [
+            [{"type": "histogram"}],
             [{"type": "histogram"}],
             [{"type": "pie"}],
             [{"type": "xy"}],
             [{"type": "bar"}],
             [{"type": "bar"}],
         ]
-    )
+        fig_height = 1800 # Increased height for the extra plot
+
     fig = make_subplots(
         rows=rows,
         cols=cols,
         subplot_titles=subplot_titles,
         specs=specs,
-        vertical_spacing=0.08,
+        vertical_spacing=0.06, # Adjusted spacing
     )
 
     def plot_app_data(data, fig, col_num):
@@ -341,22 +345,49 @@ def create_interactive_dashboard(app_data, comparison_data=None):
         if df.empty:
             return
 
-        fig.add_trace(
-            go.Histogram(
-                x=df["sentiment_score"], name="Sentiment Score", marker_color="#1f77b4"
-            ),
-            row=1,
-            col=col_num,
-        )
+        # --- Plotting Logic for Single App View ---
         if not is_comparison:
+            # <<< FIX: Add Sentiment Score histogram to its own row (row 1) >>>
+            # Manually define bins to correctly represent the -1 to 1 score range.
             fig.add_trace(
                 go.Histogram(
-                    x=df["rating"], name="User Rating", marker_color="#ff7f0e"
+                    x=df["sentiment_score"],
+                    name="Sentiment Score",
+                    marker_color="#1f77b4",
+                    xbins=dict(start=-1.0, end=1.0, size=0.1) # Corrects binning issue
                 ),
                 row=1,
                 col=1,
             )
+            # <<< FIX: Add User Rating histogram to its own row (row 2) >>>
+            fig.add_trace(
+                go.Histogram(
+                    x=df["rating"],
+                    name="User Rating",
+                    marker_color="#ff7f0e"
+                ),
+                row=2,
+                col=1,
+            )
+            # Adjust row indices for subsequent plots
+            pie_row, scatter_row, pos_topic_row, neg_topic_row = 3, 4, 5, 6
+        
+        # --- Plotting Logic for Comparison View ---
+        else:
+            # Original logic for comparison view remains the same
+            fig.add_trace(
+                go.Histogram(
+                    x=df["sentiment_score"],
+                    name="Sentiment Score",
+                    marker_color="#1f77b4",
+                    xbins=dict(start=-1.0, end=1.0, size=0.1)
+                ),
+                row=1,
+                col=col_num,
+            )
+            pie_row, scatter_row, pos_topic_row, neg_topic_row = 2, 3, 4, 5
 
+        # --- Common plotting logic ---
         sentiment_counts = df["sentiment_label"].value_counts()
         fig.add_trace(
             go.Pie(
@@ -364,8 +395,8 @@ def create_interactive_dashboard(app_data, comparison_data=None):
                 values=sentiment_counts.values,
                 name="Sentiment",
             ),
-            row=2,
-            col=col_num,
+            row=pie_row,
+            col=col_num if is_comparison else 1,
         )
 
         df_ts = df.set_index("date").resample("W")["sentiment_score"].mean().dropna()
@@ -376,8 +407,8 @@ def create_interactive_dashboard(app_data, comparison_data=None):
                 mode="lines+markers",
                 name=f"{data['name']} Sentiment Trend",
             ),
-            row=3,
-            col=1,
+            row=scatter_row,
+            col=1, # This spans both columns in comparison mode
         )
 
         if "topics" in df.columns:
@@ -391,8 +422,8 @@ def create_interactive_dashboard(app_data, comparison_data=None):
                 for _, row in df[df["sentiment_label"] == "NEGATIVE"].iterrows()
                 for topic in row["topics"]
             )
-            pos_topics_df = pd.DataFrame(positive_topics.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")  # type: ignore
-            neg_topics_df = pd.DataFrame(negative_topics.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")  # type: ignore
+            pos_topics_df = pd.DataFrame(positive_topics.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")
+            neg_topics_df = pd.DataFrame(negative_topics.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")
             fig.add_trace(
                 go.Bar(
                     y=pos_topics_df["Topic"],
@@ -401,8 +432,8 @@ def create_interactive_dashboard(app_data, comparison_data=None):
                     name="Positive",
                     marker_color="green",
                 ),
-                row=4,
-                col=col_num,
+                row=pos_topic_row,
+                col=col_num if is_comparison else 1,
             )
             fig.add_trace(
                 go.Bar(
@@ -412,8 +443,8 @@ def create_interactive_dashboard(app_data, comparison_data=None):
                     name="Negative",
                     marker_color="red",
                 ),
-                row=5,
-                col=col_num,
+                row=neg_topic_row,
+                col=col_num if is_comparison else 1,
             )
 
     plot_app_data(app_data, fig, 1)
@@ -421,13 +452,13 @@ def create_interactive_dashboard(app_data, comparison_data=None):
         plot_app_data(comparison_data, fig, 2)
         fig.update_layout(
             title_text=f"📊 App Analysis: {app_data['name']} vs. {comparison_data['name']}",
-            height=1200,
+            height=fig_height,
             showlegend=True,
         )
     else:
         fig.update_layout(
             title_text=f"📊 App Analysis: {app_data['name']}",
-            height=1600,
+            height=fig_height,
             showlegend=True,
         )
 
