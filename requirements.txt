@@ -63,7 +63,7 @@ pyparsing==3.2.3
 python-dateutil==2.9.0.post0
 pytz==2025.2
 PyYAML==6.0.2
-regex==2024.11.6
+regex==2025.7.34
 requests==2.23.0
 rich==14.1.0
 safetensors==0.5.3
