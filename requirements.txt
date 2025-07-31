@@ -78,7 +78,7 @@ spacy-loggers==1.0.5
 srsly==2.5.1
 sympy==1.14.0
 thinc==8.3.6
-tokenizers==0.21.2
+tokenizers==0.21.4
 torch==2.7.1
 tqdm==4.67.1
 transformers==4.54.0
