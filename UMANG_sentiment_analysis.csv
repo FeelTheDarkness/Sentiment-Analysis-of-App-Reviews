@@ -1,0 +1,1001 @@
+review,rating,date,source,sentiment_label,sentiment_score,topics,emotion,aspect_sentiments,category
+useless app not able to activate my UAN no. portal says go through app but your app is absolutely bogus,1,2025-07-31 14:58:07,Google Play,NEGATIVE,-0.9997277855873108,"['useless app', 'my uan', 'no. portal', 'app', 'your app']",anger,"{'useless app': 'Negative', 'my uan': 'Neutral', 'no. portal': 'Negative', 'app': 'Negative', 'your app': 'Negative'}",review
+good,5,2025-07-31 14:55:29,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+unable to access app after new updates,1,2025-07-31 14:45:59,Google Play,NEGATIVE,-0.9996956586837769,"['app', 'new updates']",sadness,"{'app': 'Negative', 'new updates': 'Negative'}",review
+very good,5,2025-07-31 14:42:04,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+good,5,2025-07-31 14:17:48,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+This app is not available in Chromebook and laptop. Please make it available,2,2025-07-31 14:12:47,Google Play,NEGATIVE,-0.9796949625015259,"['this app', 'chromebook', 'laptop']",neutral,"{'this app': 'Negative', 'chromebook': 'Negative', 'laptop': 'Negative'}",review
+"if beta program is full... it means I can't do anything with this app??? I should uninstall this app? don't know what to say?? I have downloaded this app since so long and updated many times but this app is not sending verification mail on my gmail account, so I can't start my work and all. what to do?? 🥺",1,2025-07-31 13:48:26,Google Play,NEGATIVE,-0.9989473223686218,"['beta program', 'this app', 'this app', 'this app', 'this app', 'verification mail', 'my gmail account', 'my work']",sadness,"{'beta program': 'Negative', 'this app': 'Negative', 'verification mail': 'Negative', 'my gmail account': 'Negative', 'my work': 'Negative'}",review
+simple,5,2025-07-31 13:21:01,Google Play,POSITIVE,0.9996788501739502,[],neutral,{},review
+good,5,2025-07-31 12:56:43,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,4,2025-07-31 12:33:41,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+verrygood,5,2025-07-31 12:25:33,Google Play,POSITIVE,0.8545545339584351,['verrygood'],neutral,{'verrygood': 'Positive'},review
+good,4,2025-07-31 12:13:47,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+application not open.. running take more time,1,2025-07-31 11:53:35,Google Play,NEGATIVE,-0.9997289776802063,"['application', 'more time']",sadness,"{'application': 'Negative', 'more time': 'Negative'}",review
+good,5,2025-07-31 11:42:20,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-31 11:41:38,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"Good for nothing . been trying to fetch my EPFO passbook, error keeps occurring.. not serving the purpose.. uninstalling finally",1,2025-07-31 11:29:36,Google Play,NEGATIVE,-0.9998119473457336,"['my epfo passbook', 'error', 'the purpose']",sadness,"{'my epfo passbook': 'Negative', 'error': 'Negative', 'the purpose': 'Negative'}",bug_report
+very good jcjstuo,5,2025-07-31 10:46:04,Google Play,POSITIVE,0.9998328685760498,['very good jcjstuo'],joy,{'very good jcjstuo': 'Positive'},review
+aap is not work all time.,1,2025-07-31 10:41:48,Google Play,NEGATIVE,-0.9990479350090027,['aap'],sadness,{'aap': 'Neutral'},review
+enakku app open agala,1,2025-07-31 09:59:43,Google Play,NEGATIVE,-0.592968225479126,"['enakku app', 'open agala']",neutral,"{'enakku app': 'Neutral', 'open agala': 'Neutral'}",review
+good,4,2025-07-31 08:58:30,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"The app is not opening, it was working fine earlier",1,2025-07-31 08:42:56,Google Play,NEGATIVE,-0.982711136341095,['the app'],neutral,{'the app': 'Negative'},review
+since I downloaded trying to raise a claim 10c but I couldn't get it all the time showing regret,2,2025-07-31 08:25:34,Google Play,NEGATIVE,-0.9969149827957153,"['a claim', '10c', 'regret']",sadness,"{'a claim': 'Negative', '10c': 'Negative', 'regret': 'Negative'}",review
+very good service,5,2025-07-31 08:14:20,Google Play,POSITIVE,0.9998648166656494,['very good service'],joy,{'very good service': 'Positive'},review
+nice,5,2025-07-31 08:03:16,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+super,5,2025-07-31 07:25:00,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+very good app,5,2025-07-31 07:00:21,Google Play,POSITIVE,0.9998675584793091,['very good app'],joy,{'very good app': 'Positive'},review
+best Service,5,2025-07-31 04:37:35,Google Play,POSITIVE,0.999809205532074,['best service'],neutral,{'best service': 'Positive'},review
+it's not open app im trying all tips but it's not open way I'm very disappointed pliz pex this,1,2025-07-31 00:09:20,Google Play,NEGATIVE,-0.9955248832702637,"['open app', 'all tips', 'open way', 'pliz']",sadness,"{'open app': 'Negative', 'all tips': 'Negative', 'open way': 'Negative', 'pliz': 'Negative'}",review
+bad experience sometime not working properly,1,2025-07-30 23:32:08,Google Play,NEGATIVE,-0.9998015761375427,['bad experience'],sadness,{'bad experience': 'Negative'},bug_report
+application erre hota h,1,2025-07-30 23:24:59,Google Play,NEGATIVE,-0.9810965657234192,['application erre hota h'],neutral,{'application erre hota h': 'Positive'},review
+very good👍,5,2025-07-30 23:21:08,Google Play,POSITIVE,0.8243634104728699,[],joy,{},review
+my life is my umang,5,2025-07-30 22:48:41,Google Play,POSITIVE,0.9978450536727905,"['my life', 'my umang']",sadness,"{'my life': 'Positive', 'my umang': 'Positive'}",review
+so work full,5,2025-07-30 22:22:36,Google Play,POSITIVE,0.9983421564102173,[],neutral,{},review
+"Already have been solve previous problem, Thanks ""UMANG""💐💐💐💐💐",5,2025-07-30 22:13:04,Google Play,POSITIVE,0.9638524055480957,"['previous problem', '""umang']",neutral,"{'previous problem': 'Positive', '""umang': 'Positive'}",bug_report
+so nice,5,2025-07-30 22:13:01,Google Play,POSITIVE,0.9998610019683838,[],joy,{},review
+incredible App 😀👍,5,2025-07-30 20:56:41,Google Play,POSITIVE,0.9997276663780212,['incredible app 😀👍'],joy,{'incredible app 😀👍': 'Positive'},review
+nice app,5,2025-07-30 20:39:42,Google Play,POSITIVE,0.9998061060905457,['nice app'],neutral,{'nice app': 'Positive'},review
+good application 👍,5,2025-07-30 20:31:31,Google Play,POSITIVE,0.9998018145561218,['good application'],neutral,{'good application': 'Positive'},review
+very poor process,1,2025-07-30 20:21:12,Google Play,NEGATIVE,-0.9998058676719666,['very poor process'],sadness,{'very poor process': 'Negative'},review
+सही से काम नहीं करता है,1,2025-07-30 20:09:21,Google Play,NEGATIVE,-0.8078674674034119,['से काम नहीं करता है'],neutral,{'से काम नहीं करता है': 'Negative'},review
+very nice,4,2025-07-30 20:03:13,Google Play,POSITIVE,0.9998563528060913,[],joy,{},review
+I like it❤️,5,2025-07-30 19:31:22,Google Play,POSITIVE,0.9989686012268066,[],joy,{},review
+good,5,2025-07-30 19:27:26,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-30 18:47:47,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+supur super,5,2025-07-30 18:15:50,Google Play,POSITIVE,0.7495640516281128,['super'],neutral,{'super': 'Positive'},review
+good 👍👍,5,2025-07-30 17:43:55,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+good,5,2025-07-30 16:43:40,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+worst app anything is not working,1,2025-07-30 16:33:31,Google Play,NEGATIVE,-0.9998154044151306,[],disgust,{},bug_report
+bhut acha aap hai,4,2025-07-30 16:29:46,Google Play,POSITIVE,0.7981328964233398,['bhut acha aap hai'],sadness,{'bhut acha aap hai': 'Positive'},review
+governments best 👌 work,5,2025-07-30 16:25:06,Google Play,POSITIVE,0.998281717300415,['governments'],neutral,{'governments': 'Positive'},review
+ok,4,2025-07-30 15:17:36,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+very good app,5,2025-07-30 15:02:37,Google Play,POSITIVE,0.9998675584793091,['very good app'],joy,{'very good app': 'Positive'},review
+gret,5,2025-07-30 14:46:39,Google Play,NEGATIVE,-0.9708701968193054,['gret'],sadness,{'gret': 'Positive'},review
+good experience,4,2025-07-30 14:28:44,Google Play,POSITIVE,0.9998599290847778,['good experience'],joy,{'good experience': 'Positive'},review
+kya application he yaar abhi tak pf jama nahi huaa stuts show hi ni ho rha he ek application he jha stuts dikhta he wo bhi theek se nahi chalta,1,2025-07-30 14:23:19,Google Play,NEGATIVE,-0.9966589212417603,"['abhi tak', 'jama nahi huaa stuts', 'application', 'stuts', 'theek', 'se nahi chalta']",neutral,"{'abhi tak': 'Negative', 'jama nahi huaa stuts': 'Negative', 'application': 'Negative', 'stuts': 'Negative', 'theek': 'Negative', 'se nahi chalta': 'Negative'}",review
+"This app is no more working as earlier, I'm not even able to see the services.",1,2025-07-30 14:22:12,Google Play,NEGATIVE,-0.9986037611961365,"['this app', 'the services']",sadness,"{'this app': 'Negative', 'the services': 'Negative'}",review
+"App need some imp updates, couldn't verify e-mail id due to below reason... apirevamp-nlb.umangapp.in doesn’t support a secure connection with HTTPS Attackers can see and change information you send or receive from the site. It's safest to visit this site later if you're using a public network. There is less risk from a trusted network, like your home or work Wi-Fi. You might also contact the site owner and suggest they upgrade to HTTPS. Learn more about this warning",3,2025-07-30 14:03:42,Google Play,NEGATIVE,-0.9980558156967163,"['app', 'some imp updates', 'mail', 'reason', 'apirevamp-nlb.umangapp.in', 'a secure connection', 'https attackers', 'information', 'the site', 'this site', 'a public network', 'less risk', 'a trusted network', 'your home', 'the site owner', 'https', 'this warning']",fear,"{'app': 'Negative', 'some imp updates': 'Negative', 'mail': 'Negative', 'reason': 'Negative', 'apirevamp-nlb.umangapp.in': 'Negative', 'a secure connection': 'Negative', 'https attackers': 'Negative', 'information': 'Negative', 'the site': 'Negative', 'this site': 'Negative', 'a public network': 'Negative', 'less risk': 'Negative', 'a trusted network': 'Negative', 'your home': 'Negative', 'the site owner': 'Negative', 'https': 'Negative', 'this warning': 'Negative'}",review
+app not opening in my device,1,2025-07-30 14:02:26,Google Play,NEGATIVE,-0.9993867874145508,"['app', 'my device']",sadness,"{'app': 'Negative', 'my device': 'Negative'}",review
+bahut vadia good,5,2025-07-30 13:51:23,Google Play,POSITIVE,0.9997695088386536,['bahut vadia'],joy,{'bahut vadia': 'Positive'},review
+good 👍👍👍👍,4,2025-07-30 13:23:52,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+yas,5,2025-07-30 13:19:32,Google Play,POSITIVE,0.8573846817016602,['yas'],neutral,{'yas': 'Positive'},review
+I am satisfied this aap,5,2025-07-30 13:18:05,Google Play,POSITIVE,0.9994449019432068,[],joy,{},review
+Too helpfull.,5,2025-07-30 12:19:09,Google Play,NEGATIVE,-0.9967448711395264,[],sadness,{},review
+very bad,1,2025-07-30 12:01:10,Google Play,NEGATIVE,-0.9997884631156921,[],disgust,{},review
+ok,5,2025-07-30 12:00:10,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+Umang not working. Please do the needful.,1,2025-07-30 11:26:24,Google Play,NEGATIVE,-0.9985111355781555,"['umang', 'the needful']",neutral,"{'umang': 'Negative', 'the needful': 'Neutral'}",bug_report
+app not good work,1,2025-07-30 11:26:24,Google Play,NEGATIVE,-0.9997463822364807,['not good work'],sadness,{'not good work': 'Negative'},review
+very slow app ☹️,2,2025-07-30 11:22:42,Google Play,NEGATIVE,-0.9991080164909363,['very slow app'],sadness,{'very slow app': 'Negative'},review
+Good,5,2025-07-30 11:09:30,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+this the very use helpfully and simple,5,2025-07-30 10:54:55,Google Play,POSITIVE,0.9967437982559204,[],joy,{},review
+dont use the UMANG app.not give coustomer service and not claim PF amount only show the under prosses 😡😔,1,2025-07-30 10:49:26,Google Play,NEGATIVE,-0.9964430928230286,"['the umang', 'coustomer service', 'pf amount', 'prosses']",neutral,"{'the umang': 'Neutral', 'coustomer service': 'Negative', 'pf amount': 'Negative', 'prosses': 'Negative'}",review
+good,5,2025-07-30 10:35:13,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+nice,5,2025-07-30 10:24:36,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+nice,5,2025-07-30 09:15:58,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+Problem Occurs While Login !,2,2025-07-30 08:35:55,Google Play,NEGATIVE,-0.9990587830543518,['problem'],neutral,{'problem': 'Negative'},bug_report
+best application ever. direct compitition to IRCTC. thodi or error aaskti h to thik rhega,5,2025-07-30 08:31:15,Google Play,POSITIVE,0.9887650012969971,"['best application', 'direct compitition', 'irctc', 'thodi', 'error aaskti', 'thik rhega']",neutral,"{'best application': 'Positive', 'direct compitition': 'Positive', 'irctc': 'Neutral', 'thodi': 'Positive', 'error aaskti': 'Neutral', 'thik rhega': 'Neutral'}",bug_report
+"It's such a useless app, what should I say, whenever I look at it, there is some problem or the other, all my PF money is stuck, UAN is not getting activated, and by chance it is also happening, it won't open on this device.",1,2025-07-30 04:30:29,Google Play,NEGATIVE,-0.9997435212135315,"['such a useless app', 'some problem', 'all my pf money', 'uan', 'chance', 'this device']",disgust,"{'such a useless app': 'Negative', 'some problem': 'Negative', 'all my pf money': 'Negative', 'uan': 'Negative', 'chance': 'Negative', 'this device': 'Neutral'}",bug_report
+nice app,5,2025-07-30 01:42:57,Google Play,POSITIVE,0.9998061060905457,['nice app'],neutral,{'nice app': 'Positive'},review
+ab ye app bahut hi bekar ho gya hai,1,2025-07-30 01:29:15,Google Play,POSITIVE,0.9568303227424622,['ab ye app'],neutral,{'ab ye app': 'Positive'},review
+very nice,5,2025-07-30 00:31:24,Google Play,POSITIVE,0.9998563528060913,[],joy,{},review
+goog,5,2025-07-30 00:20:22,Google Play,NEGATIVE,-0.9989757537841797,['goog'],neutral,{'goog': 'Neutral'},review
+Thank you I'm able to access them now,5,2025-07-29 23:10:58,Google Play,POSITIVE,0.9998281002044678,[],neutral,{},review
+very nice app already clear,5,2025-07-29 22:25:51,Google Play,POSITIVE,0.9998258948326111,['very nice app'],joy,{'very nice app': 'Positive'},review
+nice 👍,5,2025-07-29 22:16:19,Google Play,POSITIVE,0.9998424053192139,[],neutral,{},review
+nice,5,2025-07-29 22:12:03,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+good,5,2025-07-29 21:41:13,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good experience,5,2025-07-29 21:32:26,Google Play,POSITIVE,0.9998599290847778,['good experience'],joy,{'good experience': 'Positive'},review
+excellent,5,2025-07-29 20:57:17,Google Play,POSITIVE,0.9998434782028198,[],joy,{},review
+Best usefull app,4,2025-07-29 20:31:06,Google Play,POSITIVE,0.9983670115470886,['best usefull app'],neutral,{'best usefull app': 'Positive'},review
+sarver is bad..,3,2025-07-29 20:26:41,Google Play,NEGATIVE,-0.9998112320899963,[],disgust,{},review
+nice,5,2025-07-29 20:11:37,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+very bad app doesn't work,1,2025-07-29 20:06:54,Google Play,NEGATIVE,-0.9997734427452087,['very bad app'],sadness,{'very bad app': 'Negative'},review
+usefull app,5,2025-07-29 19:57:38,Google Play,POSITIVE,0.9953721165657043,['usefull app'],neutral,{'usefull app': 'Positive'},review
+very good,4,2025-07-29 18:52:22,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+aap nahi chale rahe hai,5,2025-07-29 17:57:22,Google Play,NEGATIVE,-0.5064538717269897,['aap nahi chale rahe hai'],neutral,{'aap nahi chale rahe hai': 'Positive'},review
+best 👌 👍,5,2025-07-29 17:38:55,Google Play,POSITIVE,0.9994170665740967,[],neutral,{},review
+jun21 month to still not open. after bug fixed still same error,1,2025-07-29 17:20:03,Google Play,NEGATIVE,-0.997403085231781,"['jun21', 'month', 'bug', 'still same error']",sadness,"{'jun21': 'Negative', 'month': 'Negative', 'bug': 'Negative', 'still same error': 'Negative'}",bug_report
+so nice,5,2025-07-29 17:15:01,Google Play,POSITIVE,0.9998610019683838,[],joy,{},review
+Good but phone number of EPFO department is not working,5,2025-07-29 16:39:04,Google Play,NEGATIVE,-0.9989939332008362,"['good but phone number', 'epfo department']",sadness,"{'good but phone number': 'Negative', 'epfo department': 'Negative'}",bug_report
+good,4,2025-07-29 16:36:26,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+wonderful,5,2025-07-29 16:14:27,Google Play,POSITIVE,0.9998772144317627,[],surprise,{},review
+good,4,2025-07-29 14:55:31,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"epf stuff dosent work anymore, gives error",1,2025-07-29 13:49:57,Google Play,NEGATIVE,-0.9981701374053955,"['stuff dosent work', 'error']",sadness,"{'stuff dosent work': 'Negative', 'error': 'Negative'}",bug_report
+Excellent,5,2025-07-29 13:46:47,Google Play,POSITIVE,0.9998434782028198,[],neutral,{},review
+"I'm already a registered member and facing problem with login with OTP, receiving OTP but login button isn't working, kindly help me on priority",4,2025-07-29 13:20:55,Google Play,NEGATIVE,-0.9980776309967041,"['a registered member', 'problem', 'login', 'otp', 'login button', 'priority']",neutral,"{'a registered member': 'Neutral', 'problem': 'Negative', 'login': 'Negative', 'otp': 'Negative', 'login button': 'Negative', 'priority': 'Neutral'}",bug_report
+not working properly,1,2025-07-29 11:17:25,Google Play,NEGATIVE,-0.9997847676277161,[],sadness,{},bug_report
+The app is not working I try to check my Pf but it keeps showing an error even after uninstalling and reinstalling the app is not working.,2,2025-07-29 11:13:23,Google Play,NEGATIVE,-0.9990818500518799,"['the app', 'my pf', 'an error', 'the app']",sadness,"{'the app': 'Negative', 'my pf': 'Neutral', 'an error': 'Negative'}",bug_report
+please 🙏,5,2025-07-29 10:32:48,Google Play,POSITIVE,0.99272221326828,[],neutral,{},review
+Waste application,1,2025-07-29 10:01:50,Google Play,NEGATIVE,-0.9992254972457886,['waste application'],neutral,{'waste application': 'Negative'},review
+good,5,2025-07-29 09:50:52,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-29 09:29:26,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+gud app,5,2025-07-29 08:58:20,Google Play,NEGATIVE,-0.8989125490188599,['gud app'],sadness,{'gud app': 'Positive'},review
+ok,5,2025-07-29 08:45:31,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+very good,5,2025-07-29 08:28:49,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+Good,5,2025-07-29 07:27:27,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"why do you create a good application. this app is called umang, change to (TIFAT) technical issues for all time",1,2025-07-29 04:50:10,Google Play,POSITIVE,0.6132912635803223,"['a good application', 'this app', 'umang', 'tifat) technical issues', 'all time']",surprise,"{'a good application': 'Negative', 'this app': 'Negative', 'umang': 'Negative', 'tifat) technical issues': 'Neutral', 'all time': 'Negative'}",bug_report
+this app is really the worst I downloaded it to see my EPFO claim and passbook but it's not working since I downloaded this app,1,2025-07-29 03:37:34,Google Play,NEGATIVE,-0.9997814297676086,"['this app', 'my epfo claim', 'passbook', 'this app']",disgust,"{'this app': 'Negative', 'my epfo claim': 'Negative', 'passbook': 'Negative'}",bug_report
+Mera Umang chalu nahin ho raha hai,5,2025-07-29 02:24:11,Google Play,NEGATIVE,-0.9742844700813293,"['mera umang', 'nahin ho raha hai']",neutral,"{'mera umang': 'Negative', 'nahin ho raha hai': 'Negative'}",review
+"like all govt employees, this also doesn't work.",1,2025-07-29 01:54:14,Google Play,NEGATIVE,-0.9997103810310364,['all govt employees'],neutral,{'all govt employees': 'Negative'},review
+very bad this app sucks,2,2025-07-29 01:38:56,Google Play,NEGATIVE,-0.9998069405555725,['this app'],disgust,{'this app': 'Negative'},review
+what a worst app by indian government. neither application is working properly. nothing but a wastage of time. the application rating does not support below 1 star.,1,2025-07-29 00:27:54,Google Play,NEGATIVE,-0.9998107552528381,"['what a worst app', 'indian government', 'neither application', 'a wastage', 'time', 'the application rating', '1 star']",sadness,"{'what a worst app': 'Negative', 'indian government': 'Negative', 'neither application': 'Negative', 'a wastage': 'Negative', 'time': 'Negative', 'the application rating': 'Negative', '1 star': 'Negative'}",review
+it's better experience to use the UMANG APP .you can easily get results of government scheme 🤔,4,2025-07-29 00:12:16,Google Play,NEGATIVE,-0.9668816328048706,"['better experience', 'the umang app', '.you', 'results', 'government scheme']",neutral,"{'better experience': 'Positive', 'the umang app': 'Positive', '.you': 'Positive', 'results': 'Neutral', 'government scheme': 'Neutral'}",review
+The application is experiencing functionality issues.,2,2025-07-28 23:44:44,Google Play,NEGATIVE,-0.9993228912353516,"['the application', 'functionality issues']",sadness,"{'the application': 'Negative', 'functionality issues': 'Negative'}",bug_report
+"Don't know why this app doesn't work on most of the mobiles, including my lava android 12. this is happening after confirmation from Devs that they have checked and it is fine at their end.",1,2025-07-28 22:09:39,Google Play,POSITIVE,0.994666576385498,"['this app', 'the mobiles', 'my lava', 'confirmation', 'devs', 'their end']",neutral,"{'this app': 'Negative', 'the mobiles': 'Negative', 'my lava': 'Neutral', 'confirmation': 'Negative', 'devs': 'Negative', 'their end': 'Negative'}",review
+Best App,5,2025-07-28 22:04:31,Google Play,POSITIVE,0.999686598777771,['best app'],neutral,{'best app': 'Positive'},review
+No good not open app,1,2025-07-28 21:41:23,Google Play,NEGATIVE,-0.9988784193992615,['no good not open app'],sadness,{'no good not open app': 'Negative'},review
+worst experience using this app. for the last 15 days I'm trying to login my UAN account for epf details but unable to do so. while I can easily login via the chrome. third class app.,1,2025-07-28 21:34:45,Google Play,NEGATIVE,-0.9997016787528992,"['worst experience', 'this app', 'the last 15 days', 'my uan account', 'epf details', 'the chrome', 'third class app']",sadness,"{'worst experience': 'Negative', 'this app': 'Negative', 'the last 15 days': 'Negative', 'my uan account': 'Negative', 'epf details': 'Negative', 'the chrome': 'Negative', 'third class app': 'Negative'}",review
+faltu app h government Ka sara Paisa barbad kar rahe ho,1,2025-07-28 21:26:58,Google Play,NEGATIVE,-0.981508195400238,"['app h government', 'kar rahe ho']",neutral,"{'app h government': 'Negative', 'kar rahe ho': 'Neutral'}",review
+good work 👍,5,2025-07-28 21:26:24,Google Play,POSITIVE,0.9998606443405151,['good work'],neutral,{'good work': 'Positive'},review
+very good application,1,2025-07-28 21:26:16,Google Play,POSITIVE,0.9998687505722046,['very good application'],joy,{'very good application': 'Positive'},review
+"This is a very good app, you get all the facilities in it, thank you umang",5,2025-07-28 21:24:34,Google Play,POSITIVE,0.9998468160629272,"['a very good app', 'all the facilities']",joy,"{'a very good app': 'Positive', 'all the facilities': 'Positive'}",review
+Very nice app,5,2025-07-28 20:18:14,Google Play,POSITIVE,0.9998562335968018,['very nice app'],joy,{'very nice app': 'Positive'},review
+goverment app is very sefty and nice apps,5,2025-07-28 19:49:57,Google Play,POSITIVE,0.9997664093971252,"['goverment app', 'very sefty and nice apps']",joy,"{'goverment app': 'Positive', 'very sefty and nice apps': 'Neutral'}",review
+"Since few days it couldn't connect to digilocker site when clicked on documents it reads your digilocker account is not linked, when I click on digilocker sart now option it reads your digilocker account is already linked with umang but umang app does not reflect my documents",3,2025-07-28 19:41:05,Google Play,NEGATIVE,-0.9989585876464844,"['few days', 'site', 'documents', 'your digilocker account', 'digilocker sart', 'option', 'your digilocker account', 'umang', 'umang app', 'my documents']",neutral,"{'few days': 'Negative', 'site': 'Negative', 'documents': 'Negative', 'your digilocker account': 'Negative', 'digilocker sart': 'Negative', 'option': 'Negative', 'umang': 'Negative', 'umang app': 'Negative', 'my documents': 'Negative'}",review
+very good app,5,2025-07-28 19:39:36,Google Play,POSITIVE,0.9998675584793091,['very good app'],joy,{'very good app': 'Positive'},review
+good,5,2025-07-28 18:37:43,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-28 18:35:46,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+actually we can't upload cheque while withdrawal of epfo so they are rejecting,1,2025-07-28 18:13:19,Google Play,NEGATIVE,-0.9958518743515015,"['cheque', 'withdrawal', 'epfo']",neutral,"{'cheque': 'Negative', 'withdrawal': 'Negative', 'epfo': 'Negative'}",review
+Its server is very bad. I can watch 1440p movies online but it takes a lot of time to open one page. 👎👎👎👎👎,1,2025-07-28 18:08:13,Google Play,NEGATIVE,-0.998534083366394,"['its server', '1440p movies', 'a lot', 'time', 'one page', '👎👎👎👎👎']",disgust,"{'its server': 'Negative', '1440p movies': 'Neutral', 'a lot': 'Negative', 'time': 'Negative', 'one page': 'Negative', '👎👎👎👎👎': 'Negative'}",review
+bahut achcha app ♥️♥️🙏♥️♥️,5,2025-07-28 17:47:14,Google Play,NEGATIVE,-0.9370146989822388,"['bahut achcha app', '♥️♥️🙏♥️♥']",joy,"{'bahut achcha app': 'Positive', '♥️♥️🙏♥️♥': 'Positive'}",review
+excellent,5,2025-07-28 17:36:44,Google Play,POSITIVE,0.9998434782028198,[],joy,{},review
+very good,5,2025-07-28 17:24:10,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+nice,5,2025-07-28 17:23:32,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+Very Good,5,2025-07-28 17:11:43,Google Play,POSITIVE,0.9998520612716675,[],neutral,{},review
+useless app,1,2025-07-28 17:08:07,Google Play,NEGATIVE,-0.9997797608375549,['useless app'],anger,{'useless app': 'Negative'},review
+"Very Nice App, So Many Time's Useful To Me & My Colleagues. Still Using This App, Previous Using Mobile Was Gone, This Mobile Was Supporting This App.",4,2025-07-28 16:27:02,Google Play,POSITIVE,0.9818534255027771,"['very nice app', 'so many time', 'my colleagues', 'this app', 'previous using mobile', 'this mobile', 'this app']",joy,"{'very nice app': 'Positive', 'so many time': 'Positive', 'my colleagues': 'Positive', 'this app': 'Positive', 'previous using mobile': 'Negative', 'this mobile': 'Positive'}",review
+bad service,1,2025-07-28 16:15:38,Google Play,NEGATIVE,-0.9997195601463318,['bad service'],sadness,{'bad service': 'Negative'},review
+nice,5,2025-07-28 16:08:01,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+super,5,2025-07-28 15:35:50,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+very good app,1,2025-07-28 15:32:57,Google Play,POSITIVE,0.9998675584793091,['very good app'],joy,{'very good app': 'Positive'},review
+very nice,5,2025-07-28 14:49:48,Google Play,POSITIVE,0.9998563528060913,[],joy,{},review
+good,3,2025-07-28 14:37:27,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+Worst app,1,2025-07-28 14:25:16,Google Play,NEGATIVE,-0.9997863173484802,['worst app'],disgust,{'worst app': 'Negative'},review
+It is of no use it is a third class app,1,2025-07-28 14:23:28,Google Play,NEGATIVE,-0.9996293783187866,"['no use', 'a third class app']",neutral,"{'no use': 'Negative', 'a third class app': 'Negative'}",review
+good,5,2025-07-28 14:12:07,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+nice apps,4,2025-07-28 13:15:56,Google Play,POSITIVE,0.999850869178772,['nice apps'],joy,{'nice apps': 'Positive'},review
+pf ka option kaam nahin kar Raha hai.,2,2025-07-28 13:09:21,Google Play,NEGATIVE,-0.9791250824928284,['pf ka option kaam nahin kar raha hai'],neutral,{'pf ka option kaam nahin kar raha hai': 'Negative'},review
+"useless app still i cant view my passbook and it doesn't show the withdrawals, i cant take my money, that one star I gave bcoz then only then I can see the post option , minus 200 star, I called 28 july 2025, 10505 told the pass book download error happens, I asked her this happens to u , she said yes....",1,2025-07-28 13:07:38,Google Play,NEGATIVE,-0.9986656904220581,"['useless app', 'my passbook', 'the withdrawals', 'my money', 'bcoz', 'the post option', '200 star', 'the pass book download error']",sadness,"{'useless app': 'Negative', 'my passbook': 'Negative', 'the withdrawals': 'Neutral', 'my money': 'Neutral', 'bcoz': 'Negative', 'the post option': 'Negative', '200 star': 'Negative', 'the pass book download error': 'Negative'}",bug_report
+very good,5,2025-07-28 12:52:41,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+nice,5,2025-07-28 10:35:59,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+Nice,3,2025-07-28 10:31:34,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+app not loading many times uninstall app and installing but app not opening,1,2025-07-28 08:52:26,Google Play,NEGATIVE,-0.994788646697998,"['app', 'many times', 'uninstall app', 'app']",sadness,"{'app': 'Negative', 'many times': 'Negative', 'uninstall app': 'Negative'}",review
+good,5,2025-07-28 08:11:56,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+Not working properly,1,2025-07-28 08:08:52,Google Play,NEGATIVE,-0.9997847676277161,[],sadness,{},bug_report
+Good 👍 28/7/2025,5,2025-07-28 06:23:32,Google Play,POSITIVE,0.9994729161262512,[],neutral,{},review
+it's good to have in your phone,5,2025-07-28 01:31:23,Google Play,POSITIVE,0.999392032623291,['your phone'],joy,{'your phone': 'Positive'},review
+i installed this app but not working...so much issue in this app..worst app..and same condition of portal also..,1,2025-07-27 23:33:55,Google Play,NEGATIVE,-0.9997641444206238,"['this app', 'this app', 'same condition']",sadness,"{'this app': 'Negative', 'same condition': 'Negative'}",bug_report
+good,5,2025-07-27 22:34:33,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+Very helpful,4,2025-07-27 22:30:11,Google Play,POSITIVE,0.9997938275337219,[],joy,{},review
+worst app that I have ever used in my life,1,2025-07-27 22:18:16,Google Play,NEGATIVE,-0.9997738003730774,['my life'],disgust,{'my life': 'Negative'},review
+very worst app,1,2025-07-27 22:17:17,Google Play,NEGATIVE,-0.9997956156730652,['very worst app'],disgust,{'very worst app': 'Negative'},review
+worst experience login problem nothing show else,1,2025-07-27 21:54:53,Google Play,NEGATIVE,-0.9996830224990845,['worst experience login problem'],sadness,{'worst experience login problem': 'Negative'},bug_report
+working good....,5,2025-07-27 21:51:15,Google Play,POSITIVE,0.9998167157173157,[],neutral,{},review
+nice,5,2025-07-27 20:19:07,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+best,3,2025-07-27 19:56:04,Google Play,POSITIVE,0.9997941851615906,[],neutral,{},review
+all time server down 👎,1,2025-07-27 19:17:26,Google Play,NEGATIVE,-0.9987205266952515,[],neutral,{},review
+Nice,5,2025-07-27 18:23:27,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+ui and tesxt quality is good show for this app,5,2025-07-27 18:00:33,Google Play,POSITIVE,0.9994359612464905,"['ui and tesxt quality', 'good show', 'this app']",neutral,"{'ui and tesxt quality': 'Positive', 'good show': 'Positive', 'this app': 'Positive'}",review
+good service,5,2025-07-27 17:59:09,Google Play,POSITIVE,0.9998499155044556,['good service'],neutral,{'good service': 'Positive'},review
+nice 👍🏻,5,2025-07-27 17:36:05,Google Play,POSITIVE,0.9998424053192139,['nice 👍'],neutral,{'nice 👍': 'Positive'},review
+nice,5,2025-07-27 16:49:56,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+never works,1,2025-07-27 16:04:28,Google Play,NEGATIVE,-0.9997624754905701,[],sadness,{},review
+good 👍,5,2025-07-27 15:53:36,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+very poor service,1,2025-07-27 15:50:19,Google Play,NEGATIVE,-0.9997722506523132,['very poor service'],sadness,{'very poor service': 'Negative'},review
+very quick service without any hassle...,5,2025-07-27 15:23:42,Google Play,POSITIVE,0.9980522394180298,"['very quick service', 'any hassle']",neutral,"{'very quick service': 'Positive', 'any hassle': 'Positive'}",review
+bast government app,5,2025-07-27 15:09:34,Google Play,POSITIVE,0.9948697090148926,['bast government app'],neutral,{'bast government app': 'Neutral'},review
+problam,5,2025-07-27 14:00:41,Google Play,NEGATIVE,-0.9672561287879944,['problam'],neutral,{'problam': 'Negative'},review
+very slow process,1,2025-07-27 13:56:34,Google Play,NEGATIVE,-0.9997110962867737,['very slow process'],neutral,{'very slow process': 'Neutral'},review
+"it's not opening in my mobile, only showing first startup screen, please help and guide me",3,2025-07-27 13:40:45,Google Play,NEGATIVE,-0.9982789754867554,"['my mobile', 'first startup screen']",neutral,"{'my mobile': 'Neutral', 'first startup screen': 'Neutral'}",review
+good app,5,2025-07-27 13:23:06,Google Play,POSITIVE,0.9998493194580078,['good app'],neutral,{'good app': 'Positive'},review
+unable to login epfo. just keep getting error : error processing the request :null . phone nothing phone 2. . it's not epfo server error cause it works fine on my iPhone but on Android it does not.,1,2025-07-27 12:59:31,Google Play,NEGATIVE,-0.998737633228302,"['epfo', 'error', 'error', 'the request', 'my iphone', 'android']",sadness,"{'epfo': 'Negative', 'error': 'Negative', 'the request': 'Negative', 'my iphone': 'Neutral', 'android': 'Negative'}",bug_report
+nahin download ho raha hain,2,2025-07-27 11:45:07,Google Play,NEGATIVE,-0.9386957883834839,['nahin download ho raha hain'],neutral,{'nahin download ho raha hain': 'Positive'},review
+nice app,4,2025-07-27 11:40:17,Google Play,POSITIVE,0.9998061060905457,['nice app'],neutral,{'nice app': 'Positive'},review
+unable to check PF passbook,1,2025-07-27 11:16:17,Google Play,NEGATIVE,-0.9997223019599915,['pf passbook'],sadness,{'pf passbook': 'Negative'},review
+God bless 🤞🏻,5,2025-07-27 10:43:08,Google Play,POSITIVE,0.9995662569999695,['god'],neutral,{'god': 'Positive'},review
+super,5,2025-07-27 10:34:50,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+very good,4,2025-07-27 10:31:49,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+𝕡𝕝𝕫 𝕠𝕡𝕖𝕟 𝕥𝕠 𝕞𝕪 𝕚𝕞𝕡𝕠𝕣𝕥𝕒𝕟𝕥 𝕒𝕡𝕡,5,2025-07-27 10:25:26,Google Play,NEGATIVE,-0.9046952128410339,['𝕡𝕝𝕫 𝕠𝕡𝕖𝕟 𝕥𝕠 𝕞𝕪 𝕚𝕞𝕡𝕠𝕣𝕥𝕒𝕟𝕥'],neutral,{'𝕡𝕝𝕫 𝕠𝕡𝕖𝕟 𝕥𝕠 𝕞𝕪 𝕚𝕞𝕡𝕠𝕣𝕥𝕒𝕟𝕥': 'Positive'},review
+ok,5,2025-07-27 09:40:29,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+all right mo,5,2025-07-27 09:22:46,Google Play,POSITIVE,0.9996362924575806,['all right mo'],neutral,{'all right mo': 'Positive'},review
+good,3,2025-07-27 09:13:49,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good for see the live things realted to our account,5,2025-07-27 08:31:38,Google Play,POSITIVE,0.9998291730880737,"['the live things', 'our account']",joy,"{'the live things': 'Positive', 'our account': 'Positive'}",review
+good,5,2025-07-27 08:15:04,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"worst app, epfo tracking claim is not working from past 10 days",1,2025-07-27 08:00:48,Google Play,NEGATIVE,-0.9997797608375549,"['worst app', 'epfo tracking claim', '10 days']",disgust,"{'worst app': 'Negative', 'epfo tracking claim': 'Negative', '10 days': 'Neutral'}",bug_report
+good,5,2025-07-27 07:42:44,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+ok,5,2025-07-27 07:16:08,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+Good for all.,5,2025-07-27 00:20:06,Google Play,POSITIVE,0.9998500347137451,[],joy,{},review
+I am trying to initiate PF online advance claim which is rejecting severely due to while initiating the claim through umang app there is not any option to upload the cheque or bank passbook but department is rejecting the claim again and again due to required attachment of said documents,1,2025-07-26 23:46:44,Google Play,NEGATIVE,-0.998671293258667,"['pf online advance claim', 'the claim', 'umang app', 'any option', 'the cheque', 'bank passbook', 'department', 'the claim', 'required attachment', 'said documents']",sadness,"{'pf online advance claim': 'Negative', 'the claim': 'Negative', 'umang app': 'Negative', 'any option': 'Negative', 'the cheque': 'Negative', 'bank passbook': 'Negative', 'department': 'Negative', 'required attachment': 'Negative', 'said documents': 'Negative'}",review
+good aap okay,4,2025-07-26 23:30:04,Google Play,POSITIVE,0.9998424053192139,[],neutral,{},review
+very nice 👍,5,2025-07-26 23:03:42,Google Play,POSITIVE,0.9998577833175659,[],joy,{},review
+wrost service,1,2025-07-26 22:56:33,Google Play,NEGATIVE,-0.9970648884773254,['wrost service'],neutral,{'wrost service': 'Positive'},review
+Good,5,2025-07-26 22:34:15,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+so many people if we need to change the password and we enter the name it says name provider is either not saying like this time waste app,1,2025-07-26 22:27:06,Google Play,NEGATIVE,-0.9994783997535706,"['so many people', 'the password', 'the name', 'name provider', 'this time', 'waste app']",neutral,"{'so many people': 'Negative', 'the password': 'Negative', 'the name': 'Negative', 'name provider': 'Negative', 'this time': 'Negative', 'waste app': 'Negative'}",review
+"It used to be better than this. Recently I have tried to access a few services, but for all I am getting pop ups like ""session token expired"", ""something went wrong"" etc. Whenever I open an app, it says ""digilocker is not linked to umang app"", but when i try to relink it says ""already linked"" and then again this endless cycle. Using this app feels like harassment.",1,2025-07-26 21:50:29,Google Play,NEGATIVE,-0.9995156526565552,"['a few services', 'pop ups', 'session', 'an app', 'digilocker', 'umang app', 'then again this endless cycle', 'this app', 'harassment']",disgust,"{'a few services': 'Negative', 'pop ups': 'Negative', 'session': 'Negative', 'an app': 'Negative', 'digilocker': 'Negative', 'umang app': 'Neutral', 'then again this endless cycle': 'Negative', 'this app': 'Negative', 'harassment': 'Negative'}",review
+good,5,2025-07-26 19:11:42,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+nice,5,2025-07-26 18:51:25,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+app is stucking...cant open files....,2,2025-07-26 18:37:23,Google Play,NEGATIVE,-0.9991340041160583,"['app', 'open files']",sadness,"{'app': 'Negative', 'open files': 'Negative'}",review
+very very nice Application,5,2025-07-26 17:34:41,Google Play,POSITIVE,0.9998623132705688,['very very nice application'],joy,{'very very nice application': 'Positive'},review
+ye app download nahi ho rahi hai Aisa kyu koi hame bataiye kaise hogi play store me dekh liye hai,5,2025-07-26 17:06:28,Google Play,NEGATIVE,-0.9884659051895142,"['ye app download nahi ho rahi hai aisa kyu koi', 'store']",neutral,"{'ye app download nahi ho rahi hai aisa kyu koi': 'Negative', 'store': 'Negative'}",review
+nice app,5,2025-07-26 16:26:42,Google Play,POSITIVE,0.9998061060905457,['nice app'],neutral,{'nice app': 'Positive'},review
+excellent 👍,5,2025-07-26 16:12:25,Google Play,POSITIVE,0.9998458623886108,[],joy,{},review
+very beautiful,5,2025-07-26 15:41:04,Google Play,POSITIVE,0.9998842477798462,[],joy,{},review
+"Worst app, does not let me login to EPFO service. No wonder why we can't be truly digital",1,2025-07-26 14:58:39,Google Play,NEGATIVE,-0.9987875819206238,"['worst app', 'epfo service', 'no wonder']",disgust,"{'worst app': 'Negative', 'epfo service': 'Negative', 'no wonder': 'Negative'}",review
+good 👍,5,2025-07-26 13:32:03,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+Need to improve a lot,1,2025-07-26 13:22:55,Google Play,NEGATIVE,-0.9635162949562073,['a lot'],neutral,{'a lot': 'Negative'},review
+good service sir,5,2025-07-26 12:10:36,Google Play,POSITIVE,0.9998340606689453,['good service'],neutral,{'good service': 'Positive'},review
+very bad 😞,1,2025-07-26 11:53:46,Google Play,NEGATIVE,-0.9998021721839905,[],disgust,{},review
+As expected from government. worst app.,1,2025-07-26 11:47:35,Google Play,NEGATIVE,-0.9998112320899963,"['government', 'worst app']",disgust,"{'government': 'Positive', 'worst app': 'Negative'}",review
+Good one,5,2025-07-26 11:22:49,Google Play,POSITIVE,0.9998288154602051,[],neutral,{},review
+good,2,2025-07-26 11:20:02,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+best,5,2025-07-26 11:08:18,Google Play,POSITIVE,0.9997941851615906,[],neutral,{},review
+in epfo claim we can't select member id they show only recent id,3,2025-07-26 10:43:22,Google Play,NEGATIVE,-0.9983409643173218,"['epfo', 'only recent i']",neutral,"{'epfo': 'Negative', 'only recent i': 'Negative'}",review
+passbook not opening,1,2025-07-26 10:32:50,Google Play,NEGATIVE,-0.9990566372871399,[],neutral,{},review
+THE APP HAS TOO MANY BUGS AND WORKS VERY SLOW,1,2025-07-26 09:50:42,Google Play,NEGATIVE,-0.9997492432594299,"['the app', 'too many bugs']",neutral,"{'the app': 'Negative', 'too many bugs': 'Negative'}",bug_report
+Doesn't work,1,2025-07-26 09:44:28,Google Play,NEGATIVE,-0.9997408986091614,[],sadness,{},review
+best apps,5,2025-07-26 09:12:00,Google Play,POSITIVE,0.999784529209137,['best apps'],neutral,{'best apps': 'Positive'},review
+vary slow,1,2025-07-26 08:57:54,Google Play,NEGATIVE,-0.9972789883613586,[],neutral,{},review
+when i am trying to open this it loading and loading not opening at all,1,2025-07-26 08:42:54,Google Play,NEGATIVE,-0.9995467066764832,['not opening'],sadness,{'not opening': 'Negative'},review
+Not working epfo login,1,2025-07-26 05:02:56,Google Play,NEGATIVE,-0.9997488856315613,['epfo login'],sadness,{'epfo login': 'Negative'},bug_report
+Pls bring all state app under one roof that is umang app. Bring all documents process online . It will be beneficial for the betterment and development of the state and country also. It play a vital role in viksit bharat smaridh bharat.,4,2025-07-26 03:02:02,Google Play,POSITIVE,0.9969070553779602,"['all state app', 'one roof', 'umang app', 'all documents', 'the betterment', 'development', 'the state', 'country', 'a vital role', 'viksit bharat smaridh bharat']",neutral,"{'all state app': 'Positive', 'one roof': 'Positive', 'umang app': 'Positive', 'all documents': 'Positive', 'the betterment': 'Positive', 'development': 'Positive', 'the state': 'Positive', 'country': 'Positive', 'a vital role': 'Positive', 'viksit bharat smaridh bharat': 'Neutral'}",review
+good 👍,5,2025-07-25 23:59:11,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+worst application waste of time. government should raise standards,1,2025-07-25 23:25:51,Google Play,NEGATIVE,-0.9998063445091248,"['worst application waste', 'time', 'government', 'standards']",disgust,"{'worst application waste': 'Negative', 'time': 'Negative', 'government': 'Negative', 'standards': 'Negative'}",review
+very bad,1,2025-07-25 23:09:22,Google Play,NEGATIVE,-0.9997884631156921,[],disgust,{},review
+good,5,2025-07-25 22:27:47,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+Very pathetic app EPFO service is down everytime.,1,2025-07-25 20:40:33,Google Play,NEGATIVE,-0.9997729659080505,"['very pathetic app epfo service', 'everytime']",disgust,"{'very pathetic app epfo service': 'Negative', 'everytime': 'Negative'}",review
+not working..useless app .waste of public monay in building this app,1,2025-07-25 20:26:07,Google Play,NEGATIVE,-0.9997641444206238,"['useless app .waste', 'public monay', 'this app']",sadness,"{'useless app .waste': 'Negative', 'public monay': 'Negative', 'this app': 'Negative'}",bug_report
+good,3,2025-07-25 19:44:50,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+update version please,5,2025-07-25 19:41:31,Google Play,POSITIVE,0.9970133304595947,['version'],neutral,{'version': 'Negative'},review
+good service,5,2025-07-25 18:56:31,Google Play,POSITIVE,0.9998499155044556,['good service'],neutral,{'good service': 'Positive'},review
+good,5,2025-07-25 18:50:39,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+not open in my phone,1,2025-07-25 18:26:44,Google Play,NEGATIVE,-0.9996662139892578,['my phone'],neutral,{'my phone': 'Neutral'},review
+good,4,2025-07-25 17:43:57,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+would give 0 start,1,2025-07-25 17:24:55,Google Play,NEGATIVE,-0.975004255771637,['start'],fear,{'start': 'Negative'},review
+I raised advance PF claim on July 10 and it is not yet settled. Raised griveance however acknowledgement with the grievance details shared. Unable to raise another grievance for same issue. Pathetic app and service.,1,2025-07-25 17:07:27,Google Play,NEGATIVE,-0.9995114803314209,"['pf claim', 'july', 'griveance', 'however acknowledgement', 'the grievance details', 'another grievance', 'same issue', 'pathetic app', 'service']",sadness,"{'pf claim': 'Neutral', 'july': 'Neutral', 'griveance': 'Positive', 'however acknowledgement': 'Negative', 'the grievance details': 'Neutral', 'another grievance': 'Negative', 'same issue': 'Negative', 'pathetic app': 'Negative', 'service': 'Negative'}",bug_report
+this app doesn't work at all there is only 1 promt error I can't check my epfo passbook anywhere. same issue with your website same issue with the application.,1,2025-07-25 16:52:43,Google Play,NEGATIVE,-0.9994971752166748,"['this app', 'only 1 promt error', 'same issue', 'your website same issue', 'the application']",sadness,"{'this app': 'Negative', 'only 1 promt error': 'Negative', 'same issue': 'Negative', 'your website same issue': 'Negative', 'the application': 'Negative'}",bug_report
+good 😊,4,2025-07-25 16:07:41,Google Play,POSITIVE,0.9998576641082764,[],neutral,{},review
+osm,5,2025-07-25 16:00:47,Google Play,NEGATIVE,-0.9950666427612305,['osm'],neutral,{'osm': 'Positive'},review
+nice,5,2025-07-25 15:58:47,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+nice,5,2025-07-25 15:56:02,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+good,5,2025-07-25 15:32:16,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+no delay,1,2025-07-25 15:31:33,Google Play,POSITIVE,0.9989402890205383,['no delay'],neutral,{'no delay': 'Positive'},review
+good,5,2025-07-25 14:59:55,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+superb 🤩,5,2025-07-25 14:28:48,Google Play,POSITIVE,0.999850869178772,['superb'],neutral,{'superb': 'Positive'},review
+good 👍,5,2025-07-25 13:49:32,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+very nice 👍,5,2025-07-25 13:39:50,Google Play,POSITIVE,0.9998577833175659,[],joy,{},review
+very bad,1,2025-07-25 13:28:45,Google Play,NEGATIVE,-0.9997884631156921,[],disgust,{},review
+not working,1,2025-07-25 13:25:32,Google Play,NEGATIVE,-0.9997778534889221,[],sadness,{},bug_report
+waste app. everytimes shows error,1,2025-07-25 13:25:25,Google Play,NEGATIVE,-0.9997705817222595,"['waste app', 'everytimes', 'error']",neutral,"{'waste app': 'Negative', 'everytimes': 'Negative', 'error': 'Negative'}",bug_report
+add online aadhar correction feature.,2,2025-07-25 12:38:53,Google Play,NEGATIVE,-0.9128904938697815,['online aadhar correction feature'],neutral,{'online aadhar correction feature': 'Neutral'},feature_request
+umang app good working 👍,5,2025-07-25 12:31:56,Google Play,POSITIVE,0.9980759620666504,['umang app'],joy,{'umang app': 'Positive'},review
+"useless worst app, trying to check passbook for more than 3 months but still it's showing error. useless app, even website also showing error,",1,2025-07-25 12:19:15,Google Play,NEGATIVE,-0.999639630317688,"['useless worst app', 'passbook', 'more than 3 months', 'error', 'useless app', 'even website', 'error']",disgust,"{'useless worst app': 'Negative', 'passbook': 'Negative', 'more than 3 months': 'Negative', 'error': 'Negative', 'useless app': 'Negative', 'even website': 'Negative'}",bug_report
+Good 👍,5,2025-07-25 12:15:50,Google Play,POSITIVE,0.9998576641082764,[],neutral,{},review
+good,5,2025-07-25 11:48:17,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+totally worst app,1,2025-07-25 11:42:03,Google Play,NEGATIVE,-0.9997887015342712,['totally worst app'],disgust,{'totally worst app': 'Negative'},review
+यह अप फोन में डाउनलोड तो हो गया परंतु खुलता नहीं है क्यों,1,2025-07-25 11:38:16,Google Play,NEGATIVE,-0.8776413798332214,"['फोन में डाउनलोड तो हो', 'गया', 'परंतु']",neutral,"{'फोन में डाउनलोड तो हो': 'Positive', 'गया': 'Negative', 'परंतु': 'Negative'}",review
+"This app is not opening ,I tried 3 months above or app functions are not properly working",1,2025-07-25 11:30:12,Google Play,NEGATIVE,-0.9997952580451965,"['this app', 'app functions']",sadness,"{'this app': 'Negative', 'app functions': 'Negative'}",review
+acha hai,5,2025-07-25 10:37:07,Google Play,POSITIVE,0.9864479303359985,['acha hai'],neutral,{'acha hai': 'Positive'},review
+good,5,2025-07-25 10:04:00,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+worst app,1,2025-07-25 09:52:08,Google Play,NEGATIVE,-0.9997863173484802,['worst app'],disgust,{'worst app': 'Negative'},review
+good everybody gets help this app,5,2025-07-25 09:36:34,Google Play,POSITIVE,0.9997277855873108,['help'],neutral,{'help': 'Positive'},review
+app shows digi locker not linked. when trying to link it shows already linked. when press ok it shows digilocker not linked,1,2025-07-25 08:47:28,Google Play,NEGATIVE,-0.9990202188491821,"['app', 'digi locker']",surprise,"{'app': 'Negative', 'digi locker': 'Negative'}",review
+very good but sometimes error problem,4,2025-07-25 07:18:57,Google Play,NEGATIVE,-0.9307894706726074,['very good but sometimes error problem'],neutral,{'very good but sometimes error problem': 'Positive'},bug_report
+stupid app zeeeeeeerooooo star pf not working worst app worst app,1,2025-07-24 22:56:20,Google Play,NEGATIVE,-0.9992782473564148,['stupid app zeeeeeeerooooo star pf'],sadness,{'stupid app zeeeeeeerooooo star pf': 'Negative'},bug_report
+i gave all permission but not working,1,2025-07-24 22:48:26,Google Play,NEGATIVE,-0.9973267316818237,['all permission'],sadness,{'all permission': 'Positive'},bug_report
+good luck,5,2025-07-24 22:32:18,Google Play,POSITIVE,0.9998250603675842,['good luck'],neutral,{'good luck': 'Positive'},review
+nice,5,2025-07-24 22:23:04,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+best,5,2025-07-24 22:22:40,Google Play,POSITIVE,0.9997941851615906,[],neutral,{},review
+I LOVE ❤️ THIS APP,5,2025-07-24 22:09:32,Google Play,POSITIVE,0.9996140599250793,['this app'],joy,{'this app': 'Positive'},review
+good,5,2025-07-24 21:54:00,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"this is the most useless and worst aap has developed by the government,so frustrated.",1,2025-07-24 21:37:48,Google Play,NEGATIVE,-0.9998247027397156,"['aap', 'the government']",anger,"{'aap': 'Negative', 'the government': 'Negative'}",review
+wow nice,5,2025-07-24 20:57:52,Google Play,POSITIVE,0.9998618364334106,[],surprise,{},review
+good,5,2025-07-24 20:45:22,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+I love umang app,5,2025-07-24 20:40:42,Google Play,POSITIVE,0.9995211362838745,['umang app'],joy,{'umang app': 'Positive'},review
+good,5,2025-07-24 19:57:03,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-24 19:34:13,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+I am unable to verify the face. I am not getting any options.,1,2025-07-24 19:32:20,Google Play,NEGATIVE,-0.9997631907463074,"['the face', 'any options']",sadness,"{'the face': 'Negative', 'any options': 'Negative'}",review
+don't download it if you are seeking it of EPF..this app is useless because EPFO website sucks...rest other utilities are good,1,2025-07-24 19:29:08,Google Play,NEGATIVE,-0.999573290348053,"['epf', 'this app', 'epfo website', 'rest', 'other utilities']",sadness,"{'epf': 'Neutral', 'this app': 'Negative', 'epfo website': 'Negative', 'rest': 'Neutral', 'other utilities': 'Positive'}",review
+very good,4,2025-07-24 18:31:31,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+super app,5,2025-07-24 18:24:28,Google Play,POSITIVE,0.9932268261909485,['super app'],neutral,{'super app': 'Positive'},review
+not working after update,1,2025-07-24 18:05:54,Google Play,NEGATIVE,-0.999687671661377,['update'],sadness,{'update': 'Negative'},bug_report
+one of the worst app. every time when I try filling for claim it says error. doesn't deserve one start also.,1,2025-07-24 18:00:40,Google Play,NEGATIVE,-0.9998179078102112,"['the worst app', 'every time', 'claim', 'error', 'one start']",anger,"{'the worst app': 'Negative', 'every time': 'Negative', 'claim': 'Negative', 'error': 'Negative', 'one start': 'Negative'}",bug_report
+usc,5,2025-07-24 16:38:28,Google Play,POSITIVE,0.9938570857048035,['usc'],neutral,{'usc': 'Neutral'},review
+"Worst , EPFO was trying to view passbook.........nothing happening",1,2025-07-24 15:51:27,Google Play,NEGATIVE,-0.9997842907905579,"['epfo', 'passbook']",disgust,"{'epfo': 'Negative', 'passbook': 'Negative'}",review
+bhai Umang app kaise nahin chal raha hai,2,2025-07-24 15:50:18,Google Play,NEGATIVE,-0.96827232837677,['bhai umang app kaise nahin chal raha hai'],neutral,{'bhai umang app kaise nahin chal raha hai': 'Neutral'},review
+very nice very helpful,5,2025-07-24 14:36:33,Google Play,POSITIVE,0.9998462200164795,[],joy,{},review
+there should be multiple member id options for epf withdrawal,3,2025-07-24 14:20:15,Google Play,NEGATIVE,-0.9985135197639465,"['multiple member id options', 'epf withdrawal']",neutral,"{'multiple member id options': 'Negative', 'epf withdrawal': 'Negative'}",review
+application not working,1,2025-07-24 13:55:55,Google Play,NEGATIVE,-0.9997543692588806,['application'],sadness,{'application': 'Negative'},bug_report
+"why did you name this app Umang?? All it does is to aggravate the pain. EPFO and other services never open. always an "" unexpected error occurs"". Please do not thank me for my patience.",1,2025-07-24 13:00:40,Google Play,NEGATIVE,-0.9995902180671692,"['this app umang', 'the pain', 'epfo', 'other services', 'an "" unexpected error', 'my patience']",anger,"{'this app umang': 'Negative', 'the pain': 'Negative', 'epfo': 'Negative', 'other services': 'Negative', 'an "" unexpected error': 'Negative', 'my patience': 'Negative'}",bug_report
+good,5,2025-07-24 11:46:04,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+best app,4,2025-07-24 11:05:04,Google Play,POSITIVE,0.999686598777771,['best app'],neutral,{'best app': 'Positive'},review
+very good app,5,2025-07-24 11:02:06,Google Play,POSITIVE,0.9998675584793091,['very good app'],joy,{'very good app': 'Positive'},review
+"it's not working,",1,2025-07-24 10:23:45,Google Play,NEGATIVE,-0.9997902512550354,[],sadness,{},bug_report
+Very nice platform👌👌👌,5,2025-07-24 10:07:02,Google Play,POSITIVE,0.9998577833175659,['very nice platform'],joy,{'very nice platform': 'Positive'},review
+bahut khub,5,2025-07-24 10:05:44,Google Play,POSITIVE,0.9127293825149536,['bahut khub'],neutral,{'bahut khub': 'Positive'},review
+very slowly speed,1,2025-07-24 09:42:12,Google Play,NEGATIVE,-0.9542057514190674,[],surprise,{},review
+good 👍,5,2025-07-24 09:35:25,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+good,5,2025-07-24 09:03:44,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-24 08:08:39,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"Cannot open the app, always stuck on the startup page, bad review!!!!",1,2025-07-24 07:43:02,Google Play,NEGATIVE,-0.9997780919075012,"['the app', 'the startup page', ', bad review']",sadness,"{'the app': 'Negative', 'the startup page': 'Negative', ', bad review': 'Negative'}",review
+good,1,2025-07-24 07:27:48,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+very good and valuable app,4,2025-07-24 07:18:37,Google Play,POSITIVE,0.9998836517333984,['very good and valuable app'],joy,{'very good and valuable app': 'Positive'},review
+"EPFO never opens. Digilocker - 1st msg says it's connected. immediate next popup - digilocker not connected! wondering which team maintains this app, and who pays them..",1,2025-07-24 00:17:01,Google Play,NEGATIVE,-0.9997618794441223,"['epfo', 'digilocker - 1st msg', 'immediate next popup - digilocker', 'which team', 'this app']",surprise,"{'epfo': 'Negative', 'digilocker - 1st msg': 'Positive', 'immediate next popup - digilocker': 'Negative', 'which team': 'Negative', 'this app': 'Neutral'}",review
+app not working. For any of the service registration is not working. pls check,1,2025-07-24 00:09:04,Google Play,NEGATIVE,-0.9997612833976746,"['app', 'the service registration']",sadness,"{'app': 'Negative', 'the service registration': 'Negative'}",bug_report
+"""UMANG ऐप का उपयोग करना पहले आसान था, लेकिन अब यह ठीक से काम नहीं कर रहा है। ऐप बार-बार क्रैश हो रहा है या ओपन ही नहीं हो रहा है। लॉगिन करने में दिक्कत आ रही है और कई बार सर्वर एरर दिखाता है। कृपया इस तकनीकी समस्या को जल्द से जल्द सुधारें ताकि हम सरकारी सेवाओं का लाभ आसानी से ले सकें।",1,2025-07-23 23:06:28,Google Play,NEGATIVE,-0.9479362368583679,"['पहले आसान था', 'लेकिन अब यह ठीक', 'से काम नहीं कर', 'बार', 'बार क्रैश हो रहा', 'ही नहीं हो रहा', 'करने', 'ताकि हम', 'सरकारी सेवाओं', 'लाभ आसानी']",neutral,"{'पहले आसान था': 'Positive', 'लेकिन अब यह ठीक': 'Negative', 'से काम नहीं कर': 'Negative', 'बार': 'Negative', 'बार क्रैश हो रहा': 'Positive', 'ही नहीं हो रहा': 'Negative', 'करने': 'Negative', 'ताकि हम': 'Positive', 'सरकारी सेवाओं': 'Positive', 'लाभ आसानी': 'Positive'}",review
+app very slow sabse bakvaas apps epf ki😠😠😠😠😡😡😡,1,2025-07-23 22:39:27,Google Play,NEGATIVE,-0.9980016350746155,"['app very slow sabse bakvaas apps', 'epf', 'ki😠😠😠😠']",neutral,"{'app very slow sabse bakvaas apps': 'Negative', 'epf': 'Negative', 'ki😠😠😠😠': 'Negative'}",review
+do not open this app my samsung M31 . Disgusting bad apps.,1,2025-07-23 22:25:24,Google Play,NEGATIVE,-0.999575674533844,"['this app', 'my samsung m31', 'disgusting bad apps']",disgust,"{'this app': 'Negative', 'my samsung m31': 'Negative', 'disgusting bad apps': 'Negative'}",review
+nice,5,2025-07-23 21:30:26,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+good,5,2025-07-23 20:26:37,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+Happy like to you 💐,5,2025-07-23 20:22:31,Google Play,POSITIVE,0.9998723268508911,[],joy,{},review
+very bad,1,2025-07-23 19:30:55,Google Play,NEGATIVE,-0.9997884631156921,[],disgust,{},review
+This is a useless app. I just tried to see my pf balance but it is not working at all and every time it shows an error.,1,2025-07-23 19:29:05,Google Play,NEGATIVE,-0.9996809959411621,"['a useless app', 'my pf balance', 'an error']",disgust,"{'a useless app': 'Negative', 'my pf balance': 'Negative', 'an error': 'Negative'}",bug_report
+best employee app 😎,5,2025-07-23 18:42:59,Google Play,POSITIVE,0.9991336464881897,['best employee app'],neutral,{'best employee app': 'Positive'},review
+"Nowadays,Umang's services are very better than before. So, I recommended to everyone for uses of it 👍👍👍💯. Today,dt 23rd of July,2025 I rated again on it's services after using of more than 3 yrs. Today, I thank to Umang's Developers Team 🙏🙏🙏.",4,2025-07-23 18:07:12,Google Play,POSITIVE,0.9969052672386169,"[""umang's services"", 'uses', 'dt 23rd', 'july,2025', ""it's services"", 'more than 3 yrs', ""umang's developers""]",joy,"{""umang's services"": 'Positive', 'uses': 'Positive', 'dt 23rd': 'Positive', 'july,2025': 'Neutral', ""it's services"": 'Positive', 'more than 3 yrs': 'Positive', ""umang's developers"": 'Positive'}",review
+Good 👍,4,2025-07-23 17:51:36,Google Play,POSITIVE,0.9998576641082764,[],neutral,{},review
+nice,5,2025-07-23 17:46:53,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+loure ka aap hai kabhi khulta hi nhi mere device me or pf portal me sab kuch khulta hai .,1,2025-07-23 17:42:42,Google Play,NEGATIVE,-0.9901350140571594,"['loure ka aap hai kabhi khulta', 'mere device', 'pf portal']",neutral,"{'loure ka aap hai kabhi khulta': 'Positive', 'mere device': 'Negative', 'pf portal': 'Positive'}",review
+main umang app se bolna chahta hun status claim ca kyon Nahin dikhata hai Maine Kitna bar Paisa uthaya Hoon Kitna Kitna Paisa uthaya hun yah sab dikhana,1,2025-07-23 17:26:52,Google Play,NEGATIVE,-0.9935480952262878,"['main umang app se bolna chahta hun status claim', 'nahin dikhata hai maine kitna bar paisa uthaya hoon kitna kitna paisa uthaya hun yah', 'sab dikhana']",neutral,"{'main umang app se bolna chahta hun status claim': 'Positive', 'nahin dikhata hai maine kitna bar paisa uthaya hoon kitna kitna paisa uthaya hun yah': 'Positive', 'sab dikhana': 'Positive'}",review
+good,3,2025-07-23 16:57:58,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+not reliable,1,2025-07-23 16:32:28,Google Play,NEGATIVE,-0.9997870326042175,[],sadness,{},review
+good,4,2025-07-23 13:31:16,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-23 12:54:09,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+excellent app for the government any information,4,2025-07-23 12:52:12,Google Play,POSITIVE,0.9995982050895691,"['excellent app', 'the government']",joy,"{'excellent app': 'Positive', 'the government': 'Neutral'}",review
+good,5,2025-07-23 12:33:52,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+better,3,2025-07-23 11:36:06,Google Play,POSITIVE,0.999264657497406,[],neutral,{},review
+nice,5,2025-07-23 11:28:19,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+nice,5,2025-07-23 10:48:03,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+APP NAHI KHUL RAHA HAI,5,2025-07-23 10:20:52,Google Play,NEGATIVE,-0.8829898834228516,['app nahi khul raha hai'],neutral,{'app nahi khul raha hai': 'Negative'},review
+good,5,2025-07-23 10:02:58,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+this app is very good,5,2025-07-23 08:43:51,Google Play,POSITIVE,0.9998623132705688,['this app'],joy,{'this app': 'Positive'},review
+mera aap khul nahi Raha,5,2025-07-23 08:09:29,Google Play,NEGATIVE,-0.9831695556640625,['mera aap khul nahi raha'],neutral,{'mera aap khul nahi raha': 'Negative'},review
+Pathetic app and poor experience.. it's not even loading to open the landing page.,1,2025-07-23 07:33:05,Google Play,NEGATIVE,-0.9998080134391785,"['pathetic app', 'poor experience', 'the landing page']",disgust,"{'pathetic app': 'Negative', 'poor experience': 'Negative', 'the landing page': 'Negative'}",review
+very nice portal for most of the government documents and other information. Easy to use too.,5,2025-07-23 06:39:37,Google Play,POSITIVE,0.9991739392280579,"['very nice portal', 'the government documents', 'other information']",joy,"{'very nice portal': 'Positive', 'the government documents': 'Neutral', 'other information': 'Neutral'}",review
+disgusting app do not install it .,1,2025-07-23 05:46:42,Google Play,NEGATIVE,-0.9994906187057495,['disgusting app'],disgust,{'disgusting app': 'Negative'},review
+very nice 👍,5,2025-07-23 05:29:44,Google Play,POSITIVE,0.9998577833175659,[],joy,{},review
+Great Initiative,5,2025-07-23 03:41:27,Google Play,POSITIVE,0.9998797178268433,['great initiative'],neutral,{'great initiative': 'Positive'},review
+nice application.,5,2025-07-23 02:44:04,Google Play,POSITIVE,0.9998407363891602,['nice application'],joy,{'nice application': 'Positive'},review
+good job,5,2025-07-23 02:33:40,Google Play,POSITIVE,0.999835729598999,['good job'],neutral,{'good job': 'Positive'},review
+Accuracy Lacking on App,2,2025-07-22 22:28:25,Google Play,NEGATIVE,-0.9995071887969971,"['accuracy', 'app']",neutral,"{'accuracy': 'Negative', 'app': 'Negative'}",review
+super Aps ♥️,5,2025-07-22 19:09:34,Google Play,POSITIVE,0.9605401158332825,['super aps'],neutral,{'super aps': 'Positive'},review
+bad,1,2025-07-22 18:12:50,Google Play,NEGATIVE,-0.999782383441925,[],disgust,{},review
+not opening,1,2025-07-22 18:10:52,Google Play,NEGATIVE,-0.9996150732040405,[],neutral,{},review
+The experience with this app now. No response and just showing the opening interface.,1,2025-07-22 18:09:47,Google Play,NEGATIVE,-0.9994857311248779,"['the experience', 'this app', 'no response', 'the opening interface']",neutral,"{'the experience': 'Negative', 'this app': 'Negative', 'no response': 'Negative', 'the opening interface': 'Negative'}",review
+nice app,5,2025-07-22 17:35:06,Google Play,POSITIVE,0.9998061060905457,['nice app'],neutral,{'nice app': 'Positive'},review
+nice,4,2025-07-22 16:57:24,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+Number one app in providing worst service,1,2025-07-22 16:18:46,Google Play,NEGATIVE,-0.9996731281280518,"['number one app', 'worst service']",disgust,"{'number one app': 'Negative', 'worst service': 'Negative'}",review
+very good,5,2025-07-22 15:43:50,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+money can't withdrawing 😡,1,2025-07-22 15:30:12,Google Play,POSITIVE,0.9514453411102295,['money'],sadness,{'money': 'Negative'},review
+good,5,2025-07-22 15:27:07,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+do not open app please help,4,2025-07-22 14:48:45,Google Play,NEGATIVE,-0.9992153644561768,['app'],neutral,{'app': 'Negative'},review
+worst service didn't open,1,2025-07-22 14:36:23,Google Play,NEGATIVE,-0.9997898936271667,['worst service'],disgust,{'worst service': 'Negative'},review
+has some issues always. unable to download uan card now.,1,2025-07-22 14:27:47,Google Play,NEGATIVE,-0.9981244206428528,"['some issues', 'uan card']",sadness,"{'some issues': 'Negative', 'uan card': 'Negative'}",bug_report
+excellent,5,2025-07-22 14:10:28,Google Play,POSITIVE,0.9998434782028198,[],joy,{},review
+very bad experience,1,2025-07-22 13:48:13,Google Play,NEGATIVE,-0.9998032450675964,['very bad experience'],sadness,{'very bad experience': 'Negative'},review
+good,5,2025-07-22 13:29:20,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-22 13:12:30,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+verygood,5,2025-07-22 12:53:08,Google Play,POSITIVE,0.9988996982574463,['verygood'],joy,{'verygood': 'Positive'},review
+worst,5,2025-07-22 12:42:38,Google Play,NEGATIVE,-0.9998016953468323,[],disgust,{},review
+good 😊,4,2025-07-22 11:22:10,Google Play,POSITIVE,0.9998576641082764,[],neutral,{},review
+thankyou,5,2025-07-22 11:20:40,Google Play,POSITIVE,0.9998428821563721,[],neutral,{},review
+not properly working,1,2025-07-22 11:14:24,Google Play,NEGATIVE,-0.9997904896736145,[],sadness,{},review
+digilocker is not working in app since a long time,1,2025-07-22 11:14:23,Google Play,NEGATIVE,-0.9987533092498779,"['digilocker', 'app', 'a long time']",neutral,"{'digilocker': 'Negative', 'app': 'Neutral', 'a long time': 'Negative'}",bug_report
+good 👍,5,2025-07-22 11:11:22,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+just another useless app lying in my mobile for years without being helpful.,1,2025-07-22 10:59:30,Google Play,NEGATIVE,-0.9998059868812561,"['just another useless app', 'my mobile', 'years']",disgust,"{'just another useless app': 'Negative', 'my mobile': 'Neutral', 'years': 'Negative'}",review
+good,5,2025-07-22 10:30:40,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+idk how this app got good rating it deserves 0 star for not being able to do the one thing everyone downloads this app for i.e. being able to see passbook. Why even have the website and app when none of them is working at any point of time. Developers of neither website or app have any accountability.,1,2025-07-22 10:17:16,Google Play,NEGATIVE,-0.9986063838005066,"['this app', 'good rating', '0 star', 'the one thing', 'this app', 'passbook', 'the website', 'app', 'any point', 'time', 'developers', 'neither website', 'app', 'any accountability']",surprise,"{'this app': 'Negative', 'good rating': 'Negative', '0 star': 'Negative', 'the one thing': 'Negative', 'passbook': 'Negative', 'the website': 'Negative', 'app': 'Negative', 'any point': 'Negative', 'time': 'Negative', 'developers': 'Negative', 'neither website': 'Negative', 'any accountability': 'Negative'}",review
+nice app,2,2025-07-22 09:36:52,Google Play,POSITIVE,0.9998061060905457,['nice app'],neutral,{'nice app': 'Positive'},review
+🧿❤️,5,2025-07-22 09:35:58,Google Play,NEGATIVE,-0.6970566511154175,[],neutral,{},review
+good,5,2025-07-22 09:23:33,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good 👍,5,2025-07-22 08:12:08,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+good,5,2025-07-22 02:50:32,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good 👍,5,2025-07-22 01:41:39,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+nice marketing,5,2025-07-22 01:35:11,Google Play,POSITIVE,0.9998272061347961,['nice marketing'],neutral,{'nice marketing': 'Positive'},review
+very useful 😁,5,2025-07-22 00:35:35,Google Play,POSITIVE,0.9994803071022034,['very useful 😁'],joy,{'very useful 😁': 'Positive'},review
+all parformance is good 👍👍👍,5,2025-07-22 00:28:59,Google Play,POSITIVE,0.9997832179069519,['all parformance'],joy,{'all parformance': 'Positive'},review
+Getting error processing the request null for EPFO. don't know why one app have multiple platforms if it is not supporting single one.,1,2025-07-22 00:23:29,Google Play,NEGATIVE,-0.9995692372322083,"['error', 'the request null', 'epfo', 'one app', 'multiple platforms']",surprise,"{'error': 'Negative', 'the request null': 'Negative', 'epfo': 'Negative', 'one app': 'Negative', 'multiple platforms': 'Negative'}",bug_report
+still this app not opening... how we can trust it....,1,2025-07-22 00:13:15,Google Play,NEGATIVE,-0.9987362027168274,['this app'],surprise,{'this app': 'Negative'},review
+does not work,1,2025-07-22 00:03:19,Google Play,NEGATIVE,-0.9997377991676331,[],sadness,{},review
+Most 3rd class app..completely useless,1,2025-07-21 23:23:57,Google Play,NEGATIVE,-0.9997783303260803,['most 3rd class app'],sadness,{'most 3rd class app': 'Negative'},review
+worst app,1,2025-07-21 22:45:34,Google Play,NEGATIVE,-0.9997863173484802,['worst app'],disgust,{'worst app': 'Negative'},review
+good,4,2025-07-21 22:11:26,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good experience,5,2025-07-21 21:40:35,Google Play,POSITIVE,0.9998599290847778,['good experience'],joy,{'good experience': 'Positive'},review
+Good,5,2025-07-21 20:54:28,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+wrost application for pf details not get properly,1,2025-07-21 20:43:02,Google Play,NEGATIVE,-0.9997846484184265,"['wrost application', 'pf details']",sadness,"{'wrost application': 'Negative', 'pf details': 'Negative'}",review
+Nothing works as expected,1,2025-07-21 20:04:06,Google Play,NEGATIVE,-0.9996939897537231,[],neutral,{},review
+good,5,2025-07-21 19:06:17,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+nice,5,2025-07-21 18:11:57,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+not working properly yet 😔,1,2025-07-21 17:18:22,Google Play,NEGATIVE,-0.9997320771217346,[],sadness,{},bug_report
+very bad with pf service,1,2025-07-21 16:49:23,Google Play,NEGATIVE,-0.9997676014900208,['pf service'],sadness,{'pf service': 'Negative'},review
+good,5,2025-07-21 16:27:37,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+Best app,5,2025-07-21 16:21:37,Google Play,POSITIVE,0.999686598777771,['best app'],neutral,{'best app': 'Positive'},review
+This app has everything but does nothing 😞,1,2025-07-21 14:17:27,Google Play,NEGATIVE,-0.9953238368034363,['this app'],neutral,{'this app': 'Negative'},review
+"in the past it's has worked very fast and claim also got in 7 days but now 2025 june and july onwards this app very very delay, and slowly claim of amount... I don't know y should like this umang app now ?",1,2025-07-21 14:08:13,Google Play,NEGATIVE,-0.9969664216041565,"['the past', 'claim', '7 days', 'now 2025 june', 'july', 'this app', 'very very delay', 'this umang app']",surprise,"{'the past': 'Negative', 'claim': 'Negative', '7 days': 'Negative', 'now 2025 june': 'Negative', 'july': 'Negative', 'this app': 'Negative', 'very very delay': 'Negative', 'this umang app': 'Negative'}",review
+"I truly think that India is transforming towards the developed nation but after using this app I serious feel bad about the Govt organisation, I am not even being able to login to the app in last 2 hours each time I am logging in it just buffer and I am back to the user login page just to check my Pf balance, I am calling their helpline number it says select your preffered language and then call disconnects I tried the same 10 times almost, I am really loosing hope of the digital portals of GOI",1,2025-07-21 13:49:02,Google Play,NEGATIVE,-0.9987857937812805,"['india', 'the developed nation', 'this app', 'the govt organisation', 'the app', 'last 2 hours', 'the user login page', 'my pf balance', 'their helpline number', 'your preffered language', 'disconnects', 'hope', 'the digital portals', 'goi']",sadness,"{'india': 'Negative', 'the developed nation': 'Negative', 'this app': 'Negative', 'the govt organisation': 'Negative', 'the app': 'Negative', 'last 2 hours': 'Negative', 'the user login page': 'Negative', 'my pf balance': 'Negative', 'their helpline number': 'Negative', 'your preffered language': 'Negative', 'disconnects': 'Negative', 'hope': 'Negative', 'the digital portals': 'Negative', 'goi': 'Negative'}",review
+Worst experience in both App and Webpage as well. Really don't understand what kind of service you are giving to the taxpayers? Multiple time transfer claim rejection even though we are the owner of our PF fund. Please improvise it to have a seamless experience for customers.,1,2025-07-21 13:26:01,Google Play,NEGATIVE,-0.9994148015975952,"['worst experience', 'both app', 'webpage', 'what kind', 'service', 'the taxpayers', 'multiple time transfer', 'the owner', 'our pf fund', 'a seamless experience', 'customers']",disgust,"{'worst experience': 'Negative', 'both app': 'Negative', 'webpage': 'Negative', 'what kind': 'Negative', 'service': 'Negative', 'the taxpayers': 'Neutral', 'multiple time transfer': 'Negative', 'the owner': 'Neutral', 'our pf fund': 'Neutral', 'a seamless experience': 'Negative', 'customers': 'Negative'}",review
+bakwas app hai sorry se fursat nahi milati.,1,2025-07-21 12:26:20,Google Play,NEGATIVE,-0.9982701539993286,[],sadness,{},review
+Goverment is doing good work it's idea of good governance,5,2025-07-21 12:15:11,Google Play,POSITIVE,0.999629020690918,"['goverment', 'good work', 'idea', 'good governance']",neutral,"{'goverment': 'Positive', 'good work': 'Positive', 'idea': 'Positive', 'good governance': 'Neutral'}",feature_request
+ok,5,2025-07-21 11:53:23,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+great app,5,2025-07-21 11:36:02,Google Play,POSITIVE,0.999821126461029,['great app'],joy,{'great app': 'Positive'},review
+Unable To Open The Application Error Occured While Opening Please Check And Clear The Issue As Soon As Possible.,1,2025-07-21 10:52:39,Google Play,NEGATIVE,-0.9995586276054382,"['the application error', 'the issue']",sadness,"{'the application error': 'Negative', 'the issue': 'Negative'}",bug_report
+epfo website is not always stable.,1,2025-07-21 10:46:48,Google Play,NEGATIVE,-0.9997686743736267,['epfo website'],neutral,{'epfo website': 'Negative'},review
+ghatiya aur wahiyat app hai acche se work hi nahin karta,1,2025-07-21 09:26:17,Google Play,NEGATIVE,-0.7067942023277283,['ghatiya aur wahiyat app hai acche se'],neutral,{'ghatiya aur wahiyat app hai acche se': 'Negative'},review
+very very slow in responding,1,2025-07-21 08:03:55,Google Play,NEGATIVE,-0.9997949004173279,[],sadness,{},review
+good,5,2025-07-21 08:02:21,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good app,5,2025-07-21 07:41:56,Google Play,POSITIVE,0.9998493194580078,['good app'],neutral,{'good app': 'Positive'},review
+good,5,2025-07-21 07:12:46,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+this app sucks,1,2025-07-21 07:02:04,Google Play,NEGATIVE,-0.9989964365959167,['this app'],disgust,{'this app': 'Negative'},review
+nice,5,2025-07-21 06:22:26,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+ok,4,2025-07-21 01:33:58,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+Epfo service always showing something went etong:nul. It's truly irritating every time I come to see the passbook getting the same error. Not sure if the application still is maintained by any development team.,1,2025-07-21 01:08:29,Google Play,NEGATIVE,-0.9997205138206482,"['epfo service', 'nul', 'the passbook', 'the same error', 'the application', 'any development team']",anger,"{'epfo service': 'Negative', 'nul': 'Negative', 'the passbook': 'Negative', 'the same error': 'Negative', 'the application': 'Negative', 'any development team': 'Negative'}",bug_report
+amazing,5,2025-07-21 00:44:15,Google Play,POSITIVE,0.999875545501709,[],joy,{},review
+good,5,2025-07-21 00:18:39,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+not Good,3,2025-07-21 00:02:57,Google Play,NEGATIVE,-0.9997889399528503,[],sadness,{},review
+verry good experience,5,2025-07-20 23:35:54,Google Play,POSITIVE,0.9998078942298889,['good experience'],joy,{'good experience': 'Positive'},review
+💕,5,2025-07-20 23:27:55,Google Play,NEGATIVE,-0.6970566511154175,[],neutral,{},review
+mere liye bahut hi sulabh or aasan easy way ka ye umang app hai,5,2025-07-20 22:53:14,Google Play,NEGATIVE,-0.9899560213088989,"['mere liye bahut', 'ye umang app hai']",neutral,"{'mere liye bahut': 'Positive', 'ye umang app hai': 'Positive'}",review
+Excellent 👍🙏,5,2025-07-20 22:27:33,Google Play,POSITIVE,0.9998458623886108,['excellent 👍'],neutral,{'excellent 👍': 'Positive'},review
+excellent performance for umang,5,2025-07-20 21:26:27,Google Play,POSITIVE,0.9998563528060913,"['excellent performance', 'umang']",joy,"{'excellent performance': 'Positive', 'umang': 'Positive'}",review
+"The app is not working properly, EPFO Service is not working, When I'm trying to login to my EPFO Account showing an error messages like"" Error Processing the Request:null"" Message, The backend APIs are not working , Pls check and do handsfree app for users.",1,2025-07-20 21:24:46,Google Play,NEGATIVE,-0.999721109867096,"['the app', 'epfo service', 'my epfo account', 'an error messages', '"" error', 'the request', 'null"" message', 'the backend apis', 'handsfree app', 'users']",sadness,"{'the app': 'Negative', 'epfo service': 'Negative', 'my epfo account': 'Negative', 'an error messages': 'Negative', '"" error': 'Negative', 'the request': 'Negative', 'null"" message': 'Negative', 'the backend apis': 'Negative', 'handsfree app': 'Negative', 'users': 'Neutral'}",bug_report
+not run in emergency,2,2025-07-20 20:56:28,Google Play,POSITIVE,0.9310141801834106,['emergency'],sadness,{'emergency': 'Neutral'},review
+PF option not working at all,1,2025-07-20 20:02:31,Google Play,NEGATIVE,-0.9996256828308105,['pf option'],neutral,{'pf option': 'Negative'},bug_report
+very nice,5,2025-07-20 19:53:01,Google Play,POSITIVE,0.9998563528060913,[],joy,{},review
+good,5,2025-07-20 19:29:01,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"Forget about raising a pf claim, Even viewing the epfo passbook is impossible with this app, I have been trying for 3 days, No server(error processing request Null) hope and time successfully wasted.",1,2025-07-20 18:55:49,Google Play,NEGATIVE,-0.9995598196983337,"['a pf claim', 'the epfo passbook', 'this app', '3 days', 'no server(error processing request', 'hope', 'time']",neutral,"{'a pf claim': 'Negative', 'the epfo passbook': 'Negative', 'this app': 'Negative', '3 days': 'Negative', 'no server(error processing request': 'Negative', 'hope': 'Negative', 'time': 'Negative'}",bug_report
+very good app paperless app,5,2025-07-20 18:23:28,Google Play,POSITIVE,0.9994245767593384,['very good app paperless app'],neutral,{'very good app paperless app': 'Positive'},review
+ik op se hi hai na bhai 0,2,2025-07-20 18:02:54,Google Play,NEGATIVE,-0.8780003786087036,['ik op se hi hai na bhai'],neutral,{'ik op se hi hai na bhai': 'Neutral'},review
+"what a disaster it has been for me good grief, can't see anything, everytime i try to raise a claim technical gitch pops up , I have just raised a claim and hun can't even see that under the track claim option it's been more than an hour 😕",1,2025-07-20 17:56:10,Google Play,NEGATIVE,-0.9996870756149292,"['what a disaster', 'good grief', 'a claim', 'technical gitch', 'a claim', 'hun', 'the track claim option', 'an hour']",sadness,"{'what a disaster': 'Negative', 'good grief': 'Negative', 'a claim': 'Negative', 'technical gitch': 'Negative', 'hun': 'Negative', 'the track claim option': 'Negative', 'an hour': 'Negative'}",review
+"This is a ""wonderful"" app which can teach you ""How to be Patient"" Since morning I am trying to login with OTP and/or MPIN option but nothing works. No error message... nothing at all. Looking at other comments in last few days seems it has been like that for quite a while.",1,2025-07-20 17:52:51,Google Play,NEGATIVE,-0.9897043108940125,"['a ""wonderful"" app', 'morning', 'otp and/or mpin option', 'no error message', 'other comments', 'last few days', 'quite a while']",surprise,"{'a ""wonderful"" app': 'Positive', 'morning': 'Neutral', 'otp and/or mpin option': 'Negative', 'no error message': 'Negative', 'other comments': 'Neutral', 'last few days': 'Neutral', 'quite a while': 'Negative'}",bug_report
+super,5,2025-07-20 15:52:48,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+good,5,2025-07-20 15:31:54,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good 👍,5,2025-07-20 15:23:49,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+This is totally waste of time . I have installed 9 times but this app isn't working .,1,2025-07-20 15:17:36,Google Play,NEGATIVE,-0.9996678829193115,"['totally waste', 'time', 'this app']",disgust,"{'totally waste': 'Negative', 'time': 'Negative', 'this app': 'Negative'}",review
+Good,3,2025-07-20 14:55:01,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+Nice,5,2025-07-20 13:51:52,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+Umang logoin,5,2025-07-20 12:57:09,Google Play,NEGATIVE,-0.5543597936630249,['umang'],neutral,{'umang': 'Neutral'},review
+nice,5,2025-07-20 10:49:51,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+good 👍🏻,5,2025-07-20 10:41:23,Google Play,POSITIVE,0.9998576641082764,['good 👍'],neutral,{'good 👍': 'Positive'},review
+Nice,5,2025-07-20 10:32:05,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+best app all india men and women,5,2025-07-20 10:11:51,Google Play,POSITIVE,0.9997994303703308,"['all india men', 'women']",neutral,"{'all india men': 'Neutral', 'women': 'Neutral'}",review
+good,5,2025-07-20 10:05:42,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good 😊👍 application.,5,2025-07-20 10:02:59,Google Play,POSITIVE,0.9997724890708923,['good 😊👍 application'],joy,{'good 😊👍 application': 'Positive'},review
+EPFO services are not working.,1,2025-07-20 09:54:28,Google Play,NEGATIVE,-0.9997667670249939,['epfo services'],sadness,{'epfo services': 'Negative'},bug_report
+", why??app not open",1,2025-07-20 08:47:06,Google Play,NEGATIVE,-0.9993098974227905,['why??app'],surprise,{'why??app': 'Negative'},review
+good,5,2025-07-20 08:28:21,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+Superb app 👌,5,2025-07-20 03:34:24,Google Play,POSITIVE,0.9997357726097107,['superb app'],neutral,{'superb app': 'Positive'},review
+good,5,2025-07-20 01:36:27,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+very useful,5,2025-07-20 00:52:56,Google Play,POSITIVE,0.999798595905304,[],joy,{},review
+umanga app login problem please,1,2025-07-19 23:09:59,Google Play,NEGATIVE,-0.9935043454170227,['umanga app login problem'],neutral,{'umanga app login problem': 'Negative'},bug_report
+download it then deleted after 2 days I think it takes around 2 years to open and I don't have that much time,1,2025-07-19 22:07:32,Google Play,NEGATIVE,-0.9995204210281372,"['2 days', 'around 2 years', 'that much time']",neutral,"{'2 days': 'Negative', 'around 2 years': 'Negative', 'that much time': 'Negative'}",review
+Useless app,1,2025-07-19 21:19:48,Google Play,NEGATIVE,-0.9997797608375549,['useless app'],anger,{'useless app': 'Negative'},review
+okay,5,2025-07-19 20:55:19,Google Play,POSITIVE,0.9997709393501282,[],neutral,{},review
+good 👍,5,2025-07-19 20:18:09,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+very bad,1,2025-07-19 20:04:36,Google Play,NEGATIVE,-0.9997884631156921,[],disgust,{},review
+Nice,5,2025-07-19 18:58:52,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+good,4,2025-07-19 18:46:23,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+Nice 👍👍👍,5,2025-07-19 18:19:23,Google Play,POSITIVE,0.9998424053192139,['nice 👍'],neutral,{'nice 👍': 'Positive'},review
+good,5,2025-07-19 18:11:07,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"one of the worst application I have ever seen, so much latency in the application. major problem is the EPFO page will not work in a single time you just have to hit and try so many times By luck you will get a chance to view your balance unfortunately I don't have that luck.",1,2025-07-19 16:00:23,Google Play,NEGATIVE,-0.9995978474617004,"['the worst application', 'so much latency', 'the application', 'major problem', 'the epfo page', 'a single time', 'luck', 'a chance', 'your balance', 'that luck']",sadness,"{'the worst application': 'Negative', 'so much latency': 'Negative', 'the application': 'Negative', 'major problem': 'Negative', 'the epfo page': 'Negative', 'a single time': 'Negative', 'luck': 'Negative', 'a chance': 'Neutral', 'your balance': 'Neutral', 'that luck': 'Negative'}",bug_report
+good,5,2025-07-19 15:43:35,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+super aplication,5,2025-07-19 15:40:15,Google Play,POSITIVE,0.89707350730896,['super aplication'],neutral,{'super aplication': 'Positive'},review
+very useful,5,2025-07-19 15:36:14,Google Play,POSITIVE,0.999798595905304,[],joy,{},review
+good,5,2025-07-19 15:02:08,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+very nice 👍,5,2025-07-19 14:39:13,Google Play,POSITIVE,0.9998577833175659,[],joy,{},review
+good,5,2025-07-19 14:13:57,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-19 14:02:35,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+not responding . why?,1,2025-07-19 13:02:44,Google Play,NEGATIVE,-0.9997429251670837,[],surprise,{},review
+super ❤️,5,2025-07-19 12:54:08,Google Play,POSITIVE,0.9331682920455933,[],neutral,{},review
+"Proud to use this government app just to see ""Error processing the request""",1,2025-07-19 12:08:36,Google Play,NEGATIVE,-0.952965259552002,"['this government app', '""error', 'the request']",joy,"{'this government app': 'Neutral', '""error': 'Negative', 'the request': 'Negative'}",bug_report
+very bad service 😞,1,2025-07-19 11:58:24,Google Play,NEGATIVE,-0.9996441602706909,['very bad service'],disgust,{'very bad service': 'Negative'},review
+Unable to check my PF passbook.,1,2025-07-19 11:39:49,Google Play,NEGATIVE,-0.9995998740196228,['my pf passbook'],sadness,{'my pf passbook': 'Negative'},review
+Very slow service,1,2025-07-19 11:19:15,Google Play,NEGATIVE,-0.9997288584709167,['very slow service'],neutral,{'very slow service': 'Neutral'},review
+"I've been facing repeated issues with the EPFO service on UMANG app. many time I try to access it, a pop-up appears saying ""Something went wrong"" or ""error processing the request null"", but there's been no resolution despite the long wait. It's frustrating & inconvenient. I tried uninstalling and installing the app but it made no difference😟. Worst app in ever",1,2025-07-19 10:58:10,Google Play,NEGATIVE,-0.9996984004974365,"['repeated issues', 'the epfo service', 'umang app', 'the request null', 'no resolution', 'the long wait', 'the app', 'no difference', 'worst app']",sadness,"{'repeated issues': 'Negative', 'the epfo service': 'Negative', 'umang app': 'Negative', 'the request null': 'Negative', 'no resolution': 'Negative', 'the long wait': 'Negative', 'the app': 'Negative', 'no difference': 'Negative', 'worst app': 'Negative'}",bug_report
+The app servers still under maintenance it seems. Like for how many days?,1,2025-07-19 10:25:44,Google Play,NEGATIVE,-0.9992290735244751,"['the app', 'maintenance', 'how many days']",neutral,"{'the app': 'Negative', 'maintenance': 'Negative', 'how many days': 'Neutral'}",review
+very good,5,2025-07-19 10:11:31,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+ok this apps n,5,2025-07-19 10:05:32,Google Play,POSITIVE,0.9991757273674011,['this apps'],neutral,{'this apps': 'Neutral'},review
+Good,5,2025-07-19 09:51:19,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"gud exercise......... bahut jald har km hunda .................. suprb .....,.......................... ...., asha hai Umang appp superb super fast work ......it's brilliant and work ko lekr bahut loyal hai............................................. such a Umang application download consultant..................... Umang app se app ke kyi kaam esiliye start and complete ho jaye hai................................................... Maine pahle bar ese use Kiya hai experience mera behtreen rha",5,2025-07-19 09:06:19,Google Play,POSITIVE,0.9977918863296509,"['gud exercise', 'bahut jald har km hunda .................. suprb', '...., asha hai umang appp superb super fast work', 'loyal hai', 'ho jaye hai................................................... maine pahle bar ese use']",neutral,"{'gud exercise': 'Positive', 'bahut jald har km hunda .................. suprb': 'Positive', '...., asha hai umang appp superb super fast work': 'Positive', 'loyal hai': 'Positive', 'ho jaye hai................................................... maine pahle bar ese use': 'Positive'}",review
+very nice,5,2025-07-19 09:02:46,Google Play,POSITIVE,0.9998563528060913,[],joy,{},review
+nice,5,2025-07-19 08:23:39,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+"works 2/10 times when using any service. most of the time there's some error, some server failure, this and that",2,2025-07-19 07:47:05,Google Play,NEGATIVE,-0.9975874423980713,"['any service', 'the time', 'some error', 'some server failure']",neutral,"{'any service': 'Negative', 'the time': 'Negative', 'some error': 'Negative', 'some server failure': 'Negative'}",bug_report
+Good App,5,2025-07-19 07:07:06,Google Play,POSITIVE,0.9998493194580078,['good app'],neutral,{'good app': 'Positive'},review
+I have 4 pf account in one uan no but when I want to withdraw money showing only one pf no,1,2025-07-19 06:20:53,Google Play,NEGATIVE,-0.9984340071678162,"['4 pf account', 'one uan', 'money', 'only one pf']",sadness,"{'4 pf account': 'Negative', 'one uan': 'Neutral', 'money': 'Negative', 'only one pf': 'Negative'}",review
+ok,5,2025-07-19 00:51:39,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+good app and nice sistam,5,2025-07-19 00:11:45,Google Play,POSITIVE,0.9998489618301392,"['good app', 'nice sistam']",joy,"{'good app': 'Positive', 'nice sistam': 'Positive'}",review
+Good,5,2025-07-19 00:10:15,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+star,5,2025-07-18 23:23:59,Google Play,POSITIVE,0.9997329115867615,['star'],neutral,{'star': 'Neutral'},review
+I'm unable to use the app It is showing technical issue since last one month. I have tried uninstalling the app many times but still the app is not working.,1,2025-07-18 23:14:54,Google Play,NEGATIVE,-0.9994320273399353,"['the app', 'technical issue', 'last one month', 'the app', 'the app']",sadness,"{'the app': 'Negative', 'technical issue': 'Negative', 'last one month': 'Negative'}",bug_report
+good,5,2025-07-18 22:22:26,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"Worst experience 🤦 as usual, this proves the poor quality of Govt's service.",1,2025-07-18 21:27:21,Google Play,NEGATIVE,-0.9997738003730774,"['the poor quality', ""govt's service""]",disgust,"{'the poor quality': 'Negative', ""govt's service"": 'Negative'}",review
+super,5,2025-07-18 20:59:59,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+nice app,4,2025-07-18 19:54:41,Google Play,POSITIVE,0.9998061060905457,['nice app'],neutral,{'nice app': 'Positive'},review
+bahut achha app he,5,2025-07-18 19:42:02,Google Play,NEGATIVE,-0.9756198525428772,['achha app'],neutral,{'achha app': 'Negative'},review
+good,4,2025-07-18 19:31:22,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+very good aap,5,2025-07-18 19:18:20,Google Play,POSITIVE,0.9998631477355957,['very good aap'],joy,{'very good aap': 'Positive'},review
+excellent,5,2025-07-18 18:29:14,Google Play,POSITIVE,0.9998434782028198,[],joy,{},review
+good,5,2025-07-18 18:04:31,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-18 17:10:30,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"last 3weeks I try to open the app but still now not opened ,i tried also uninstalled and reinstalled but not use not opened",3,2025-07-18 16:52:44,Google Play,NEGATIVE,-0.9932034015655518,['the app'],sadness,{'the app': 'Negative'},review
+nise,5,2025-07-18 16:32:19,Google Play,NEGATIVE,-0.790794849395752,[],neutral,{},review
+registration hi nahi ho raha very bad app all time show error otp send nahi hota,1,2025-07-18 15:58:00,Google Play,NEGATIVE,-0.9996626377105713,"['registration hi nahi ho raha', 'very bad app', 'error otp', 'nahi hota']",sadness,"{'registration hi nahi ho raha': 'Negative', 'very bad app': 'Negative', 'error otp': 'Negative', 'nahi hota': 'Negative'}",bug_report
+ok,5,2025-07-18 15:48:11,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+fine,5,2025-07-18 15:40:46,Google Play,POSITIVE,0.9998335838317871,[],anger,{},review
+ok,5,2025-07-18 15:22:46,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+verry good,3,2025-07-18 15:00:39,Google Play,POSITIVE,0.9998464584350586,[],joy,{},review
+thanks Jaaneman,5,2025-07-18 14:30:47,Google Play,POSITIVE,0.9997656941413879,['thanks'],neutral,{'thanks': 'Positive'},review
+I have been trying to check my epf for the last 1 year on this app but this app is always giving me multiple issues. I don't know kese desh aage badega jab government agencies ka digital India hi kaam ni kr rha h. Modi ji Tech team badlo tabhi indian badlega digital me.,1,2025-07-18 13:58:08,Google Play,NEGATIVE,-0.9983806610107422,"['my epf', 'the last 1 year', 'this app', 'this app', 'multiple issues', 'kese desh aage badega jab government agencies', 'digital india', 'hi kaam ni kr rha h.', 'ji tech team', 'tabhi', 'indian badlega', 'digital']",sadness,"{'my epf': 'Negative', 'the last 1 year': 'Neutral', 'this app': 'Negative', 'multiple issues': 'Negative', 'kese desh aage badega jab government agencies': 'Neutral', 'digital india': 'Neutral', 'hi kaam ni kr rha h.': 'Neutral', 'ji tech team': 'Neutral', 'tabhi': 'Neutral', 'indian badlega': 'Neutral', 'digital': 'Neutral'}",bug_report
+good,3,2025-07-18 13:34:53,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good 👍,5,2025-07-18 13:28:48,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+not working. no customer care support.,1,2025-07-18 13:26:22,Google Play,NEGATIVE,-0.9997792840003967,['no customer care support'],sadness,{'no customer care support': 'Negative'},bug_report
+While doing login i am not getting OTP ...wired,1,2025-07-18 13:16:45,Google Play,NEGATIVE,-0.9990654587745667,['login'],sadness,{'login': 'Negative'},review
+"it's really bad ,like past three days i have been trying to make my ABC ID but it's not working ,what we can expect from a government app",1,2025-07-18 13:10:40,Google Play,NEGATIVE,-0.9996800422668457,"['three days', 'my abc id', 'a government app']",sadness,"{'three days': 'Negative', 'my abc id': 'Negative', 'a government app': 'Negative'}",bug_report
+Not opening,1,2025-07-18 13:07:12,Google Play,NEGATIVE,-0.9996150732040405,[],neutral,{},review
+ok,5,2025-07-18 13:02:39,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+Does not work,1,2025-07-18 12:29:44,Google Play,NEGATIVE,-0.9997377991676331,[],sadness,{},review
+good,4,2025-07-18 11:44:18,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+App not working,1,2025-07-18 11:41:07,Google Play,NEGATIVE,-0.9997286200523376,['app'],sadness,{'app': 'Negative'},bug_report
+nothing works,1,2025-07-18 11:04:16,Google Play,NEGATIVE,-0.9997561573982239,[],neutral,{},review
+no scary,5,2025-07-18 08:41:02,Google Play,NEGATIVE,-0.9996505975723267,[],fear,{},review
+App open hone mai itna tym lghta hai Har Baar Sarver Down hi rehta hai,1,2025-07-18 08:20:25,Google Play,NEGATIVE,-0.9742401242256165,['app open hone mai itna tym lghta hai har baar'],neutral,{'app open hone mai itna tym lghta hai har baar': 'Neutral'},review
+great,5,2025-07-18 07:33:38,Google Play,POSITIVE,0.9998630285263062,[],joy,{},review
+good,5,2025-07-18 06:34:36,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+nice app,5,2025-07-18 05:11:10,Google Play,POSITIVE,0.9998061060905457,['nice app'],neutral,{'nice app': 'Positive'},review
+good,4,2025-07-18 04:11:07,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+nice experience with umang app information,2,2025-07-18 00:23:18,Google Play,POSITIVE,0.999313235282898,"['nice experience', 'umang app information']",neutral,"{'nice experience': 'Positive', 'umang app information': 'Positive'}",review
+trying go login since two days but unable to login,1,2025-07-17 23:59:35,Google Play,NEGATIVE,-0.9971731901168823,"['go login', 'two days']",sadness,"{'go login': 'Negative', 'two days': 'Negative'}",review
+"trying to enter UAN number,showing error processing request,null.",1,2025-07-17 23:15:10,Google Play,NEGATIVE,-0.9997100234031677,"['uan number', 'error processing request']",sadness,"{'uan number': 'Negative', 'error processing request': 'Negative'}",bug_report
+bakwas app,1,2025-07-17 22:38:25,Google Play,NEGATIVE,-0.8719189763069153,[],neutral,{},review
+"30/62025 Gave 1 star as unable to use service for over a month Edited 17/7/2025 ""A heartfelt thank you for getting back to me! However, This application truly is a masterpiece in itself. It just loves to tell me my session has expired, then graciously offers an endless buffering loop instead of the simple courtesy of letting me log back in. Or, you know, even log out. Pure genius, really.""",1,2025-07-17 21:53:12,Google Play,POSITIVE,0.9985116124153137,"['30/62025', '1 star', 'service', 'this application', 'a masterpiece', 'my session', 'an endless buffering loop', 'the simple courtesy', 'pure genius']",neutral,"{'30/62025': 'Negative', '1 star': 'Negative', 'service': 'Negative', 'this application': 'Positive', 'a masterpiece': 'Positive', 'my session': 'Negative', 'an endless buffering loop': 'Positive', 'the simple courtesy': 'Negative', 'pure genius': 'Positive'}",review
+Helpful 😃,5,2025-07-17 21:49:51,Google Play,POSITIVE,0.9989602565765381,['helpful 😃'],neutral,{'helpful 😃': 'Positive'},review
+good,5,2025-07-17 21:40:51,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"While using EPFO, facing issue in login.all time show error.",1,2025-07-17 20:32:57,Google Play,NEGATIVE,-0.9995073080062866,"['epfo', 'issue', 'login.all time show error']",sadness,"{'epfo': 'Negative', 'issue': 'Negative', 'login.all time show error': 'Negative'}",bug_report
+so help full,5,2025-07-17 20:16:33,Google Play,NEGATIVE,-0.8544971346855164,[],neutral,{},review
+super,5,2025-07-17 19:18:26,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+"This app and Web version both are terrific nowadays , i am trying to get the passbook but it shows the maximum number of OTP's sent despite the fact that no otp is there",1,2025-07-17 19:07:51,Google Play,POSITIVE,0.9926702976226807,"['this app and web version', 'the passbook', 'the maximum number', 'otp', 'the fact', 'no otp']",surprise,"{'this app and web version': 'Positive', 'the passbook': 'Neutral', 'the maximum number': 'Neutral', 'otp': 'Negative', 'the fact': 'Negative', 'no otp': 'Negative'}",review
+good,5,2025-07-17 18:47:34,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+this aap is not opening at all Very Bad The New version is worst.,1,2025-07-17 14:53:06,Google Play,NEGATIVE,-0.999610960483551,"['this aap', 'the new version']",disgust,"{'this aap': 'Negative', 'the new version': 'Negative'}",review
+very nice,5,2025-07-17 14:49:20,Google Play,POSITIVE,0.9998563528060913,[],joy,{},review
+nice 👍,5,2025-07-17 14:49:08,Google Play,POSITIVE,0.9998424053192139,[],neutral,{},review
+"App is not working, it's struck on splash screen and not moving forward. tried clearing cache, uninstalling and reinstalling as well but still same issue.",1,2025-07-17 14:44:01,Google Play,NEGATIVE,-0.9994150400161743,"['app', 'splash screen', 'clearing cache', 'uninstalling', 'issue']",sadness,"{'app': 'Negative', 'splash screen': 'Negative', 'clearing cache': 'Negative', 'uninstalling': 'Negative', 'issue': 'Negative'}",bug_report
+easy & useful for my work,5,2025-07-17 14:37:31,Google Play,POSITIVE,0.9996248483657837,"['easy', 'my work']",joy,"{'easy': 'Positive', 'my work': 'Positive'}",review
+Govt. of India. Thankyou.🇮🇳🇮🇳🇮🇳,5,2025-07-17 14:35:02,Google Play,POSITIVE,0.9997641444206238,"['govt', 'india', 'thankyou', '🇮🇳🇮🇳🇮']",joy,"{'govt': 'Positive', 'india': 'Positive', 'thankyou': 'Positive', '🇮🇳🇮🇳🇮': 'Positive'}",review
+very good,5,2025-07-17 14:29:31,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+jab bhi umang app use karta hu uske baad phone hang karna shuru kar deta hai. use karne ke baad jab koi dusari app kholta hu to key pad kaam nahi karta fir sari app koclose karke chalana padta hai . or ye har baar umang app chalane ke baad hi hota hai.,2,2025-07-17 14:19:22,Google Play,NEGATIVE,-0.9985609650611877,"['jab bhi umang app', 'karta hu', 'uske baad phone hang karna shuru kar deta hai', 'ke baad jab koi dusari app kholta hu', 'key pad kaam nahi karta fir sari app', 'koclose karke chalana padta hai', 'or ye har baar umang app chalane ke baad']",neutral,"{'jab bhi umang app': 'Positive', 'karta hu': 'Negative', 'uske baad phone hang karna shuru kar deta hai': 'Positive', 'ke baad jab koi dusari app kholta hu': 'Negative', 'key pad kaam nahi karta fir sari app': 'Negative', 'koclose karke chalana padta hai': 'Positive', 'or ye har baar umang app chalane ke baad': 'Negative'}",review
+very good,5,2025-07-17 14:11:39,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+super,5,2025-07-17 14:06:02,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+worst 😭 it is not connecting to digilocker,1,2025-07-17 13:37:19,Google Play,NEGATIVE,-0.99970942735672,[],disgust,{},review
+good,5,2025-07-17 13:30:07,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-17 13:24:41,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+excellent,4,2025-07-17 13:16:41,Google Play,POSITIVE,0.9998434782028198,[],joy,{},review
+good app,5,2025-07-17 13:08:23,Google Play,POSITIVE,0.9998493194580078,['good app'],neutral,{'good app': 'Positive'},review
+Pls change Tamil Font more readable font. Some headings showing only dot dot dot and some other headings going to next line. Better use combact font.,4,2025-07-17 13:03:02,Google Play,NEGATIVE,-0.9955517649650574,"['tamil', 'font', 'some headings', 'only dot dot dot', 'some other headings', 'next line', 'combact font']",neutral,"{'tamil': 'Negative', 'font': 'Positive', 'some headings': 'Negative', 'only dot dot dot': 'Negative', 'some other headings': 'Negative', 'next line': 'Neutral', 'combact font': 'Positive'}",review
+👍,4,2025-07-17 13:01:29,Google Play,NEGATIVE,-0.6970566511154175,[],neutral,{},review
+very somuch server issue,1,2025-07-17 12:51:22,Google Play,NEGATIVE,-0.9978912472724915,['very somuch server issue'],sadness,{'very somuch server issue': 'Negative'},bug_report
+pretty good app working smooth thank you developer नमस्कार,5,2025-07-17 12:46:51,Google Play,POSITIVE,0.9997555613517761,"['pretty good app', 'developer']",joy,"{'pretty good app': 'Positive', 'developer': 'Positive'}",review
+nice,5,2025-07-17 12:45:02,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+👍,1,2025-07-17 12:41:48,Google Play,NEGATIVE,-0.6970566511154175,[],neutral,{},review
+not open this app sometimes.,5,2025-07-17 12:27:50,Google Play,NEGATIVE,-0.9974017143249512,['this app'],sadness,{'this app': 'Negative'},review
+PF K LIYE APPLY HI NI KAR PAA RAHA BAKWAS APPLICATION,1,2025-07-17 12:26:26,Google Play,NEGATIVE,-0.9875496029853821,"['pf k liye', 'kar paa raha', 'application']",neutral,"{'pf k liye': 'Neutral', 'kar paa raha': 'Neutral', 'application': 'Neutral'}",review
+good,5,2025-07-17 12:21:41,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+Good,5,2025-07-17 12:18:57,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"Epf passbook showing error for e nomination even I have already done it. But still the same error , filing e nomination is compulsory to view passbook, this is one of the worst app of all times",1,2025-07-17 12:18:31,Google Play,NEGATIVE,-0.99980229139328,"['passbook', 'error', 'e nomination', 'but still the same error', 'e nomination', 'passbook', 'the worst app', 'all times']",disgust,"{'passbook': 'Negative', 'error': 'Negative', 'e nomination': 'Negative', 'but still the same error': 'Negative', 'the worst app': 'Negative', 'all times': 'Negative'}",bug_report
+"most of times we get backend issue in services, like epfo, cibil score etc...",3,2025-07-17 12:16:31,Google Play,NEGATIVE,-0.9959689378738403,"['times', 'backend issue', 'services', 'epfo']",neutral,"{'times': 'Negative', 'backend issue': 'Negative', 'services': 'Negative', 'epfo': 'Negative'}",bug_report
+The worst app is always in the teach issue server problem,1,2025-07-17 12:15:58,Google Play,NEGATIVE,-0.9998112320899963,"['the worst app', 'the teach issue server problem']",disgust,"{'the worst app': 'Negative', 'the teach issue server problem': 'Negative'}",bug_report
+"If it's from India the app should understand the location and provide information in their state language or English is fine. I don't know how to read Hindi nor speak, but you people send notifications in Hindi. Developers please be aware that across India people are using this app and not everyone understands or reads Hindi.",1,2025-07-17 12:15:57,Google Play,NEGATIVE,-0.9912592768669128,"['india', 'the app', 'the location', 'information', 'their state language', 'english', 'hindi', 'you people', 'notifications', 'hindi', 'developers', 'india people', 'this app', 'hindi']",neutral,"{'india': 'Neutral', 'the app': 'Positive', 'the location': 'Neutral', 'information': 'Positive', 'their state language': 'Neutral', 'english': 'Positive', 'hindi': 'Negative', 'you people': 'Positive', 'notifications': 'Negative', 'developers': 'Negative', 'india people': 'Neutral', 'this app': 'Neutral'}",review
+"EPFO Passbook is not opening showing an error it's more than a month since the problem is not solved, that's how you provide services. Frustrated with your services at least fix it on time.",1,2025-07-17 12:13:27,Google Play,NEGATIVE,-0.9994377493858337,"['epfo passbook', 'an error', 'more than a month', 'the problem', 'services', 'your services', 'time']",anger,"{'epfo passbook': 'Negative', 'an error': 'Negative', 'more than a month': 'Negative', 'the problem': 'Negative', 'services': 'Negative', 'your services': 'Negative', 'time': 'Negative'}",bug_report
+Needs further improvement in regards to integration of the data,5,2025-07-17 12:11:58,Google Play,NEGATIVE,-0.9938126802444458,"['further improvement', 'regards', 'integration', 'the data']",neutral,"{'further improvement': 'Negative', 'regards': 'Negative', 'integration': 'Negative', 'the data': 'Negative'}",review
+very nice application,5,2025-07-17 12:10:44,Google Play,POSITIVE,0.9998540878295898,['very nice application'],joy,{'very nice application': 'Positive'},review
+please improve the TalkBack accessibility on this app this app is completely in accessible,1,2025-07-17 12:08:40,Google Play,POSITIVE,0.9952003955841064,"['the talkback accessibility', 'this app', 'this app']",neutral,"{'the talkback accessibility': 'Negative', 'this app': 'Positive'}",review
+good,5,2025-07-17 12:07:32,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+all the time server down 👎,1,2025-07-17 12:06:06,Google Play,NEGATIVE,-0.9971364736557007,['all the time server'],neutral,{'all the time server': 'Negative'},review
+very nice,5,2025-07-17 11:58:18,Google Play,POSITIVE,0.9998563528060913,[],joy,{},review
+good,5,2025-07-17 11:57:58,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+very good,5,2025-07-17 11:54:50,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+worest app i ever seen and why the Indian government apps only like this.i try to open this from 10 days but it's not working.why the all other private apps are working good.please take the amount from my accounts and make it working.,1,2025-07-17 11:54:34,Google Play,POSITIVE,0.8741747736930847,"['the indian government apps', 'this.i', '10 days', 'the all other private apps', 'good.please', 'the amount', 'my accounts']",surprise,"{'the indian government apps': 'Negative', 'this.i': 'Negative', '10 days': 'Neutral', 'the all other private apps': 'Positive', 'good.please': 'Negative', 'the amount': 'Neutral', 'my accounts': 'Neutral'}",bug_report
+bad not waerking,1,2025-07-17 06:24:21,Google Play,NEGATIVE,-0.6435049772262573,[],neutral,{},review
+The app has one hard issue that it doesn't connect with digilocker.everytime when I opened digilocker it said that your digilocker account is not connected with Umang profile please link again and when I am going to link digilocker account then it said your digilocker account is already linked with your digilocker account. please fix it 🙏,1,2025-07-17 05:42:58,Google Play,NEGATIVE,-0.9989472031593323,"['the app', 'one hard issue', 'digilocker.everytime', 'your digilocker account', 'umang profile', 'digilocker account', 'your digilocker account', 'your digilocker account']",neutral,"{'the app': 'Negative', 'one hard issue': 'Negative', 'digilocker.everytime': 'Negative', 'your digilocker account': 'Negative', 'umang profile': 'Negative', 'digilocker account': 'Negative'}",bug_report
+slow process app,2,2025-07-17 05:36:40,Google Play,NEGATIVE,-0.9990744590759277,['slow process app'],neutral,{'slow process app': 'Neutral'},review
+bahut slow app Hai hamesha iska server down Hi rahata,3,2025-07-17 03:56:09,Google Play,NEGATIVE,-0.9948670864105225,"['slow app', 'hi rahata']",neutral,"{'slow app': 'Negative', 'hi rahata': 'Negative'}",review
+umang app is not opening in my mobile,1,2025-07-17 01:06:13,Google Play,NEGATIVE,-0.9993715882301331,"['umang app', 'my mobile']",sadness,"{'umang app': 'Negative', 'my mobile': 'Neutral'}",review
+nice app,5,2025-07-17 01:02:28,Google Play,POSITIVE,0.9998061060905457,['nice app'],neutral,{'nice app': 'Positive'},review
+gobar app,1,2025-07-17 00:29:47,Google Play,NEGATIVE,-0.8010095953941345,['gobar app'],neutral,{'gobar app': 'Neutral'},review
+"why even have this portal when everything needs to be done through the website ? this app just does not work. I can't check my PF, cant withdraw PF. it doesn't let me do anything. a waste application for waste of time.",1,2025-07-17 00:01:46,Google Play,NEGATIVE,-0.9997584223747253,"['the website', 'this app', 'my pf', 'a waste application', 'waste', 'time']",sadness,"{'the website': 'Negative', 'this app': 'Negative', 'my pf': 'Negative', 'a waste application': 'Negative', 'waste': 'Negative', 'time': 'Negative'}",review
+This Application's Very Easy to use And smooth working And very Helpful For Gov scheme👍🏽,5,2025-07-16 23:02:19,Google Play,POSITIVE,0.9990234375,['gov scheme'],joy,{'gov scheme': 'Positive'},review
+Nice 👍🙂👍,5,2025-07-16 22:34:01,Google Play,POSITIVE,0.9998424053192139,['nice 👍🙂'],neutral,{'nice 👍🙂': 'Positive'},review
+gud,5,2025-07-16 21:57:22,Google Play,NEGATIVE,-0.8956557512283325,['gud'],sadness,{'gud': 'Positive'},review
+good,5,2025-07-16 21:56:51,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+bilkul bekar app hai,1,2025-07-16 21:46:12,Google Play,NEGATIVE,-0.8101599216461182,['bilkul bekar app hai'],neutral,{'bilkul bekar app hai': 'Positive'},review
+very nice 👍,5,2025-07-16 21:29:07,Google Play,POSITIVE,0.9998577833175659,[],joy,{},review
+good app,3,2025-07-16 20:55:21,Google Play,POSITIVE,0.9998493194580078,['good app'],neutral,{'good app': 'Positive'},review
+super,5,2025-07-16 20:50:02,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+best the all app,5,2025-07-16 20:17:51,Google Play,POSITIVE,0.9998090863227844,['best the all app'],neutral,{'best the all app': 'Positive'},review
+good,5,2025-07-16 19:55:10,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"I love this app,so easy,",5,2025-07-16 19:49:44,Google Play,POSITIVE,0.9998354911804199,['this app'],joy,{'this app': 'Positive'},review
+it is very use full application,5,2025-07-16 19:45:14,Google Play,POSITIVE,0.9922816157341003,['full application'],joy,{'full application': 'Positive'},review
+not soo helping app. bad response,2,2025-07-16 19:04:28,Google Play,NEGATIVE,-0.9992485642433167,['bad response'],sadness,{'bad response': 'Negative'},review
+sabase bakwas app hai ye always technical issue ho hota hai. Epfo service me na passbook open hota hai na Koi request process hoti hai,1,2025-07-16 18:06:45,Google Play,NEGATIVE,-0.9923768043518066,"['sabase', 'app', 'hai ye', 'epfo service', 'open hota', 'na koi request process hoti hai']",sadness,"{'sabase': 'Negative', 'app': 'Negative', 'hai ye': 'Negative', 'epfo service': 'Negative', 'open hota': 'Negative', 'na koi request process hoti hai': 'Negative'}",bug_report
+worst app even seen,1,2025-07-16 17:42:14,Google Play,NEGATIVE,-0.9997939467430115,['worst app'],disgust,{'worst app': 'Negative'},review
+good 👍,4,2025-07-16 17:42:01,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+"Funny application. You want to access EPF passbook? ""Oops, error processing your request"" , You want to access digital documents? ""We apologise for the inconvenience, there's a technical issue.....""",1,2025-07-16 16:17:12,Google Play,NEGATIVE,-0.9792068004608154,"['funny application', 'epf passbook', 'your request', 'digital documents', 'the inconvenience', 'a technical issue']",neutral,"{'funny application': 'Positive', 'epf passbook': 'Neutral', 'your request': 'Negative', 'digital documents': 'Neutral', 'the inconvenience': 'Negative', 'a technical issue': 'Negative'}",bug_report
+good,5,2025-07-16 16:15:51,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-16 15:58:06,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+v good,5,2025-07-16 15:04:16,Google Play,POSITIVE,0.9984826445579529,[],joy,{},review
+Excellent,5,2025-07-16 14:10:46,Google Play,POSITIVE,0.9998434782028198,[],neutral,{},review
+good 👍,4,2025-07-16 14:04:59,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+good,5,2025-07-16 13:56:43,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+bad app,1,2025-07-16 13:39:17,Google Play,NEGATIVE,-0.9997212290763855,['bad app'],sadness,{'bad app': 'Negative'},review
+this app is not working,1,2025-07-16 13:33:29,Google Play,NEGATIVE,-0.9997813105583191,['this app'],sadness,{'this app': 'Negative'},bug_report
+ok,4,2025-07-16 13:00:24,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+Always time very slow work it's not good work totally time wastage,2,2025-07-16 12:56:54,Google Play,NEGATIVE,-0.9997705817222595,"['very slow work', 'good work', 'totally time wastage']",sadness,"{'very slow work': 'Negative', 'good work': 'Negative', 'totally time wastage': 'Negative'}",review
+Waste of time technical problem 2025 waste of time technical problem waste of time many times,1,2025-07-16 11:51:07,Google Play,NEGATIVE,-0.9996368885040283,"['waste', 'time technical problem', '2025 waste', 'time', 'technical problem waste', 'time']",neutral,"{'waste': 'Negative', 'time technical problem': 'Negative', '2025 waste': 'Negative', 'time': 'Negative', 'technical problem waste': 'Negative'}",bug_report
+worst service of EPFO in umang and their website I don't know how they are handling pf accounts they don't have basics customer handling,1,2025-07-16 11:50:59,Google Play,NEGATIVE,-0.9997976422309875,"['epfo', 'umang', 'pf accounts', 'basics customer handling']",disgust,"{'epfo': 'Negative', 'umang': 'Neutral', 'pf accounts': 'Neutral', 'basics customer handling': 'Negative'}",review
+normals services,5,2025-07-16 11:39:57,Google Play,POSITIVE,0.9821321964263916,['services'],neutral,{'services': 'Neutral'},review
+It I is very useful for citizens,5,2025-07-16 11:06:08,Google Play,POSITIVE,0.9991637468338013,['citizens'],joy,{'citizens': 'Positive'},review
+very nice 💯🙂,3,2025-07-16 09:46:00,Google Play,POSITIVE,0.9998577833175659,['very nice 💯🙂'],joy,{'very nice 💯🙂': 'Positive'},review
+bad performance any time,1,2025-07-16 09:35:28,Google Play,NEGATIVE,-0.999757707118988,['bad performance'],neutral,{'bad performance': 'Negative'},review
+pathetic..nothing works,1,2025-07-16 07:43:54,Google Play,NEGATIVE,-0.9997875094413757,[],sadness,{},review
+not working,1,2025-07-16 07:01:26,Google Play,NEGATIVE,-0.9997778534889221,[],sadness,{},bug_report
+good,5,2025-07-16 06:52:02,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+nice,5,2025-07-16 06:42:48,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+good app,5,2025-07-15 23:57:48,Google Play,POSITIVE,0.9998493194580078,['good app'],neutral,{'good app': 'Positive'},review
+this is the nice App,5,2025-07-15 23:55:01,Google Play,POSITIVE,0.9998457431793213,['the nice app'],joy,{'the nice app': 'Positive'},review
+bad,1,2025-07-15 23:16:07,Google Play,NEGATIVE,-0.999782383441925,[],disgust,{},review
+good,5,2025-07-15 23:04:32,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+lajavab,5,2025-07-15 22:42:24,Google Play,NEGATIVE,-0.8998590111732483,['lajavab'],neutral,{'lajavab': 'Neutral'},review
+nice,5,2025-07-15 22:36:30,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+not start bad service,5,2025-07-15 21:31:20,Google Play,POSITIVE,0.996383786201477,['bad service'],fear,{'bad service': 'Negative'},review
+99 % dead slow/ not responding,1,2025-07-15 20:44:15,Google Play,NEGATIVE,-0.9995025396347046,[],sadness,{},review
+helpfull,5,2025-07-15 20:37:38,Google Play,POSITIVE,0.9971383810043335,['helpfull'],neutral,{'helpfull': 'Positive'},review
+just tell me how many time this app facing technical problem.,1,2025-07-15 20:30:10,Google Play,NEGATIVE,-0.9982706308364868,"['how many time', 'this app', 'technical problem']",neutral,"{'how many time': 'Negative', 'this app': 'Negative', 'technical problem': 'Negative'}",bug_report
+good,3,2025-07-15 19:37:03,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+chala raha hun chal nahin raha hai,1,2025-07-15 19:02:12,Google Play,NEGATIVE,-0.9426928758621216,['chala raha hun chal nahin raha hai'],neutral,{'chala raha hun chal nahin raha hai': 'Positive'},review
+network problem,3,2025-07-15 18:23:48,Google Play,NEGATIVE,-0.9992607235908508,['network problem'],neutral,{'network problem': 'Negative'},bug_report
+good app,5,2025-07-15 18:03:17,Google Play,POSITIVE,0.9998493194580078,['good app'],neutral,{'good app': 'Positive'},review
+bad umang because no open,1,2025-07-15 17:33:04,Google Play,NEGATIVE,-0.9997321963310242,['bad umang'],sadness,{'bad umang': 'Negative'},review
+good,5,2025-07-15 17:25:57,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+EPFO Side only most recent ID show other ID not showing bad experience 😞,2,2025-07-15 16:52:56,Google Play,NEGATIVE,-0.771226704120636,"['epfo side', 'only most recent id show', 'bad experience']",neutral,"{'epfo side': 'Neutral', 'only most recent id show': 'Positive', 'bad experience': 'Negative'}",review
+ok,5,2025-07-15 16:27:32,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+gud,5,2025-07-15 16:06:22,Google Play,NEGATIVE,-0.8956557512283325,['gud'],sadness,{'gud': 'Positive'},review
+how many days are required to resolve the issue of the App please tell me..,1,2025-07-15 15:59:57,Google Play,NEGATIVE,-0.964126467704773,"['how many days', 'the issue', 'the app']",neutral,"{'how many days': 'Neutral', 'the issue': 'Negative', 'the app': 'Negative'}",bug_report
+NONE OF USE,1,2025-07-15 15:58:38,Google Play,NEGATIVE,-0.9996275901794434,['use'],neutral,{'use': 'Negative'},review
+hardam technique issue rheta hai band kyu nhi karte isko fhir,1,2025-07-15 15:53:00,Google Play,NEGATIVE,-0.9666056632995605,['rheta hai band'],neutral,{'rheta hai band': 'Negative'},bug_report
+"Lots of time Login problems, Technical issue and error always there in Umang app",1,2025-07-15 14:58:39,Google Play,NEGATIVE,-0.9973299503326416,"['lots', 'time login problems', 'technical issue', 'error', 'umang app']",sadness,"{'lots': 'Negative', 'time login problems': 'Negative', 'technical issue': 'Negative', 'error': 'Negative', 'umang app': 'Negative'}",bug_report
+helpful app,5,2025-07-15 14:27:59,Google Play,POSITIVE,0.9995542168617249,['helpful app'],neutral,{'helpful app': 'Positive'},review
+App doesn't working,1,2025-07-15 14:26:19,Google Play,NEGATIVE,-0.9997043013572693,['app'],sadness,{'app': 'Negative'},review
+not good service all time slow work,1,2025-07-15 14:24:08,Google Play,NEGATIVE,-0.9996967315673828,"['not good service', 'all time slow work']",sadness,"{'not good service': 'Negative', 'all time slow work': 'Neutral'}",review
+good 👍,5,2025-07-15 13:55:37,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+good,5,2025-07-15 13:26:59,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+srwar doun,5,2025-07-15 13:14:14,Google Play,NEGATIVE,-0.9084128737449646,['srwar doun'],neutral,{'srwar doun': 'Positive'},review
+this is the worst app on my phone... There are always errors and errors. I don't know what to do with this,1,2025-07-15 12:14:10,Google Play,NEGATIVE,-0.9997946619987488,"['the worst app', 'my phone', 'errors', 'errors']",disgust,"{'the worst app': 'Negative', 'my phone': 'Negative', 'errors': 'Negative'}",bug_report
+I can't check my account statement. please check the issue quickly sir 😔 long day it's going on,1,2025-07-15 12:04:11,Google Play,NEGATIVE,-0.6350722312927246,"['my account statement', 'the issue']",neutral,"{'my account statement': 'Neutral', 'the issue': 'Negative'}",bug_report
+good,5,2025-07-15 11:46:31,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+very good,5,2025-07-15 09:51:34,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+not working nowdays,1,2025-07-15 06:49:06,Google Play,NEGATIVE,-0.9993776679039001,['nowdays'],sadness,{'nowdays': 'Negative'},bug_report
+Please Update the Umang app it's last updation is 16 Jun So Please update it for Smooth working. Thankou,1,2025-07-15 06:39:06,Google Play,POSITIVE,0.9971062541007996,"['the umang app', 'last updation', '16 jun', 'smooth working', 'thankou']",neutral,"{'the umang app': 'Neutral', 'last updation': 'Neutral', '16 jun': 'Neutral', 'smooth working': 'Positive', 'thankou': 'Neutral'}",review
+service very slow... just PF withdrawal take 20-30 days.,4,2025-07-15 05:36:27,Google Play,NEGATIVE,-0.9994958639144897,"['service', 'just pf withdrawal']",neutral,"{'service': 'Negative', 'just pf withdrawal': 'Negative'}",review
+v.good,5,2025-07-15 02:54:29,Google Play,POSITIVE,0.994877278804779,['v.good'],neutral,{'v.good': 'Positive'},review
+Very Poor Experience. The UMANG App is extremely slow and often fails to load properly. OTP often does not arrive or shows error. Server issues are frequent. Many important services do not work properly. The user interface is confusing and frustrating.,1,2025-07-15 02:28:57,Google Play,NEGATIVE,-0.9997660517692566,"['very poor experience', 'the umang app', 'otp', 'error', 'server issues', 'many important services', 'the user interface']",sadness,"{'very poor experience': 'Negative', 'the umang app': 'Negative', 'otp': 'Negative', 'error': 'Negative', 'server issues': 'Negative', 'many important services': 'Negative', 'the user interface': 'Negative'}",bug_report
+Digilocker is not working on this app. Please fix is soon.,2,2025-07-14 23:53:44,Google Play,NEGATIVE,-0.9991875290870667,"['digilocker', 'this app']",sadness,"{'digilocker': 'Negative', 'this app': 'Neutral'}",bug_report
+mast,5,2025-07-14 23:24:49,Google Play,POSITIVE,0.7173449993133545,['mast'],neutral,{'mast': 'Neutral'},review
+very good,5,2025-07-14 23:11:24,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+very nice,5,2025-07-14 22:58:37,Google Play,POSITIVE,0.9998563528060913,[],joy,{},review
+best app,5,2025-07-14 22:30:23,Google Play,POSITIVE,0.999686598777771,['best app'],neutral,{'best app': 'Positive'},review
+this app is not open in my mobile pls do something for satisfaction customer,1,2025-07-14 21:42:37,Google Play,NEGATIVE,-0.9996383190155029,"['this app', 'my mobile', 'satisfaction customer']",neutral,"{'this app': 'Negative', 'my mobile': 'Neutral', 'satisfaction customer': 'Positive'}",review
+good helping,5,2025-07-14 21:00:29,Google Play,POSITIVE,0.9998443126678467,['good helping'],neutral,{'good helping': 'Positive'},review
+July 14 2025 stuck at loading page,1,2025-07-14 20:33:11,Google Play,NEGATIVE,-0.998994767665863,['loading page'],neutral,{'loading page': 'Negative'},review
+good,5,2025-07-14 19:18:53,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+it's good,5,2025-07-14 17:18:41,Google Play,POSITIVE,0.9998360872268677,[],joy,{},review
+super,5,2025-07-14 17:08:49,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+excellent,5,2025-07-14 16:34:05,Google Play,POSITIVE,0.9998434782028198,[],joy,{},review
+thirdclass useless app it is...,1,2025-07-14 16:06:37,Google Play,NEGATIVE,-0.9998076558113098,['thirdclass useless app'],disgust,{'thirdclass useless app': 'Neutral'},review
+❤️❤️❤️❤️❤️,5,2025-07-14 15:01:28,Google Play,NEGATIVE,-0.6970566511154175,[],neutral,{},review
+Good aaps..,5,2025-07-14 14:25:09,Google Play,POSITIVE,0.9998413324356079,['good aaps'],neutral,{'good aaps': 'Positive'},review
+good 👍,5,2025-07-14 13:28:34,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+Umang is blank no pages to show ?,1,2025-07-14 12:53:54,Google Play,NEGATIVE,-0.9996203184127808,"['umang', 'no pages']",neutral,"{'umang': 'Negative', 'no pages': 'Negative'}",review
+good,5,2025-07-14 12:50:46,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-14 12:42:11,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+very good,5,2025-07-14 11:39:49,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+very good,3,2025-07-14 11:39:06,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+"Worst experience using this app for EPFO services. Logging in to EPFO, View passbook nothing works and either it shows, you are already logged in or session expired. What type of testing, the QA team performed on this app and provided signoff for this and What to say about the developers.",1,2025-07-14 11:36:04,Google Play,NEGATIVE,-0.9997851252555847,"['worst experience', 'this app', 'epfo services', 'epfo', 'session', 'what type', 'testing', 'the qa team', 'this app', 'signoff', 'the developers']",disgust,"{'worst experience': 'Negative', 'this app': 'Negative', 'epfo services': 'Negative', 'epfo': 'Negative', 'session': 'Negative', 'what type': 'Negative', 'testing': 'Neutral', 'the qa team': 'Negative', 'signoff': 'Negative', 'the developers': 'Negative'}",review
+good,5,2025-07-14 11:16:41,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+Good 👍👍,5,2025-07-14 11:15:51,Google Play,POSITIVE,0.9998576641082764,[],neutral,{},review
+nice aap,5,2025-07-14 09:54:51,Google Play,POSITIVE,0.9998094439506531,['nice aap'],neutral,{'nice aap': 'Positive'},review
+app is stuck on splash screen,1,2025-07-14 09:39:43,Google Play,NEGATIVE,-0.9980801343917847,"['app', 'splash screen']",sadness,"{'app': 'Negative', 'splash screen': 'Negative'}",review
+good,5,2025-07-14 09:32:31,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+nice,5,2025-07-14 08:21:16,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+super,5,2025-07-14 07:34:18,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+intrsted,5,2025-07-14 01:47:08,Google Play,POSITIVE,0.9358789920806885,[],neutral,{},review
+good,5,2025-07-13 23:14:46,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+best aap🥰,5,2025-07-13 23:10:36,Google Play,POSITIVE,0.9997019171714783,['best aap🥰'],neutral,{'best aap🥰': 'Positive'},review
+excited,5,2025-07-13 22:20:12,Google Play,POSITIVE,0.9997768998146057,[],fear,{},review
+ok,5,2025-07-13 21:28:58,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+super,4,2025-07-13 20:53:20,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+ok,5,2025-07-13 20:27:53,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+good,5,2025-07-13 19:16:08,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+our money I with pf and in name of so called security we are harassed for withdrawal why it takes decades for withdrawal? if we have unique Uan number them why pf are not automatically deposited in single account why we have to suffer ? Try to improve,1,2025-07-13 18:55:11,Google Play,NEGATIVE,-0.9992781281471252,"['our money', 'so called security', 'withdrawal', 'decades', 'withdrawal', 'unique uan number', 'single account']",fear,"{'our money': 'Negative', 'so called security': 'Negative', 'withdrawal': 'Negative', 'decades': 'Negative', 'unique uan number': 'Negative', 'single account': 'Neutral'}",review
+very nice,5,2025-07-13 18:40:10,Google Play,POSITIVE,0.9998563528060913,[],joy,{},review
+"you are already logged in , what's wrong i did not get it",1,2025-07-13 18:11:28,Google Play,NEGATIVE,-0.999588668346405,[],surprise,{},review
+Good One,5,2025-07-13 17:53:17,Google Play,POSITIVE,0.9998288154602051,[],neutral,{},review
+nice application,5,2025-07-13 16:55:55,Google Play,POSITIVE,0.9998229146003723,['nice application'],neutral,{'nice application': 'Positive'},review
+"I used to check pf balance before, now it not allowing saying number is not registered.",1,2025-07-13 15:00:25,Google Play,NEGATIVE,-0.9995286464691162,"['pf balance', 'number']",neutral,"{'pf balance': 'Negative', 'number': 'Negative'}",review
+best aapp,5,2025-07-13 12:42:07,Google Play,POSITIVE,0.9997907280921936,['best aapp'],neutral,{'best aapp': 'Positive'},review
+worst app..time waste,1,2025-07-13 12:37:18,Google Play,NEGATIVE,-0.9998061060905457,['worst app..time waste'],disgust,{'worst app..time waste': 'Negative'},review
+"After installing this app, it's not working. It is frequently showing ""The app is sideloaded and downloaded from google play store. Please install the official umang app from google play store to continue."" I had download this app from play store. Why is is showing that? Please look into the issue.",2,2025-07-13 11:51:31,Google Play,NEGATIVE,-0.9984924793243408,"['this app', 'the app', 'google play store', 'the official umang app', 'google play store', 'this app', 'play store', 'the issue']",neutral,"{'this app': 'Negative', 'the app': 'Negative', 'google play store': 'Negative', 'the official umang app': 'Negative', 'play store': 'Negative', 'the issue': 'Negative'}",bug_report
+why does it says ...The entered number is not registered with umang app? just a simple thing here is so complicated,1,2025-07-13 11:34:02,Google Play,NEGATIVE,-0.9995208978652954,"['the entered number', 'umang app', 'just a simple thing']",surprise,"{'the entered number': 'Negative', 'umang app': 'Negative', 'just a simple thing': 'Negative'}",review
+ok,5,2025-07-13 11:23:13,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+good,5,2025-07-13 11:18:41,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+🤟🤟,5,2025-07-13 11:11:43,Google Play,NEGATIVE,-0.6970566511154175,[],neutral,{},review
+"This is a pathetic application. I raised my claim and its been 28 days and has not been settled yet. I tried to connect over live chat, it's popping to try again. I tried to raise grievance then it's showing otp can't be generated to proceed. Umang services leads me to a problematic situation and it disappointed me a lot.",1,2025-07-13 10:59:39,Google Play,NEGATIVE,-0.9996399879455566,"['a pathetic application', 'my claim', 'live chat', 'grievance', 'umang services', 'a problematic situation']",sadness,"{'a pathetic application': 'Negative', 'my claim': 'Negative', 'live chat': 'Negative', 'grievance': 'Negative', 'umang services': 'Negative', 'a problematic situation': 'Negative'}",bug_report
+good,1,2025-07-13 10:15:40,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-13 09:35:58,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-13 08:51:20,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"all links are not working, when you click on a link nothing happens. also some of the error messages are not clear enough to understand what the issue is. please improve if possible.",2,2025-07-13 08:18:05,Google Play,NEGATIVE,-0.9994620680809021,"['all links', 'a link', 'the error messages', 'the issue']",sadness,"{'all links': 'Negative', 'a link': 'Negative', 'the error messages': 'Negative', 'the issue': 'Negative'}",bug_report
+nice work,5,2025-07-13 07:45:34,Google Play,POSITIVE,0.9998576641082764,['nice work'],joy,{'nice work': 'Positive'},review
+excellent customer service,5,2025-07-13 07:40:58,Google Play,POSITIVE,0.9998500347137451,['excellent customer service'],joy,{'excellent customer service': 'Positive'},review
+very poor apps,2,2025-07-13 02:05:13,Google Play,NEGATIVE,-0.999790370464325,['very poor apps'],sadness,{'very poor apps': 'Negative'},review
+not working in epfo,1,2025-07-13 01:30:40,Google Play,NEGATIVE,-0.9996989965438843,['epfo'],sadness,{'epfo': 'Neutral'},bug_report
+application download many times but app not open please resolve this issue,1,2025-07-12 23:44:36,Google Play,NEGATIVE,-0.9954675436019897,['this issue'],sadness,{'this issue': 'Negative'},bug_report
+Star,5,2025-07-12 23:14:19,Google Play,POSITIVE,0.9997329115867615,['star'],neutral,{'star': 'Neutral'},review
+I had submitted my pf advance withdrawal but still more than 25 days its showing under process I don't know exactly what happen are they dying or were are the epfo stupid employees it's my own money then also I had to.wait somuch,1,2025-07-12 21:47:32,Google Play,NEGATIVE,-0.9994389414787292,"['my pf', 'advance withdrawal', 'its showing', 'process', 'the epfo stupid employees', 'my own money', 'to.wait somuch']",surprise,"{'my pf': 'Negative', 'advance withdrawal': 'Negative', 'its showing': 'Negative', 'process': 'Negative', 'the epfo stupid employees': 'Negative', 'my own money': 'Negative', 'to.wait somuch': 'Negative'}",review
+ok,3,2025-07-12 20:58:03,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+this app is useless,1,2025-07-12 20:42:32,Google Play,NEGATIVE,-0.9997970461845398,['this app'],sadness,{'this app': 'Negative'},review
+use full.,5,2025-07-12 19:49:43,Google Play,POSITIVE,0.9523302912712097,[],neutral,{},review
+"Full of bugs and servers ,Too Disappointed",1,2025-07-12 19:47:43,Google Play,NEGATIVE,-0.9995694756507874,"['bugs', 'servers']",sadness,"{'bugs': 'Negative', 'servers': 'Negative'}",bug_report
+tahnks for your support in my bed time ...,5,2025-07-12 19:33:48,Google Play,POSITIVE,0.9954044818878174,"['your support', 'my bed time']",neutral,"{'your support': 'Positive', 'my bed time': 'Positive'}",review
+hi umang team last few days my last pf can't apply ur site.. y Becoz iam used already resine and current ussing account.. but show only resine office details only,4,2025-07-12 18:48:09,Google Play,NEGATIVE,-0.9947911500930786,"['hi umang team', 'my last pf', 'ur site', 'y becoz iam', 'resine', 'current ussing account', 'only resine office details']",sadness,"{'hi umang team': 'Negative', 'my last pf': 'Negative', 'ur site': 'Negative', 'y becoz iam': 'Negative', 'resine': 'Neutral', 'current ussing account': 'Negative', 'only resine office details': 'Negative'}",review
+nice👍 app,5,2025-07-12 17:19:31,Google Play,POSITIVE,0.709746241569519,['nice👍 app'],neutral,{'nice👍 app': 'Positive'},review
+nice app,5,2025-07-12 17:08:20,Google Play,POSITIVE,0.9998061060905457,['nice app'],neutral,{'nice app': 'Positive'},review
+Very Good,4,2025-07-12 16:59:39,Google Play,POSITIVE,0.9998520612716675,[],neutral,{},review
+"Earlier digilocker was opening in Umang, in between digilocker was logging out, now if I open digilocker in Umang it is showing already linked , then after processing it is showing not liked, please solve this issue. device is moto g54 5g",1,2025-07-12 16:33:24,Google Play,NEGATIVE,-0.9973949193954468,"['umang', 'digilocker', 'digilocker', 'umang', 'this issue', 'device', 'moto g54']",neutral,"{'umang': 'Negative', 'digilocker': 'Negative', 'this issue': 'Negative', 'device': 'Neutral', 'moto g54': 'Neutral'}",bug_report
+excellent,5,2025-07-12 15:29:20,Google Play,POSITIVE,0.9998434782028198,[],joy,{},review
+umang app is the best app this application is most important for our online work...,4,2025-07-12 15:09:28,Google Play,POSITIVE,0.9995792508125305,"['umang app', 'the best app', 'this application', 'our online work']",neutral,"{'umang app': 'Positive', 'the best app': 'Positive', 'this application': 'Positive', 'our online work': 'Positive'}",review
+very poor condition,5,2025-07-12 15:01:45,Google Play,NEGATIVE,-0.9997921586036682,['very poor condition'],sadness,{'very poor condition': 'Negative'},review
+bad service,1,2025-07-12 14:39:40,Google Play,NEGATIVE,-0.9997195601463318,['bad service'],sadness,{'bad service': 'Negative'},review
+nice app,5,2025-07-12 14:31:07,Google Play,POSITIVE,0.9998061060905457,['nice app'],neutral,{'nice app': 'Positive'},review
+very good,5,2025-07-12 14:12:00,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+good work,5,2025-07-12 12:48:06,Google Play,POSITIVE,0.9998413324356079,['good work'],neutral,{'good work': 'Positive'},review
+This app is nit working. Aple sarkar regustration is not working. profile creation is nit working,1,2025-07-12 12:35:37,Google Play,NEGATIVE,-0.9995517134666443,"['this app', 'nit', 'aple sarkar regustration', 'profile creation', 'nit']",sadness,"{'this app': 'Negative', 'nit': 'Negative', 'aple sarkar regustration': 'Negative', 'profile creation': 'Negative'}",bug_report
+ok,5,2025-07-12 11:32:23,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+very bad service,1,2025-07-12 11:15:14,Google Play,NEGATIVE,-0.9997568726539612,['very bad service'],disgust,{'very bad service': 'Negative'},review
+good,5,2025-07-12 10:51:33,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+ya app so much for pf and smooth and people working,5,2025-07-12 10:49:40,Google Play,POSITIVE,0.9541720151901245,"['ya app', 'people']",joy,"{'ya app': 'Positive', 'people': 'Positive'}",review
+excellent,5,2025-07-12 10:19:28,Google Play,POSITIVE,0.9998434782028198,[],joy,{},review
+nice,4,2025-07-12 09:59:47,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+very bad experience.,1,2025-07-12 09:09:17,Google Play,NEGATIVE,-0.9998070597648621,['very bad experience'],sadness,{'very bad experience': 'Negative'},review
+very nice,5,2025-07-12 07:11:35,Google Play,POSITIVE,0.9998563528060913,[],joy,{},review
+good,5,2025-07-12 06:09:25,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+Awesome,5,2025-07-12 03:17:55,Google Play,POSITIVE,0.9998682737350464,[],joy,{},review
+good,5,2025-07-12 00:38:50,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-11 23:23:54,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+💯,5,2025-07-11 23:11:50,Google Play,NEGATIVE,-0.6970566511154175,[],neutral,{},review
+excellent service 👍👍👍👍,5,2025-07-11 22:04:13,Google Play,POSITIVE,0.9998108744621277,['excellent service'],joy,{'excellent service': 'Positive'},review
+Umang app ≥ SBI bank servers 😁 keep waiting..... kya yaaar,1,2025-07-11 21:58:35,Google Play,NEGATIVE,-0.9949226975440979,"['umang app ≥ sbi bank servers 😁', 'yaaar']",neutral,"{'umang app ≥ sbi bank servers 😁': 'Neutral', 'yaaar': 'Neutral'}",review
+good,5,2025-07-11 19:38:34,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"very worst app, when we have placed the request for pf withdrawal showing success but unable to track",1,2025-07-11 19:31:29,Google Play,NEGATIVE,-0.9997639060020447,"['very worst app', 'the request', 'pf withdrawal', 'success']",disgust,"{'very worst app': 'Negative', 'the request': 'Positive', 'pf withdrawal': 'Positive', 'success': 'Negative'}",feature_request
+vad service,3,2025-07-11 19:15:53,Google Play,NEGATIVE,-0.9509932994842529,['vad service'],neutral,{'vad service': 'Positive'},review
+very good,1,2025-07-11 18:54:34,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+"wonderful app,safest and covers every step",5,2025-07-11 18:51:44,Google Play,POSITIVE,0.9998834133148193,"['wonderful app', 'every step']",joy,"{'wonderful app': 'Positive', 'every step': 'Positive'}",review
+VERY GOOD nice,5,2025-07-11 17:25:24,Google Play,POSITIVE,0.9998626708984375,[],joy,{},review
+good 👍,5,2025-07-11 17:22:07,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+very Good,5,2025-07-11 16:25:10,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+very good app,5,2025-07-11 16:19:21,Google Play,POSITIVE,0.9998675584793091,['very good app'],joy,{'very good app': 'Positive'},review
+"my mobile number is registers and Linked to digilocker, but still this app shows as not registered and not Link",1,2025-07-11 16:05:47,Google Play,NEGATIVE,-0.9995673298835754,"['my mobile number', 'registers', 'digilocker', 'this app']",sadness,"{'my mobile number': 'Negative', 'registers': 'Negative', 'digilocker': 'Negative', 'this app': 'Negative'}",review
+service nahi hi pa raha hai,1,2025-07-11 16:02:41,Google Play,NEGATIVE,-0.8828467726707458,[],neutral,{},review
+very good,5,2025-07-11 15:06:05,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+good almost,3,2025-07-11 15:04:03,Google Play,POSITIVE,0.9998353719711304,[],neutral,{},review
+100% safe,5,2025-07-11 14:52:54,Google Play,POSITIVE,0.9996824264526367,[],neutral,{},review
+👍👍,5,2025-07-11 14:39:33,Google Play,NEGATIVE,-0.6970566511154175,[],neutral,{},review
+always server down 😔,1,2025-07-11 14:09:15,Google Play,NEGATIVE,-0.9976789355278015,[],neutral,{},review
+browser defunct. monitor properly,1,2025-07-11 13:33:44,Google Play,NEGATIVE,-0.9995988011360168,[],sadness,{},review
+nice,1,2025-07-11 13:25:12,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+good experience,5,2025-07-11 12:36:46,Google Play,POSITIVE,0.9998599290847778,['good experience'],joy,{'good experience': 'Positive'},review
+nice,5,2025-07-11 12:27:12,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+vary helpful,4,2025-07-11 11:54:14,Google Play,POSITIVE,0.9977546334266663,[],joy,{},review
+good,5,2025-07-11 11:44:44,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+An absolute solution to resolve every necessities with a single click for every Indian,5,2025-07-11 09:49:06,Google Play,POSITIVE,0.829023540019989,"['an absolute solution', 'every necessities', 'a single click']",neutral,"{'an absolute solution': 'Positive', 'every necessities': 'Positive', 'a single click': 'Positive'}",review
+bad experience 🥴,1,2025-07-11 09:16:10,Google Play,NEGATIVE,-0.9997407793998718,['bad experience'],sadness,{'bad experience': 'Negative'},review
+excellent apps,5,2025-07-11 09:13:31,Google Play,POSITIVE,0.9998579025268555,['excellent apps'],joy,{'excellent apps': 'Positive'},review
+super,5,2025-07-11 08:30:41,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+not interested in umang app very slow service ratings down karo 😔,1,2025-07-11 08:27:56,Google Play,NEGATIVE,-0.9992333650588989,"['umang app', 'very slow service ratings', 'karo 😔']",sadness,"{'umang app': 'Negative', 'very slow service ratings': 'Negative', 'karo 😔': 'Negative'}",review
+"3months not working this app, today working",4,2025-07-11 08:16:08,Google Play,NEGATIVE,-0.9970030188560486,['this app'],sadness,{'this app': 'Negative'},bug_report
+epfo ki site open nhi ho rhi,1,2025-07-11 08:14:45,Google Play,NEGATIVE,-0.9862083196640015,"['epfo ki site', 'open nhi ho rhi']",neutral,"{'epfo ki site': 'Positive', 'open nhi ho rhi': 'Neutral'}",review
+This app really very bad working.. every time showing server problem. From 3months back,1,2025-07-11 07:47:11,Google Play,NEGATIVE,-0.9997925162315369,"['this app', 'server problem']",disgust,"{'this app': 'Negative', 'server problem': 'Negative'}",bug_report
+nice to use,5,2025-07-11 06:57:30,Google Play,POSITIVE,0.9998076558113098,[],joy,{},review
+gud work,3,2025-07-11 04:57:43,Google Play,POSITIVE,0.872447669506073,['gud work'],sadness,{'gud work': 'Positive'},review
+app isn't working,1,2025-07-11 04:05:09,Google Play,NEGATIVE,-0.9995692372322083,['app'],sadness,{'app': 'Negative'},review
+super,5,2025-07-11 02:14:19,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+nice good app,5,2025-07-11 01:18:31,Google Play,POSITIVE,0.9998660087585449,['nice good app'],joy,{'nice good app': 'Positive'},review
+such a nice app,5,2025-07-11 00:27:28,Google Play,POSITIVE,0.9998223185539246,['such a nice app'],joy,{'such a nice app': 'Positive'},review
+they really need to hire a better UI/UX designer as soon as possible.,1,2025-07-10 23:59:53,Google Play,NEGATIVE,-0.9996498823165894,['a better ui/ux designer'],neutral,{'a better ui/ux designer': 'Positive'},review
+v good,5,2025-07-10 23:58:03,Google Play,POSITIVE,0.9984826445579529,[],joy,{},review
+good,1,2025-07-10 23:44:44,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+Always there is technical error. please solve this errors.,3,2025-07-10 23:27:13,Google Play,NEGATIVE,-0.9985979199409485,"['technical error', 'this errors']",sadness,"{'technical error': 'Negative', 'this errors': 'Negative'}",bug_report
+All Time Server Problem,1,2025-07-10 22:55:39,Google Play,NEGATIVE,-0.9993855953216553,['all time server problem'],neutral,{'all time server problem': 'Negative'},bug_report
+all are say your app worst,1,2025-07-10 22:02:01,Google Play,NEGATIVE,-0.999810516834259,['your app'],disgust,{'your app': 'Negative'},review
+nice,5,2025-07-10 20:49:25,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+"worst App I ever used because it is always in ""developers mode"". EPFO sever are always busy and even after giving correct information, it still rejects my claim again and again",1,2025-07-10 20:48:14,Google Play,NEGATIVE,-0.9997677206993103,"['worst app', 'developers mode', 'epfo sever', 'correct information', 'my claim']",disgust,"{'worst app': 'Negative', 'developers mode': 'Negative', 'epfo sever': 'Negative', 'correct information': 'Negative', 'my claim': 'Negative'}",review
+wrost app,1,2025-07-10 20:33:06,Google Play,NEGATIVE,-0.9957335591316223,['wrost app'],neutral,{'wrost app': 'Positive'},review
+very good,5,2025-07-10 19:25:52,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+best,5,2025-07-10 19:24:46,Google Play,POSITIVE,0.9997941851615906,[],neutral,{},review
+app to badiya hai pr ye sale isme khujli kyun krte rehte hn... ungli kar kar ke iss app ko aisa kr dete hn: kabhi kuchh open nahi hota or open hota to show nhi hota😕 Thank you umang team meri aap ab kaam karne lagi.,5,2025-07-10 18:36:11,Google Play,NEGATIVE,-0.9492015838623047,"['app', 'badiya hai pr ye sale isme khujli', 'krte rehte hn', 'ungli', 'kar kar ke', 'iss app ko aisa', 'kabhi', 'kuchh open nahi hota', 'hota', 'nhi hota😕']",joy,"{'app': 'Positive', 'badiya hai pr ye sale isme khujli': 'Positive', 'krte rehte hn': 'Negative', 'ungli': 'Positive', 'kar kar ke': 'Negative', 'iss app ko aisa': 'Negative', 'kabhi': 'Negative', 'kuchh open nahi hota': 'Negative', 'hota': 'Negative', 'nhi hota😕': 'Negative'}",review
+do you know why I am unable to access application instead installation.Its just on the opening interface with no further action its not opening in my phone insted after reinstallation,4,2025-07-10 18:19:19,Google Play,NEGATIVE,-0.9989390969276428,"['application', 'the opening interface', 'no further action', 'my phone', 'reinstallation']",sadness,"{'application': 'Negative', 'the opening interface': 'Negative', 'no further action': 'Negative', 'my phone': 'Negative', 'reinstallation': 'Negative'}",review
+not working and I had mailed you with attached screenshot,1,2025-07-10 17:44:29,Google Play,NEGATIVE,-0.9995691180229187,['attached screenshot'],sadness,{'attached screenshot': 'Neutral'},bug_report
+don't install your money is debited,1,2025-07-10 17:27:21,Google Play,NEGATIVE,-0.9969646334648132,['your money'],neutral,{'your money': 'Negative'},review
+xcelent,5,2025-07-10 15:45:13,Google Play,NEGATIVE,-0.6635781526565552,[],neutral,{},review
+bahut bekar,1,2025-07-10 14:54:26,Google Play,POSITIVE,0.9892177581787109,['bahut bekar'],neutral,{'bahut bekar': 'Positive'},review
+ok,4,2025-07-10 14:38:42,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+"the app is showing digilocker is not connected with umang app. but when I click get started, the app is telling me digilocker is already connected with umang app.",2,2025-07-10 13:54:18,Google Play,NEGATIVE,-0.9978173971176147,"['the app', 'digilocker', 'umang app', 'the app', 'digilocker', 'umang app']",neutral,"{'the app': 'Negative', 'digilocker': 'Negative', 'umang app': 'Neutral'}",review
+nice,5,2025-07-10 13:36:43,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+nice,5,2025-07-10 11:35:04,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+super,5,2025-07-10 11:32:43,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+best,3,2025-07-10 11:32:41,Google Play,POSITIVE,0.9997941851615906,[],neutral,{},review
+Nice,5,2025-07-10 11:26:58,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+mast,5,2025-07-10 11:19:43,Google Play,POSITIVE,0.7173449993133545,['mast'],neutral,{'mast': 'Neutral'},review
+👍,3,2025-07-10 10:57:14,Google Play,NEGATIVE,-0.6970566511154175,[],neutral,{},review
+"the application run is very slow it's run to only 2/3 hours outof 24 hours this is very low application to user.... when I open the app I see always one msg ""something went wrong "" it's all right but I always see one msg... 😄",2,2025-07-10 10:47:54,Google Play,NEGATIVE,-0.9942248463630676,"['the application run', 'only 2/3 hours', 'very low application', 'user', 'the app', 'one msg', 'one msg']",surprise,"{'the application run': 'Negative', 'only 2/3 hours': 'Negative', 'very low application': 'Negative', 'user': 'Negative', 'the app': 'Negative', 'one msg': 'Negative'}",review
+waste,1,2025-07-10 10:28:19,Google Play,NEGATIVE,-0.9997934699058533,['waste'],disgust,{'waste': 'Negative'},review
+worst ever 😑,1,2025-07-10 10:27:26,Google Play,NEGATIVE,-0.9998098015785217,[],disgust,{},review
+not working properly,1,2025-07-10 10:11:27,Google Play,NEGATIVE,-0.9997847676277161,[],sadness,{},bug_report
+great 👍,4,2025-07-10 09:57:13,Google Play,POSITIVE,0.9997692704200745,[],joy,{},review
+one off the best app good application,5,2025-07-10 09:47:07,Google Play,POSITIVE,0.9996609687805176,['the best app good application'],joy,{'the best app good application': 'Neutral'},review
+epfo service not good.,2,2025-07-10 09:41:04,Google Play,NEGATIVE,-0.9997138381004333,['epfo service'],sadness,{'epfo service': 'Negative'},review
+always server is not available 😕 very bad app,1,2025-07-10 09:00:38,Google Play,NEGATIVE,-0.9955301880836487,['very bad app'],sadness,{'very bad app': 'Negative'},review
+good,5,2025-07-10 07:25:06,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"May God Shall be bless for using my old green/Poor Citizenship RATION card Once again Thanking you all.,",5,2025-07-10 01:58:44,Google Play,POSITIVE,0.9804626703262329,"['god', 'my old green/poor citizenship ration card']",joy,"{'god': 'Neutral', 'my old green/poor citizenship ration card': 'Positive'}",review
+good,4,2025-07-10 01:20:28,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+very good,5,2025-07-10 01:11:35,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+Most disturbing app. I am not able to check my PF Passbook for 1 month now. Whats the use of the app,1,2025-07-09 23:51:45,Google Play,NEGATIVE,-0.9981595873832703,"['most disturbing app', 'my pf passbook', '1 month', 'the use', 'the app']",disgust,"{'most disturbing app': 'Negative', 'my pf passbook': 'Negative', '1 month': 'Negative', 'the use': 'Negative', 'the app': 'Negative'}",review
+very bad experience,1,2025-07-09 23:33:57,Google Play,NEGATIVE,-0.9998032450675964,['very bad experience'],sadness,{'very bad experience': 'Negative'},review
+All time out of service,1,2025-07-09 23:17:43,Google Play,NEGATIVE,-0.9984821677207947,"['all time', 'service']",sadness,"{'all time': 'Negative', 'service': 'Negative'}",review
+super,5,2025-07-09 22:46:16,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+wow,5,2025-07-09 22:07:08,Google Play,POSITIVE,0.999592125415802,[],surprise,{},review
+good,5,2025-07-09 21:34:54,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+nice 👍👍👍,5,2025-07-09 21:30:48,Google Play,POSITIVE,0.9998424053192139,['nice 👍'],neutral,{'nice 👍': 'Positive'},review
+worst 😞,1,2025-07-09 19:49:02,Google Play,NEGATIVE,-0.9998087286949158,[],disgust,{},review
+good,4,2025-07-09 19:36:15,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+super app,5,2025-07-09 18:46:21,Google Play,POSITIVE,0.9932268261909485,['super app'],neutral,{'super app': 'Positive'},review
+im apply pf for umang26.06.25... but today date 9.07.25...no any answer.. worst app.. very very worst.,1,2025-07-09 18:21:37,Google Play,NEGATIVE,-0.9998087286949158,"['umang26.06.25', 'worst app']",sadness,"{'umang26.06.25': 'Negative', 'worst app': 'Negative'}",review
+Excellent 👌,5,2025-07-09 17:29:05,Google Play,POSITIVE,0.9998458623886108,[],neutral,{},review
+"App is quite slow, EPFO under it does not work most of the time, even if it works again it is slow and gets logged out frequently. ""Regret inconvenience we are facing technical issue"" message is frequent. Unique error messages are shown - API access limit reached, request blocked till.... Moreover the live chat option for help is of no help.",1,2025-07-09 17:07:47,Google Play,NEGATIVE,-0.998887836933136,"['app', 'epfo', 'the time', 'technical issue"" message', 'unique error messages', 'api access limit', 'request', 'the live chat option', 'help', 'no help']",neutral,"{'app': 'Negative', 'epfo': 'Negative', 'the time': 'Negative', 'technical issue"" message': 'Negative', 'unique error messages': 'Negative', 'api access limit': 'Negative', 'request': 'Negative', 'the live chat option': 'Negative', 'help': 'Negative', 'no help': 'Negative'}",bug_report
+EPFO page never loads in this app it loads like hell. Even the site works this slow then what is the point of having such apps and government websites when it can't handle a certain load. Highly disappointed with both the services,1,2025-07-09 16:34:47,Google Play,NEGATIVE,-0.9995323419570923,"['epfo page', 'this app', 'hell', 'even the site', 'the point', 'such apps', 'government websites', 'a certain load', 'both the services']",sadness,"{'epfo page': 'Negative', 'this app': 'Negative', 'hell': 'Negative', 'even the site': 'Negative', 'the point': 'Negative', 'such apps': 'Negative', 'government websites': 'Negative', 'a certain load': 'Negative', 'both the services': 'Negative'}",review
+good,5,2025-07-09 15:56:33,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+excellent 👌,5,2025-07-09 15:48:20,Google Play,POSITIVE,0.9998458623886108,[],joy,{},review
+very good app,5,2025-07-09 15:26:01,Google Play,POSITIVE,0.9998675584793091,['very good app'],joy,{'very good app': 'Positive'},review
+good,4,2025-07-09 14:53:12,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+not opening,5,2025-07-09 14:39:21,Google Play,NEGATIVE,-0.9996150732040405,[],neutral,{},review
+very good,5,2025-07-09 14:36:00,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+very poor service Umang... if we apply for PF in Umang it shows submitted at the portal for a month then it goes to the field office.on Umang for 3 days work it takes a month... if we apply through the EPFO website the same day it goes to the field office... ... very very pathetic app.. Never use umang i am deleting this app,1,2025-07-09 13:54:16,Google Play,NEGATIVE,-0.9997590184211731,"['very poor service umang', 'umang', 'the portal', 'a month', 'the field', 'office.on umang', '3 days work', 'a month', 'the epfo website', 'the field office', '... very very pathetic app', 'umang', 'this app']",sadness,"{'very poor service umang': 'Negative', 'umang': 'Negative', 'the portal': 'Negative', 'a month': 'Negative', 'the field': 'Negative', 'office.on umang': 'Negative', '3 days work': 'Negative', 'the epfo website': 'Negative', 'the field office': 'Negative', '... very very pathetic app': 'Negative', 'this app': 'Negative'}",review
+nice app,5,2025-07-09 13:19:02,Google Play,POSITIVE,0.9998061060905457,['nice app'],neutral,{'nice app': 'Positive'},review
+"Very bad experience with this app, nothing is working properly. Every time it shows technical error and even if i logged in with correct credentials then also it shows invalid credentials. So there is lot to improve in this app and it's not at all stable to use.",1,2025-07-09 13:16:27,Google Play,NEGATIVE,-0.9997760653495789,"['very bad experience', 'this app', 'technical error', 'correct credentials', 'invalid credentials', 'lot', 'this app']",sadness,"{'very bad experience': 'Negative', 'this app': 'Negative', 'technical error': 'Negative', 'correct credentials': 'Negative', 'invalid credentials': 'Negative', 'lot': 'Negative'}",bug_report
+horrible aap,1,2025-07-09 13:12:20,Google Play,NEGATIVE,-0.9997641444206238,['horrible aap'],fear,{'horrible aap': 'Negative'},review
+bast aap,5,2025-07-09 12:17:40,Google Play,POSITIVE,0.9975132942199707,['bast aap'],neutral,{'bast aap': 'Positive'},review
+good app,5,2025-07-09 12:06:04,Google Play,POSITIVE,0.9998493194580078,['good app'],neutral,{'good app': 'Positive'},review
+very worst app,1,2025-07-09 12:04:56,Google Play,NEGATIVE,-0.9997956156730652,['very worst app'],disgust,{'very worst app': 'Negative'},review
+good,5,2025-07-09 11:48:32,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+this app has a serious issue with Digilocker integration. I previously used the digilocker app. Then I switched to umang app. But when I try to open digilocker documents and tap on the 'get started' button..after first tap it shows a pop up mentioning your digilocker is not connected with umang. after the second tap it says it is already connected but fails to show the documents. Please fix this as soon as possible.,1,2025-07-09 11:42:18,Google Play,NEGATIVE,-0.9995098114013672,"['this app', 'a serious issue', 'digilocker integration', 'the digilocker app', 'umang app', 'digilocker documents', 'first tap', 'a pop', 'your digilocker', 'umang', 'the second tap', 'the documents']",sadness,"{'this app': 'Negative', 'a serious issue': 'Negative', 'digilocker integration': 'Negative', 'the digilocker app': 'Negative', 'umang app': 'Negative', 'digilocker documents': 'Negative', 'first tap': 'Negative', 'a pop': 'Negative', 'your digilocker': 'Negative', 'umang': 'Negative', 'the second tap': 'Negative', 'the documents': 'Negative'}",bug_report
+"Nice app, works very well,gives all accurate information. First Government best app ever I have seen.",5,2025-07-09 11:41:28,Google Play,POSITIVE,0.9997422099113464,"['nice app', 'all accurate information', 'first government', 'best app']",neutral,"{'nice app': 'Positive', 'all accurate information': 'Positive', 'first government': 'Positive', 'best app': 'Positive'}",review
+𝐍𝐨𝐭 𝐨𝐩𝐞𝐧𝐢𝐧𝐠 𝐏𝐥𝐬 𝐬𝐨𝐥𝐯𝐞 𝐭𝐡𝐞 𝐢𝐬𝐬𝐮𝐞𝐬,1,2025-07-09 11:14:08,Google Play,NEGATIVE,-0.9046952128410339,"['𝐍𝐨𝐭 𝐨𝐩𝐞𝐧𝐢𝐧𝐠', '𝐏𝐥𝐬 𝐬𝐨𝐥𝐯𝐞', '𝐭𝐡𝐞 𝐢𝐬𝐬𝐮𝐞𝐬']",neutral,"{'𝐍𝐨𝐭 𝐨𝐩𝐞𝐧𝐢𝐧𝐠': 'Negative', '𝐏𝐥𝐬 𝐬𝐨𝐥𝐯𝐞': 'Negative', '𝐭𝐡𝐞 𝐢𝐬𝐬𝐮𝐞𝐬': 'Negative'}",review
+"when epfo 3.0 starts , withdrawal from upi",4,2025-07-09 11:00:36,Google Play,NEGATIVE,-0.9989338517189026,['epfo'],sadness,{'epfo': 'Neutral'},review
+Very disappointed with the app.,1,2025-07-09 10:56:17,Google Play,NEGATIVE,-0.9997991919517517,['the app'],sadness,{'the app': 'Negative'},review
+7 out of 10 people are not able to access the app and they say the app is having heavy traffic May be it's ETERNAL LUNCH TIME for the app,1,2025-07-09 10:45:44,Google Play,NEGATIVE,-0.9995265007019043,"['7 out of 10 people', 'the app', 'the app', 'heavy traffic', 'eternal lunch time', 'the app']",sadness,"{'7 out of 10 people': 'Negative', 'the app': 'Negative', 'heavy traffic': 'Negative', 'eternal lunch time': 'Negative'}",review
+good service,5,2025-07-09 10:31:58,Google Play,POSITIVE,0.9998499155044556,['good service'],neutral,{'good service': 'Positive'},review
+wonder ful,5,2025-07-09 10:31:02,Google Play,POSITIVE,0.9972615242004395,[],neutral,{},review
+good,5,2025-07-09 08:53:48,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+ok,5,2025-07-09 04:48:43,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+99% of time server issue,1,2025-07-09 01:12:58,Google Play,POSITIVE,0.9696927070617676,"['99%', 'time server issue']",neutral,"{'99%': 'Negative', 'time server issue': 'Negative'}",bug_report
+very good 👍,5,2025-07-09 00:55:59,Google Play,POSITIVE,0.999870777130127,[],joy,{},review
+👍❤️,5,2025-07-09 00:09:58,Google Play,NEGATIVE,-0.6970566511154175,[],neutral,{},review
+Good q🙏q,5,2025-07-08 23:47:13,Google Play,POSITIVE,0.9998576641082764,[],neutral,{},review
+"Not showing Epfo balance, It show as invalid. There is something error with this app",1,2025-07-08 23:34:14,Google Play,NEGATIVE,-0.9995299577713013,"['epfo balance', 'something error', 'this app']",sadness,"{'epfo balance': 'Negative', 'something error': 'Negative', 'this app': 'Negative'}",bug_report
+"I'm trying to use the UMANG app, but it shows the message: 'The app version is not registered with Google Play OR you are not signed into Google Play. Please install the official UMANG app from the Google Play Store to continue.' However, I already installed it from the Play Store and my phone is running Android 15, but it's still not working.",1,2025-07-08 23:12:30,Google Play,NEGATIVE,-0.9996623992919922,"['the umang app', 'the message', 'the app version', 'google play', 'google play', 'the official umang app', 'the google play store', 'the play store', 'my phone']",sadness,"{'the umang app': 'Negative', 'the message': 'Negative', 'the app version': 'Negative', 'google play': 'Negative', 'the official umang app': 'Negative', 'the google play store': 'Negative', 'the play store': 'Negative', 'my phone': 'Negative'}",bug_report
+good 👍,5,2025-07-08 23:01:32,Google Play,POSITIVE,0.9998576641082764,[],joy,{},review
+good srivce,5,2025-07-08 22:40:12,Google Play,POSITIVE,0.9998519420623779,['good srivce'],joy,{'good srivce': 'Positive'},review
+"I tried multiple times to create a new UAN through the UMANG app, but it keeps failing. Every time I try, it just shows a ""system error"" message. I've tried at different times and on different days, but the result is always the same. Very disappointing experience. Please fix this issue.",1,2025-07-08 22:15:19,Google Play,NEGATIVE,-0.9997221827507019,"['a new uan', 'the umang app', 'a ""system error"" message', 'different times', 'different days', 'the result', 'very disappointing experience', 'this issue']",sadness,"{'a new uan': 'Negative', 'the umang app': 'Negative', 'a ""system error"" message': 'Negative', 'different times': 'Negative', 'different days': 'Negative', 'the result': 'Negative', 'very disappointing experience': 'Negative', 'this issue': 'Negative'}",bug_report
+super,5,2025-07-08 21:30:38,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+useless app not able to see the passbook details in the site.. it always say password wrong..,1,2025-07-08 20:54:42,Google Play,NEGATIVE,-0.9997478127479553,"['useless app', 'the passbook details', 'the site']",anger,"{'useless app': 'Negative', 'the passbook details': 'Negative', 'the site': 'Negative'}",review
+Worst application ever! just like all other government websites this works only when we dont need it !,1,2025-07-08 20:35:36,Google Play,NEGATIVE,-0.9997730851173401,"['worst application', 'all other government websites']",disgust,"{'worst application': 'Negative', 'all other government websites': 'Negative'}",review
+super,5,2025-07-08 20:17:31,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+nice,5,2025-07-08 20:07:46,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+Nothing is open in this app. pls don't download. Not working at all.,1,2025-07-08 20:06:20,Google Play,NEGATIVE,-0.9997496008872986,['this app'],sadness,{'this app': 'Negative'},bug_report
+terrible experince with this whenever i check for epfo balance and status it never states always show some errors,2,2025-07-08 19:35:14,Google Play,NEGATIVE,-0.9984657764434814,"['terrible experince', 'epfo balance', 'status', 'some errors']",fear,"{'terrible experince': 'Negative', 'epfo balance': 'Negative', 'status': 'Negative', 'some errors': 'Negative'}",bug_report
+not well connected with services and full of bugs,1,2025-07-08 19:30:27,Google Play,NEGATIVE,-0.999797523021698,"['services', 'bugs']",sadness,"{'services': 'Negative', 'bugs': 'Negative'}",bug_report
+Good 👍,3,2025-07-08 19:00:37,Google Play,POSITIVE,0.9998576641082764,[],neutral,{},review
+worst,1,2025-07-08 18:55:44,Google Play,NEGATIVE,-0.9998016953468323,[],disgust,{},review
+ok,4,2025-07-08 18:54:51,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+waste just keeps spinning and technical issues. Devlopers of app or the people maintaining it should be fired immediately. lack of basic app management the very simple tasks don't work. what is the use of having app that doesn't work or keeps loading 90 percent of the time. pathetic developers.,1,2025-07-08 18:36:31,Google Play,NEGATIVE,-0.9998181462287903,"['waste', 'spinning and technical issues', 'devlopers', 'app', 'the people', 'lack', 'basic app management', 'the very simple tasks', 'the use', 'app', '90 percent', 'the time', 'pathetic developers']",sadness,"{'waste': 'Negative', 'spinning and technical issues': 'Negative', 'devlopers': 'Negative', 'app': 'Negative', 'the people': 'Negative', 'lack': 'Negative', 'basic app management': 'Negative', 'the very simple tasks': 'Negative', 'the use': 'Negative', '90 percent': 'Negative', 'the time': 'Negative', 'pathetic developers': 'Negative'}",bug_report
+good,5,2025-07-08 18:12:47,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"what kind of app is this , when starting the app it just freezes on start screen. It looks like an inexperienced idiot is maintaining it. can't government create good apps?",1,2025-07-08 18:12:30,Google Play,NEGATIVE,-0.9996129870414734,"['what kind', 'app', 'the app', 'start screen', 'an inexperienced idiot', 'government', 'good apps']",neutral,"{'what kind': 'Negative', 'app': 'Negative', 'the app': 'Negative', 'start screen': 'Negative', 'an inexperienced idiot': 'Negative', 'government': 'Negative', 'good apps': 'Negative'}",review
+Not working,1,2025-07-08 17:26:35,Google Play,NEGATIVE,-0.9997778534889221,[],sadness,{},bug_report
+we pay taxes to get poor website and mobile apps. Unable to access PF portal for last 3 days.Not sure who develop these low quality applications without any vision.,1,2025-07-08 17:19:53,Google Play,NEGATIVE,-0.9996708631515503,"['taxes', 'poor website', 'mobile apps', 'pf portal', 'last 3 days.not', 'these low quality applications', 'any vision']",sadness,"{'taxes': 'Neutral', 'poor website': 'Negative', 'mobile apps': 'Negative', 'pf portal': 'Negative', 'last 3 days.not': 'Negative', 'these low quality applications': 'Negative', 'any vision': 'Negative'}",review
+"worst app every time facing error, while checking balance, trying to transfer amount, but 100 of 100 times Failure.",1,2025-07-08 16:53:46,Google Play,NEGATIVE,-0.9992231130599976,"['worst app', 'error', 'balance']",disgust,"{'worst app': 'Negative', 'error': 'Negative', 'balance': 'Neutral'}",bug_report
+good service,5,2025-07-08 16:45:40,Google Play,POSITIVE,0.9998499155044556,['good service'],neutral,{'good service': 'Positive'},review
+Excellent,5,2025-07-08 16:32:35,Google Play,POSITIVE,0.9998434782028198,[],neutral,{},review
+सबसे बेकार ऐप हे यार साला चलता ही नहीं हे,1,2025-07-08 15:39:45,Google Play,NEGATIVE,-0.8124627470970154,['सबसे बेकार'],neutral,{'सबसे बेकार': 'Positive'},review
+Not at all opening,1,2025-07-08 15:32:40,Google Play,NEGATIVE,-0.9995692372322083,['not at all opening'],neutral,{'not at all opening': 'Negative'},review
+good,5,2025-07-08 14:46:51,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+very good .,5,2025-07-08 14:29:35,Google Play,POSITIVE,0.9998475313186646,[],joy,{},review
+good,5,2025-07-08 14:06:07,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+super,5,2025-07-08 13:46:01,Google Play,POSITIVE,0.998783528804779,['super'],neutral,{'super': 'Positive'},review
+frustrated.....epfo not working and not showing passbook,1,2025-07-08 13:29:41,Google Play,NEGATIVE,-0.9997764229774475,"['epfo', 'passbook']",surprise,"{'epfo': 'Negative', 'passbook': 'Negative'}",bug_report
+software developer problem epfo not responding,1,2025-07-08 13:16:52,Google Play,NEGATIVE,-0.9994775652885437,"['software developer problem', 'epfo']",sadness,"{'software developer problem': 'Negative', 'epfo': 'Negative'}",bug_report
+very nice usefool,5,2025-07-08 13:10:26,Google Play,POSITIVE,0.9986479878425598,['very nice usefool'],joy,{'very nice usefool': 'Positive'},review
+good,5,2025-07-08 13:08:23,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+nice,5,2025-07-08 13:00:15,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+nice app,5,2025-07-08 12:21:46,Google Play,POSITIVE,0.9998061060905457,['nice app'],neutral,{'nice app': 'Positive'},review
+not update,1,2025-07-08 12:15:07,Google Play,NEGATIVE,-0.9985750913619995,[],neutral,{},review
+i like this feature,5,2025-07-08 11:48:05,Google Play,POSITIVE,0.9998424053192139,['this feature'],joy,{'this feature': 'Positive'},feature_request
+timely not reachable your service multiple time error,5,2025-07-08 11:44:58,Google Play,NEGATIVE,-0.9991843104362488,['your service multiple time error'],sadness,{'your service multiple time error': 'Negative'},bug_report
+pf why under process much days.,1,2025-07-08 11:29:27,Google Play,NEGATIVE,-0.992703914642334,['process'],surprise,{'process': 'Negative'},review
+everytime it has problem to opening,1,2025-07-08 11:14:37,Google Play,NEGATIVE,-0.9963216781616211,['problem'],neutral,{'problem': 'Negative'},bug_report
+really this app needs a lot of updates doesn't work properly the server is down nothing works properly,1,2025-07-08 10:56:06,Google Play,NEGATIVE,-0.9997734427452087,"['this app', 'a lot', 'updates', 'the server']",sadness,"{'this app': 'Negative', 'a lot': 'Negative', 'updates': 'Negative', 'the server': 'Negative'}",review
+good,5,2025-07-08 10:28:39,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+👍 nyc,5,2025-07-08 10:24:22,Google Play,POSITIVE,0.9602228999137878,['👍 nyc'],neutral,{'👍 nyc': 'Positive'},review
+good aap,4,2025-07-08 10:16:44,Google Play,POSITIVE,0.9998424053192139,['good aap'],joy,{'good aap': 'Positive'},review
+Good app,5,2025-07-08 10:09:52,Google Play,POSITIVE,0.9998493194580078,['good app'],neutral,{'good app': 'Positive'},review
+best app,5,2025-07-08 08:39:12,Google Play,POSITIVE,0.999686598777771,['best app'],neutral,{'best app': 'Positive'},review
+responsible.,5,2025-07-08 08:18:37,Google Play,POSITIVE,0.9995707869529724,[],disgust,{},review
+good,5,2025-07-08 08:05:16,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+The app is showing app is sideloaded and not download from Play Store. Kindly resolve the issue.,2,2025-07-08 07:57:13,Google Play,NEGATIVE,-0.8912485837936401,"['the app', 'app', 'play store', 'the issue']",neutral,"{'the app': 'Negative', 'app': 'Negative', 'play store': 'Neutral', 'the issue': 'Negative'}",bug_report
+"you are asking location that's fine, if im in majority hindi speaking state that also fine, but if I'm not on those states and the notification are coming in hindi only how can one understand if they're not knowing hindi, isn't this is an indirect imposition of hindi",1,2025-07-08 07:41:54,Google Play,NEGATIVE,-0.9971912503242493,"['location', 'majority hindi', 'state', 'those states', 'the notification', 'hindi', 'hindi', 'an indirect imposition', 'hindi']",neutral,"{'location': 'Negative', 'majority hindi': 'Negative', 'state': 'Negative', 'those states': 'Negative', 'the notification': 'Negative', 'hindi': 'Negative', 'an indirect imposition': 'Negative'}",review
+full time slow...and server issue...worst apps by government of India...our government have to speed their websites and apps for public,1,2025-07-08 06:45:12,Google Play,NEGATIVE,-0.9998025298118591,"['server issue', 'worst apps', 'government', 'india', 'our government', 'their websites', 'apps']",sadness,"{'server issue': 'Negative', 'worst apps': 'Negative', 'government': 'Negative', 'india': 'Negative', 'our government': 'Negative', 'their websites': 'Negative', 'apps': 'Negative'}",bug_report
+Best Performance application,5,2025-07-08 06:19:19,Google Play,POSITIVE,0.999786913394928,['best performance application'],neutral,{'best performance application': 'Positive'},review
+excellent,5,2025-07-08 05:25:05,Google Play,POSITIVE,0.9998434782028198,[],joy,{},review
+good,5,2025-07-08 04:23:04,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+every time server busy,2,2025-07-08 01:30:33,Google Play,NEGATIVE,-0.9834604859352112,[],neutral,{},review
+very good,5,2025-07-08 00:55:49,Google Play,POSITIVE,0.9998520612716675,[],joy,{},review
+poor service,1,2025-07-08 00:38:15,Google Play,NEGATIVE,-0.9996534585952759,['poor service'],sadness,{'poor service': 'Negative'},review
+good,4,2025-07-08 00:10:22,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+"Can't expect much from a govt. app. It crashes every time. Whenever I try to open my EPFO passbook, it gives me different kind of errors and loads for infinity.",1,2025-07-07 23:56:31,Google Play,NEGATIVE,-0.998572587966919,"['a govt', 'app', 'my epfo passbook', 'different kind', 'errors', 'loads', 'infinity']",neutral,"{'a govt': 'Negative', 'app': 'Negative', 'my epfo passbook': 'Negative', 'different kind': 'Negative', 'errors': 'Negative', 'loads': 'Negative', 'infinity': 'Negative'}",bug_report
+super app,5,2025-07-07 22:59:16,Google Play,POSITIVE,0.9932268261909485,['super app'],neutral,{'super app': 'Positive'},review
+like this app,3,2025-07-07 22:04:08,Google Play,POSITIVE,0.9980413913726807,['this app'],neutral,{'this app': 'Positive'},review
+very nice,5,2025-07-07 22:00:24,Google Play,POSITIVE,0.9998563528060913,[],joy,{},review
+my mobile number registered with UAN but this app always showing the mobile number not registered with UAN. same issue last couple of days.,1,2025-07-07 21:03:21,Google Play,NEGATIVE,-0.9978173971176147,"['my mobile number', 'uan', 'this app', 'the mobile number', 'uan', 'same issue', 'days']",sadness,"{'my mobile number': 'Negative', 'uan': 'Negative', 'this app': 'Negative', 'the mobile number': 'Negative', 'same issue': 'Negative', 'days': 'Negative'}",bug_report
+thank ful app,5,2025-07-07 20:23:26,Google Play,POSITIVE,0.9995131492614746,['ful app'],neutral,{'ful app': 'Positive'},review
+good,4,2025-07-07 20:20:24,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+not opening,1,2025-07-07 20:07:59,Google Play,NEGATIVE,-0.9996150732040405,[],neutral,{},review
+worst not login no words worst,1,2025-07-07 19:52:36,Google Play,NEGATIVE,-0.9992020726203918,['no words'],disgust,{'no words': 'Negative'},review
+good,5,2025-07-07 19:47:32,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+exelent,5,2025-07-07 18:53:58,Google Play,POSITIVE,0.9989122152328491,['exelent'],neutral,{'exelent': 'Positive'},review
+ye thik h,3,2025-07-07 18:19:20,Google Play,POSITIVE,0.9679705500602722,['ye thik'],neutral,{'ye thik': 'Positive'},review
+good,5,2025-07-07 18:10:55,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-07 18:03:30,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+superb app for documentations,5,2025-07-07 17:29:05,Google Play,POSITIVE,0.9997877478599548,"['superb app', 'documentations']",neutral,"{'superb app': 'Positive', 'documentations': 'Positive'}",review
+good,5,2025-07-07 17:25:48,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+Good 👍,3,2025-07-07 17:01:51,Google Play,POSITIVE,0.9998576641082764,[],neutral,{},review
+"app not working for withdraw pf amount, poor service",1,2025-07-07 16:56:55,Google Play,NEGATIVE,-0.9991950392723083,"['app', 'pf amount']",sadness,"{'app': 'Negative', 'pf amount': 'Negative'}",bug_report
+nice,5,2025-07-07 16:35:40,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+v Good,5,2025-07-07 16:30:05,Google Play,POSITIVE,0.9984826445579529,[],neutral,{},review
+Very Bad Service,1,2025-07-07 16:19:51,Google Play,NEGATIVE,-0.9997568726539612,['very bad service'],disgust,{'very bad service': 'Negative'},review
+Good 👍,5,2025-07-07 15:43:38,Google Play,POSITIVE,0.9998576641082764,[],neutral,{},review
+good,4,2025-07-07 15:14:13,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+nice,5,2025-07-07 15:10:25,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+it's been almost more than 3+ months and I can't access the EPFO account and passbook. what's going on with. nether the site works properly nor the app,1,2025-07-07 14:27:17,Google Play,NEGATIVE,-0.9994277358055115,"['the epfo account', 'passbook', 'nether', 'the site', 'the app']",sadness,"{'the epfo account': 'Neutral', 'passbook': 'Negative', 'nether': 'Negative', 'the site': 'Negative', 'the app': 'Negative'}",review
+very very nice,5,2025-07-07 13:59:34,Google Play,POSITIVE,0.9998605251312256,[],joy,{},review
+good,5,2025-07-07 13:47:42,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good. .service,5,2025-07-07 12:36:30,Google Play,POSITIVE,0.9998509883880615,[],neutral,{},review
+good okok,4,2025-07-07 12:33:57,Google Play,POSITIVE,0.9998297691345215,['good okok'],neutral,{'good okok': 'Positive'},review
+ok,5,2025-07-07 12:12:32,Google Play,POSITIVE,0.9997851252555847,[],neutral,{},review
+"useless, EPFO portal never works",1,2025-07-07 11:55:21,Google Play,NEGATIVE,-0.9998044371604919,['epfo portal'],anger,{'epfo portal': 'Negative'},review
+exllence,5,2025-07-07 11:36:22,Google Play,NEGATIVE,-0.9497016072273254,['exllence'],neutral,{'exllence': 'Positive'},review
+very Wrost app not working view passbook and view claim pls ban this app storage waste,1,2025-07-07 11:11:45,Google Play,NEGATIVE,-0.9996709823608398,"['very wrost app', 'view passbook', 'this app storage waste']",sadness,"{'very wrost app': 'Negative', 'view passbook': 'Negative', 'this app storage waste': 'Negative'}",bug_report
+😞,3,2025-07-07 10:49:58,Google Play,NEGATIVE,-0.6970566511154175,[],neutral,{},review
+It is a very bad app connectivity i have use this for ever time,1,2025-07-07 10:42:23,Google Play,NEGATIVE,-0.9997918009757996,"['a very bad app connectivity', 'ever time']",disgust,"{'a very bad app connectivity': 'Negative', 'ever time': 'Positive'}",review
+better,5,2025-07-07 10:41:56,Google Play,POSITIVE,0.999264657497406,[],neutral,{},review
+nice,5,2025-07-07 10:25:08,Google Play,POSITIVE,0.9998552799224854,[],neutral,{},review
+"who builds these government apps and websites?. I really appreciate the initiative by the government but the website and the app is terrible. from the past 3-4 days i am trying to register on the national consumer helpline but it says it sends a verification email to my email, it never sent!! and whenever I try to register it always says 504 bad gateway!!? what. I can build a better app and website than this, please resolve the issue",1,2025-07-07 10:24:40,Google Play,NEGATIVE,-0.9986905455589294,"['these government apps', 'websites', 'the initiative', 'the government', 'the website', 'the app', 'the past 3-4 days', 'the national consumer helpline', 'a verification email', 'my email', '504 bad gateway', 'a better app', 'website', 'the issue']",disgust,"{'these government apps': 'Negative', 'websites': 'Negative', 'the initiative': 'Positive', 'the government': 'Negative', 'the website': 'Negative', 'the app': 'Negative', 'the past 3-4 days': 'Negative', 'the national consumer helpline': 'Negative', 'a verification email': 'Negative', 'my email': 'Negative', '504 bad gateway': 'Negative', 'a better app': 'Negative', 'website': 'Negative', 'the issue': 'Negative'}",bug_report
+better app for epf,5,2025-07-07 10:08:23,Google Play,NEGATIVE,-0.7620741128921509,"['better app', 'epf']",neutral,"{'better app': 'Neutral', 'epf': 'Neutral'}",review
+umang app Android phone not working plz my help,5,2025-07-07 09:10:33,Google Play,NEGATIVE,-0.9990265369415283,"['umang app', 'android phone', 'my help']",sadness,"{'umang app': 'Neutral', 'android phone': 'Negative', 'my help': 'Positive'}",bug_report
+this app is pop,5,2025-07-07 09:06:54,Google Play,POSITIVE,0.991216778755188,['this app'],neutral,{'this app': 'Neutral'},review
+whenever login to my UAN always unable to open any claim or passbook. So much errors each and every time so much frustrating. also uan web is not up to the mark.,1,2025-07-07 08:35:58,Google Play,NEGATIVE,-0.9996744394302368,"['my uan', 'any claim', 'passbook', 'so much errors', 'every time', 'uan web', 'the mark']",sadness,"{'my uan': 'Negative', 'any claim': 'Negative', 'passbook': 'Negative', 'so much errors': 'Negative', 'every time': 'Negative', 'uan web': 'Negative', 'the mark': 'Negative'}",bug_report
+nice work people all people all help,5,2025-07-07 08:33:17,Google Play,POSITIVE,0.9998074173927307,"['nice work people', 'all people']",joy,"{'nice work people': 'Positive', 'all people': 'Positive'}",review
+very worst app responding i couldn't look status of pf passbook the app has nothing no use better delete from Play Store,1,2025-07-07 08:28:03,Google Play,NEGATIVE,-0.9997462630271912,"['very worst app', 'status', 'pf passbook', 'the app', 'play store']",disgust,"{'very worst app': 'Negative', 'status': 'Negative', 'pf passbook': 'Negative', 'the app': 'Negative', 'play store': 'Negative'}",review
+good,5,2025-07-07 06:39:25,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+very useful,4,2025-07-07 06:01:01,Google Play,POSITIVE,0.999798595905304,[],joy,{},review
+good,4,2025-07-07 05:42:20,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-06 22:46:24,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,5,2025-07-06 22:00:44,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,2,2025-07-06 21:50:50,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+good,4,2025-07-06 20:26:54,Google Play,POSITIVE,0.9998161196708679,[],neutral,{},review
+super app,5,2025-07-06 19:35:43,Google Play,POSITIVE,0.9932268261909485,['super app'],neutral,{'super app': 'Positive'},review
+poor app,1,2025-07-06 19:30:40,Google Play,NEGATIVE,-0.9997596144676208,['poor app'],sadness,{'poor app': 'Negative'},review
+good umang porfomosum app😀😃😄,5,2025-07-06 19:15:04,Google Play,POSITIVE,0.9990633130073547,['good umang porfomosum app'],neutral,{'good umang porfomosum app': 'Positive'},review
