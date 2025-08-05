@@ -408,6 +408,7 @@ def create_interactive_dashboard(app_data, comparison_data=None):
         df1.dropna(subset=["date"], inplace=True)
         df2.dropna(subset=["date"], inplace=True)
 
+        # The subplot_titles are now in the correct order to match the plots.
         subplot_titles = (
             f"Sentiment Score - {app1_name}", f"Sentiment Score - {app2_name}",
             f"Sentiment Breakdown - {app1_name}", f"Sentiment Breakdown - {app2_name}",
