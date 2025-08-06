@@ -11,6 +11,7 @@ import pandas as pd
 from datetime import datetime
 from collections import Counter
 import plotly.graph_objects as go
+from transformers import AutoTokenizer
 from plotly.subplots import make_subplots
 from transformers.pipelines import pipeline
 from google_play_scraper import app as gp_app, reviews, Sort
@@ -36,16 +37,40 @@ def initialize_models():
         print(f"❌ Failed to load spaCy model: {e}")
         print("Please install the model manually:")
         print("   python -m spacy download en_core_web_sm")
-        return None, None
+        return None, None, None, None
+
+    device = 0 if torch.cuda.is_available() else -1
 
     sentiment_analyzer = pipeline(  # type: ignore
         "sentiment-analysis",
         model="distilbert-base-uncased-finetuned-sst-2-english",
-        device=0 if torch.cuda.is_available() else -1,
+        device=device,
     )
-    print("✅ Transformers model loaded successfully!")
+    print("✅ Sentiment analysis model loaded successfully!")
+
+    emotion_analyzer = pipeline(  # type: ignore
+        "text-classification",
+        model="j-hartmann/emotion-english-distilroberta-base",
+        return_all_scores=True,
+        device=device,
+    )
+    print("✅ Emotion detection model loaded successfully!")
+    
+    slow_tokenizer = AutoTokenizer.from_pretrained(
+        "yangheng/deberta-v3-base-absa-v1.1", 
+        use_fast=False
+    )
+
+    absa_analyzer = pipeline(  # type: ignore
+        "text-classification",
+        model="yangheng/deberta-v3-base-absa-v1.1",
+        tokenizer=slow_tokenizer, # Pass the slow tokenizer to the pipeline
+        device=device,
+    )
+    print("✅ ABSA model loaded successfully!")
+
     print("✅ All models loaded successfully!")
-    return nlp, sentiment_analyzer
+    return nlp, sentiment_analyzer, emotion_analyzer, absa_analyzer
 
 
 # --- DATA SCRAPING ---
@@ -214,7 +239,8 @@ def analyze_sentiment(df, sentiment_analyzer):
         # Filter out empty reviews
         batch = [r for r in batch if r.strip()]
         if batch:
-            results.extend(sentiment_analyzer(batch))
+            # FIX: Add truncation to handle long reviews
+            results.extend(sentiment_analyzer(batch, truncation=True, max_length=512))
 
     # Handle cases where some reviews might have been filtered out
     if len(results) < len(reviews_list):
@@ -272,6 +298,96 @@ def analyze_topics(df, nlp_model):
     return df
 
 
+def analyze_emotions(df, emotion_analyzer):
+    """Performs emotion analysis on the review text."""
+    print("😊 Performing emotion analysis...")
+    if "review" not in df.columns or df.empty:
+        return df
+
+    df["review"] = df["review"].astype(str).fillna("")
+    reviews_list = df["review"].tolist()
+    
+    # Get the top emotion for each review
+    top_emotions = []
+    batch_size = 64
+    for i in range(0, len(reviews_list), batch_size):
+        batch = reviews_list[i:i+batch_size]
+        batch = [r for r in batch if r.strip()]
+        if batch:
+            # FIX: Add truncation to handle long reviews
+            results = emotion_analyzer(batch, truncation=True, max_length=512)
+            for result in results:
+                # The result is a list of dicts for each review in the batch
+                top_emotion = max(result, key=lambda x: x['score'])
+                top_emotions.append(top_emotion['label'])
+
+    # Handle cases where some reviews might have been filtered out
+    if len(top_emotions) < len(reviews_list):
+        full_emotions = []
+        emotion_idx = 0
+        for review in reviews_list:
+            if review.strip():
+                full_emotions.append(top_emotions[emotion_idx])
+                emotion_idx += 1
+            else:
+                full_emotions.append("neutral") # Default for empty reviews
+        top_emotions = full_emotions
+    
+    df["emotion"] = top_emotions
+    return df
+
+
+def analyze_aspect_sentiments(df, absa_analyzer):
+    """Performs aspect-based sentiment analysis."""
+    print("🔎 Performing aspect-based sentiment analysis...")
+    if "review" not in df.columns or "topics" not in df.columns or df.empty:
+        df["aspect_sentiments"] = pd.Series([[] for _ in range(len(df))])
+        return df
+
+    aspect_sentiments = []
+    for _, row in df.iterrows():
+        review = row["review"]
+        topics = row["topics"]
+        sentiments = {}
+        if review and topics:
+            for topic in topics:
+                try:
+                    # FIX: Add truncation to handle long reviews
+                    result = absa_analyzer(review, text_pair=topic, truncation=True, max_length=512)
+                    top_sentiment = max(result, key=lambda x: x['score'])
+                    sentiments[topic] = top_sentiment['label']
+                except Exception as e:
+                    # Sometimes the model might fail on certain topic/review pairs
+                    # print(f"Could not analyze aspect '{topic}': {e}")
+                    pass
+        aspect_sentiments.append(sentiments)
+
+    df["aspect_sentiments"] = aspect_sentiments
+    return df
+
+
+def identify_bug_feature_requests(df):
+    """Identifies potential bug reports and feature requests."""
+    print("🐞 Identifying bug reports and feature requests...")
+    if "review" not in df.columns or df.empty:
+        df["category"] = "review"
+        return df
+
+    bug_keywords = ["bug", "crash", "error", "glitch", "issue", "problem", "not working", "fix"]
+    feature_keywords = ["add", "feature", "idea", "suggestion", "implement", "request", "wish", "would be great if"]
+
+    def categorize_review(review):
+        review_lower = review.lower()
+        if any(keyword in review_lower for keyword in bug_keywords):
+            return "bug_report"
+        if any(keyword in review_lower for keyword in feature_keywords):
+            return "feature_request"
+        return "review"
+
+    df["category"] = df["review"].apply(categorize_review)
+    return df
+
+
 # --- VISUALIZATION ---
 
 
@@ -281,11 +397,18 @@ def create_interactive_dashboard(app_data, comparison_data=None):
     is_comparison = comparison_data is not None
 
     if is_comparison:
-        # --- COMPARISON MODE: Explicitly build the dashboard for clarity ---
+        # --- COMPARISON MODE ---
         rows, cols = 5, 2
         app1_name, df1 = app_data['name'], app_data['df']
         app2_name, df2 = comparison_data['name'], comparison_data['df']
 
+        # Ensure 'date' columns are datetime objects before resampling
+        df1["date"] = pd.to_datetime(df1["date"], errors="coerce")
+        df2["date"] = pd.to_datetime(df2["date"], errors="coerce")
+        df1.dropna(subset=["date"], inplace=True)
+        df2.dropna(subset=["date"], inplace=True)
+
+        # The subplot_titles are now in the correct order to match the plots.
         subplot_titles = (
             f"Sentiment Score - {app1_name}", f"Sentiment Score - {app2_name}",
             f"Sentiment Breakdown - {app1_name}", f"Sentiment Breakdown - {app2_name}",
@@ -295,63 +418,108 @@ def create_interactive_dashboard(app_data, comparison_data=None):
         )
         specs = [
             [{"type": "histogram"}, {"type": "histogram"}],
-            [{"type": "domain"}, {"type": "domain"}],
-            [{"colspan": 2}, None],
+            [{"type": "pie"}, {"type": "pie"}],
+            [{"colspan": 2, "type": "xy"}, None],
             [{"type": "bar"}, {"type": "bar"}],
             [{"type": "bar"}, {"type": "bar"}],
         ]
 
-        fig = make_subplots(rows=rows, cols=cols, subplot_titles=subplot_titles, specs=specs, vertical_spacing=0.08)
+        fig = make_subplots(rows=rows, cols=cols, subplot_titles=subplot_titles, specs=specs, vertical_spacing=0.12)
 
-        # -- App 1 (Left Column) --
-        fig.add_trace(go.Histogram(x=df1["sentiment_score"], name=f"Sentiment Score ({app1_name})", marker_color="#1f77b4", xbins=dict(start=-1.0, end=1.0, size=0.1)), row=1, col=1)
-        fig.add_trace(go.Pie(labels=df1["sentiment_label"].value_counts().index, values=df1["sentiment_label"].value_counts().values, name=f"Sentiment ({app1_name})"), row=2, col=1)
+        # ROW 1: Sentiment Score Histograms
+        fig.add_trace(go.Histogram(x=df1["sentiment_score"], name=app1_name, marker_color="#1f77b4"), row=1, col=1)
+        fig.add_trace(go.Histogram(x=df2["sentiment_score"], name=app2_name, marker_color="#ff7f0e"), row=1, col=2)
 
-        if "topics" in df1.columns:
+        # ROW 2: Sentiment Breakdown Pies
+        fig.add_trace(go.Pie(labels=df1["sentiment_label"].value_counts().index, values=df1["sentiment_label"].value_counts().values, name=f"{app1_name} Sent."), row=2, col=1)
+        fig.add_trace(go.Pie(labels=df2["sentiment_label"].value_counts().index, values=df2["sentiment_label"].value_counts().values, name=f"{app2_name} Sent."), row=2, col=2)
+
+        # ROW 3: Combined Weekly Average Sentiment Trend
+        df1_ts = df1.set_index("date").resample("W")["sentiment_score"].mean().dropna()
+        df2_ts = df2.set_index("date").resample("W")["sentiment_score"].mean().dropna()
+        fig.add_trace(go.Scatter(x=df1_ts.index, y=df1_ts.values, mode="lines+markers", name=f"{app1_name} Trend"), row=3, col=1)
+        fig.add_trace(go.Scatter(x=df2_ts.index, y=df2_ts.values, mode="lines+markers", name=f"{app2_name} Trend"), row=3, col=1)
+
+        # ROWS 4 & 5: Topic Analysis
+        if "topics" in df1.columns and "topics" in df2.columns:
+            # App 1 Topics
             pos_topics1 = Counter(topic for _, row in df1[df1["sentiment_label"] == "POSITIVE"].iterrows() for topic in row["topics"])
             neg_topics1 = Counter(topic for _, row in df1[df1["sentiment_label"] == "NEGATIVE"].iterrows() for topic in row["topics"])
             pos_df1 = pd.DataFrame(pos_topics1.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")
             neg_df1 = pd.DataFrame(neg_topics1.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")
 
-            fig.add_trace(go.Bar(y=pos_df1["Topic"], x=pos_df1["Count"], orientation="h", name=f"Positive ({app1_name})", marker_color="green", showlegend=False), row=4, col=1)
-            fig.add_trace(go.Bar(y=neg_df1["Topic"], x=neg_df1["Count"], orientation="h", name=f"Negative ({app1_name})", marker_color="red", showlegend=False), row=5, col=1)
-
-        # -- App 2 (Right Column) --
-        fig.add_trace(go.Histogram(x=df2["sentiment_score"], name=f"Sentiment Score ({app2_name})", marker_color="#ff7f0e", xbins=dict(start=-1.0, end=1.0, size=0.1)), row=1, col=2)
-        fig.add_trace(go.Pie(labels=df2["sentiment_label"].value_counts().index, values=df2["sentiment_label"].value_counts().values, name=f"Sentiment ({app2_name})"), row=2, col=2)
-
-        if "topics" in df2.columns:
+            # App 2 Topics
             pos_topics2 = Counter(topic for _, row in df2[df2["sentiment_label"] == "POSITIVE"].iterrows() for topic in row["topics"])
             neg_topics2 = Counter(topic for _, row in df2[df2["sentiment_label"] == "NEGATIVE"].iterrows() for topic in row["topics"])
             pos_df2 = pd.DataFrame(pos_topics2.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")
             neg_df2 = pd.DataFrame(neg_topics2.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")
 
-            fig.add_trace(go.Bar(y=pos_df2["Topic"], x=pos_df2["Count"], orientation="h", name=f"Positive ({app2_name})", marker_color="mediumseagreen", showlegend=False), row=4, col=2)
-            fig.add_trace(go.Bar(y=neg_df2["Topic"], x=neg_df2["Count"], orientation="h", name=f"Negative ({app2_name})", marker_color="tomato", showlegend=False), row=5, col=2)
+            # Add Topic Traces
+            fig.add_trace(go.Bar(y=pos_df1["Topic"], x=pos_df1["Count"], orientation="h", name=f"{app1_name} Pos Topics", marker_color="green"), row=4, col=1)
+            fig.add_trace(go.Bar(y=pos_df2["Topic"], x=pos_df2["Count"], orientation="h", name=f"{app2_name} Pos Topics", marker_color="lightgreen"), row=4, col=2)
+            fig.add_trace(go.Bar(y=neg_df1["Topic"], x=neg_df1["Count"], orientation="h", name=f"{app1_name} Neg Topics", marker_color="red"), row=5, col=1)
+            fig.add_trace(go.Bar(y=neg_df2["Topic"], x=neg_df2["Count"], orientation="h", name=f"{app2_name} Neg Topics", marker_color="salmon"), row=5, col=2)
 
-        # -- Shared Chart (Weekly Sentiment) --
-        df1_ts = df1.set_index("date").resample("W")["sentiment_score"].mean().dropna()
-        df2_ts = df2.set_index("date").resample("W")["sentiment_score"].mean().dropna()
-        fig.add_trace(go.Scatter(x=df1_ts.index, y=df1_ts.values, mode="lines+markers", name=f"{app1_name} Trend"), row=3, col=1)
-        fig.add_trace(go.Scatter(x=df2_ts.index, y=df2_ts.values, mode="lines+markers", name=f"{app2_name} Trend"), row=3, col=1)
-        
-        fig.update_layout(title_text=f"📊 App Analysis: {app1_name} vs. {app2_name}", height=1200, showlegend=True)
+        fig.update_layout(title_text=f"📊 App Analysis: {app1_name} vs. {app2_name}", height=1800, showlegend=True)
 
     else:
-        # --- SINGLE APP MODE: This logic is preserved as it was correct ---
-        rows, cols = 6, 1
+        # --- SINGLE APP MODE (This part remains the same) ---
         app_name, df = app_data['name'], app_data['df']
-        subplot_titles = ("Sentiment Score Distribution", "User Rating Distribution", "Sentiment Breakdown", "Weekly Average Sentiment", "Top Positive Topics", "Top Negative Topics")
-        specs = [[{"type": "histogram"}], [{"type": "histogram"}], [{"type": "pie"}], [{"type": "xy"}], [{"type": "bar"}], [{"type": "bar"}]]
         
-        fig = make_subplots(rows=rows, cols=cols, subplot_titles=subplot_titles, specs=specs, vertical_spacing=0.06)
+        # Ensure 'date' column is datetime object before resampling
+        df["date"] = pd.to_datetime(df["date"], errors="coerce")
+        df.dropna(subset=["date"], inplace=True)
+        
+        # Check if enhanced analysis was performed
+        enhanced_analysis = "emotion" in df.columns and "aspect_sentiments" in df.columns
 
+        if enhanced_analysis:
+            rows, cols = 8, 2
+            subplot_titles = (
+                "Sentiment Score Distribution", "User Rating Distribution",
+                "Sentiment Breakdown", "Emotion Distribution",
+                "Weekly Average Sentiment", "Bug Reports vs. Feature Requests",
+                "Top Positive Topics", "Top Negative Topics",
+                "Aspect-Sentiment Heatmap", None,
+                "Top 'Joy' Topics", "Top 'Anger' Topics",
+                "Top 'Sadness' Topics", "Top 'Surprise' Topics",
+                "Top 'Fear' Topics", "Top 'Love' Topics", # Example: Add more emotions if needed
+            )
+            specs = [
+                [{"type": "histogram"}, {"type": "histogram"}],
+                [{"type": "pie"}, {"type": "pie"}],
+                [{"type": "xy"}, {"type": "bar"}],
+                [{"type": "bar"}, {"type": "bar"}],
+                [{"type": "heatmap", "colspan": 2}, None],
+                [{"type": "bar"}, {"type": "bar"}],
+                [{"type": "bar"}, {"type": "bar"}],
+                [{"type": "bar"}, {"type": "bar"}],
+            ]
+            fig = make_subplots(rows=rows, cols=cols, subplot_titles=subplot_titles, specs=specs, vertical_spacing=0.08, horizontal_spacing=0.1)
+        else:
+            rows, cols = 4, 2
+            subplot_titles = (
+                "Sentiment Score Distribution", "User Rating Distribution",
+                "Sentiment Breakdown", "Weekly Average Sentiment",
+                "Top Positive Topics", "Top Negative Topics",
+            )
+            # Corrected specs for basic mode to avoid rowspan issues
+            specs = [
+                [{"type": "histogram"}, {"type": "histogram"}],
+                [{"type": "pie"}, {"type": "xy"}],
+                [{"type": "bar"}, {"type": "bar"}],
+                [{}, {}],
+            ]
+            fig = make_subplots(rows=rows, cols=cols, subplot_titles=subplot_titles, specs=specs, vertical_spacing=0.15)
+
+
+        # --- Basic Plots (Always Shown) ---
         fig.add_trace(go.Histogram(x=df["sentiment_score"], name="Sentiment Score", marker_color="#1f77b4", xbins=dict(start=-1.0, end=1.0, size=0.1)), row=1, col=1)
-        fig.add_trace(go.Histogram(x=df["rating"], name="User Rating", marker_color="#ff7f0e"), row=2, col=1)
-        fig.add_trace(go.Pie(labels=df["sentiment_label"].value_counts().index, values=df["sentiment_label"].value_counts().values, name="Sentiment"), row=3, col=1)
+        fig.add_trace(go.Histogram(x=df["rating"], name="User Rating", marker_color="#ff7f0e"), row=1, col=2)
+        fig.add_trace(go.Pie(labels=df["sentiment_label"].value_counts().index, values=df["sentiment_label"].value_counts().values, name="Sentiment"), row=2, col=1)
         
         df_ts = df.set_index("date").resample("W")["sentiment_score"].mean().dropna()
-        fig.add_trace(go.Scatter(x=df_ts.index, y=df_ts.values, mode="lines+markers", name=f"{app_name} Sentiment Trend"), row=4, col=1)
+        fig.add_trace(go.Scatter(x=df_ts.index, y=df_ts.values, mode="lines+markers", name=f"{app_name} Sentiment Trend"), row=2, col=2)
 
         if "topics" in df.columns:
             pos_topics = Counter(topic for _, row in df[df["sentiment_label"] == "POSITIVE"].iterrows() for topic in row["topics"])
@@ -359,12 +527,75 @@ def create_interactive_dashboard(app_data, comparison_data=None):
             pos_df = pd.DataFrame(pos_topics.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")
             neg_df = pd.DataFrame(neg_topics.most_common(10), columns=["Topic", "Count"]).sort_values(by="Count")
 
-            fig.add_trace(go.Bar(y=pos_df["Topic"], x=pos_df["Count"], orientation="h", name="Positive", marker_color="green"), row=5, col=1)
-            fig.add_trace(go.Bar(y=neg_df["Topic"], x=neg_df["Count"], orientation="h", name="Negative", marker_color="red"), row=6, col=1)
-        
-        fig.update_layout(title_text=f"📊 App Analysis: {app_name}", height=1800, showlegend=True)
+            fig.add_trace(go.Bar(y=pos_df["Topic"], x=pos_df["Count"], orientation="h", name="Positive Topics", marker_color="green"), row=3, col=1)
+            fig.add_trace(go.Bar(y=neg_df["Topic"], x=neg_df["Count"], orientation="h", name="Negative Topics", marker_color="red"), row=3, col=2)
+
+        # --- Enhanced Plots (Only if data is available) ---
+        if enhanced_analysis:
+             # Reposition weekly trend for enhanced layout
+            fig.add_trace(go.Scatter(x=df_ts.index, y=df_ts.values, mode="lines+markers", name=f"{app_name} Sentiment Trend"), row=3, col=1)
+            
+            # Emotion Distribution
+            emotion_counts = df["emotion"].value_counts()
+            fig.add_trace(go.Pie(labels=emotion_counts.index, values=emotion_counts.values, name="Emotions"), row=2, col=2)
+
+            # Bug/Feature Request Chart
+            category_counts = df["category"].value_counts()
+            fig.add_trace(go.Bar(x=category_counts.index, y=category_counts.values, name="Review Categories"), row=3, col=2)
+            
+            # Update topic charts to new positions
+            fig.add_trace(go.Bar(y=pos_df["Topic"], x=pos_df["Count"], orientation="h", name="Positive Topics", marker_color="green"), row=4, col=1)
+            fig.add_trace(go.Bar(y=neg_df["Topic"], x=neg_df["Count"], orientation="h", name="Negative Topics", marker_color="red"), row=4, col=2)
+
+            # Aspect-Sentiment Heatmap
+            if "aspect_sentiments" in df.columns:
+                aspect_sentiments_list = [s for s in df["aspect_sentiments"] if s]
+                if aspect_sentiments_list:
+                    aspect_sentiment_counts = Counter()
+                    for sentiments in aspect_sentiments_list:
+                        for aspect, sentiment in sentiments.items():
+                            aspect_sentiment_counts[(aspect, sentiment)] += 1
+                    
+                    if aspect_sentiment_counts:
+                        # Limit to top N aspects for clarity
+                        top_aspects = [item[0][0] for item in aspect_sentiment_counts.most_common(20)]
+                        filtered_counts = {k: v for k, v in aspect_sentiment_counts.items() if k[0] in top_aspects}
+
+                        aspects, sentiments, counts = zip(*[(k[0], k[1], v) for k, v in filtered_counts.items()])
+                        heatmap_df = pd.DataFrame({'aspect': aspects, 'sentiment': sentiments, 'count': counts})
+                        heatmap_pivot = heatmap_df.pivot_table(index='aspect', columns='sentiment', values='count', fill_value=0)
+                        
+                        fig.add_trace(go.Heatmap(
+                            z=heatmap_pivot.values,
+                            x=heatmap_pivot.columns,
+                            y=heatmap_pivot.index,
+                            colorscale="Viridis"
+                        ), row=5, col=1)
+
+            # Emotion-Topic Bar Charts
+            def get_top_emotion_topics(df, emotion, n=10):
+                emotion_df = df[(df["emotion"] == emotion) & (df['topics'].apply(len) > 0)]
+                if emotion_df.empty:
+                    return pd.DataFrame(columns=["Topic", "Count"])
+                topics = Counter(topic for _, row in emotion_df.iterrows() for topic in row["topics"])
+                return pd.DataFrame(topics.most_common(n), columns=["Topic", "Count"]).sort_values(by="Count")
+
+            joy_topics_df = get_top_emotion_topics(df, "joy")
+            anger_topics_df = get_top_emotion_topics(df, "anger")
+            sadness_topics_df = get_top_emotion_topics(df, "sadness")
+            surprise_topics_df = get_top_emotion_topics(df, "surprise")
+            
+            fig.add_trace(go.Bar(y=joy_topics_df["Topic"], x=joy_topics_df["Count"], orientation='h', name='Joy Topics', marker_color='gold'), row=6, col=1)
+            fig.add_trace(go.Bar(y=anger_topics_df["Topic"], x=anger_topics_df["Count"], orientation='h', name='Anger Topics', marker_color='crimson'), row=6, col=2)
+            fig.add_trace(go.Bar(y=sadness_topics_df["Topic"], x=sadness_topics_df["Count"], orientation='h', name='Sadness Topics', marker_color='blue'), row=7, col=1)
+            fig.add_trace(go.Bar(y=surprise_topics_df["Topic"], x=surprise_topics_df["Count"], orientation='h', name='Surprise Topics', marker_color='purple'), row=7, col=2)
+
+        fig.update_layout(title_text=f"📊 App Analysis: {app_name}", height=2800 if enhanced_analysis else 1200, showlegend=True)
 
     filename = f"analysis_dashboard_{app_data['name'].replace(' ', '_')}.html"
+    if is_comparison:
+        filename = f"analysis_dashboard_{app_data['name'].replace(' ', '_')}_vs_{comparison_data['name'].replace(' ', '_')}.html"
+        
     fig.write_html(filename)
     print(f"✅ Dashboard saved to: {filename}")
 
@@ -372,10 +603,10 @@ def create_interactive_dashboard(app_data, comparison_data=None):
 # --- MAIN EXECUTION ---
 def main():
     """Main function to run the interactive analysis workflow."""
-    nlp, sentiment_analyzer = initialize_models()
+    nlp, sentiment_analyzer, emotion_analyzer, absa_analyzer = initialize_models()
 
     # Check if models were loaded successfully
-    if nlp is None or sentiment_analyzer is None:
+    if nlp is None or sentiment_analyzer is None or emotion_analyzer is None or absa_analyzer is None:
         print("❌ Failed to initialize models. Exiting.")
         return
 
@@ -478,6 +709,13 @@ def main():
 
         df = analyze_sentiment(df, sentiment_analyzer)
         df = analyze_topics(df, nlp)
+
+        enhanced_analysis_choice = input("Perform enhanced analysis (emotions, ABSA, etc.)? (y/n): ").lower().strip()
+        if enhanced_analysis_choice == 'y':
+            df = analyze_emotions(df, emotion_analyzer)
+            df = analyze_aspect_sentiments(df, absa_analyzer)
+            df = identify_bug_feature_requests(df)
+
         app_data_dict[app_name] = {"name": app_name, "df": df}
         csv_filename = f"{app_name.replace(' ', '_')}_sentiment_analysis.csv"
         df.to_csv(csv_filename, index=False)
