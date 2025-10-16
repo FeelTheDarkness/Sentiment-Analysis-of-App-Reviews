@@ -392,7 +392,19 @@ def identify_bug_feature_requests(df):
 
 
 def create_interactive_dashboard(app_data, comparison_data=None):
-    """Creates an interactive Plotly dashboard and saves it as an HTML file."""
+    """
+    Generate and save an interactive Plotly HTML dashboard for one app or a side-by-side comparison of two apps.
+    
+    Parameters:
+        app_data (dict): Required. Dict with keys:
+            - 'name' (str): Display name of the primary app.
+            - 'df' (pandas.DataFrame): DataFrame containing processed review data (expected columns: 'date', 'sentiment_score', 'sentiment_label', and optionally 'rating', 'topics', 'emotion', 'aspect_sentiments', 'category').
+        comparison_data (dict | None): Optional. If provided, a dict with the same structure as `app_data` for the second app; triggers comparison layout and plots.
+    
+    Behavior:
+        - Saves a self-contained HTML file named "analysis_dashboard_{app_name}.html" for single-app mode or "analysis_dashboard_{app1}_vs_{app2}.html" for comparison mode.
+        - Chooses plotting layouts and which visualizations to include based on whether enhanced analysis fields (e.g., 'emotion', 'aspect_sentiments') and topic data are present.
+    """
     print("📊 Generating interactive dashboard...")
     is_comparison = comparison_data is not None
 
@@ -558,6 +570,17 @@ def create_interactive_dashboard(app_data, comparison_data=None):
                         fig.add_trace(go.Heatmap(z=heatmap_pivot.values, x=heatmap_pivot.columns, y=heatmap_pivot.index, colorscale="Viridis"), row=5, col=1)
 
             def get_top_emotion_topics(df, emotion, n=10):
+                """
+                Compute the top topics associated with a given emotion across reviews.
+                
+                Parameters:
+                    df (pandas.DataFrame): DataFrame with at least an "emotion" column and a "topics" column where each row's "topics" is an iterable of topic strings.
+                    emotion (str): Emotion label to filter reviews by (e.g., "joy", "anger").
+                    n (int): Maximum number of top topics to return.
+                
+                Returns:
+                    pandas.DataFrame: DataFrame with columns "Topic" and "Count" containing up to `n` topics most frequently appearing in reviews labeled with `emotion`. Rows are sorted by "Count" in ascending order. An empty DataFrame with those columns is returned if no matching reviews are found.
+                """
                 emotion_df = df[(df["emotion"] == emotion) & (df['topics'].apply(len) > 0)]
                 if emotion_df.empty: return pd.DataFrame(columns=["Topic", "Count"])
                 topics = Counter(topic for _, row in emotion_df.iterrows() for topic in row["topics"])
