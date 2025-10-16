@@ -571,15 +571,15 @@ def create_interactive_dashboard(app_data, comparison_data=None):
 
             def get_top_emotion_topics(df, emotion, n=10):
                 """
-                Compute the top topics associated with a given emotion across reviews.
+                Return the most frequent topics appearing in reviews labeled with a specific emotion.
                 
                 Parameters:
-                    df (pandas.DataFrame): DataFrame with at least an "emotion" column and a "topics" column where each row's "topics" is an iterable of topic strings.
+                    df (pandas.DataFrame): DataFrame containing an "emotion" column and a "topics" column where each row's "topics" is an iterable of topic strings.
                     emotion (str): Emotion label to filter reviews by (e.g., "joy", "anger").
                     n (int): Maximum number of top topics to return.
                 
                 Returns:
-                    pandas.DataFrame: DataFrame with columns "Topic" and "Count" containing up to `n` topics most frequently appearing in reviews labeled with `emotion`. Rows are sorted by "Count" in ascending order. An empty DataFrame with those columns is returned if no matching reviews are found.
+                    pandas.DataFrame: DataFrame with columns "Topic" and "Count" containing up to `n` topics most frequently appearing in reviews with the specified `emotion`. Rows are sorted by "Count" in ascending order. Returns an empty DataFrame with those columns if no matching reviews are found.
                 """
                 emotion_df = df[(df["emotion"] == emotion) & (df['topics'].apply(len) > 0)]
                 if emotion_df.empty: return pd.DataFrame(columns=["Topic", "Count"])
